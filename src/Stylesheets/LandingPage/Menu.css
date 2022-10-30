@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  @apply h-[100vh] bg-cinza
+}
+
+.nav-list li {
+  @apply text-2xl font-sans font-bold h-10 w-32 text-center m-0 h-fit p-1.5 rounded-xl text-preto border-branco border-2 cursor-pointer;
+}
+
+.nav-list li:last-child {
+  @apply bg-verde text-branco hover:bg-branco;
+}
+
+.nav-list li:last-child:hover {
+  @apply bg-branco border border-verde text-verde duration-200 text-[26px];
+}
