@@ -4,7 +4,7 @@ import Descricao from './Descricao.js'
 
 export default function Material() {
   return (
-    <div className='flex flex-wrap justify-evenly'>
+    <div className='flex flex-wrap justify-evenly content-between'>
       <Faixa/>
       <Preview/>
       <Descricao/>

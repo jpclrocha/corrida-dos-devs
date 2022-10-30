@@ -5,12 +5,12 @@ import Conteudo from "./Components/LandingPage/Conteudo";
 import Ranking from "./Components/Ranking/Ranking";
 import Conta from "./Components/MinhaConta/Conta";
 import Material from "./Components/MateriaisExpandido/Material";
-
+import Playlist from "./Components/PlaylistMateriais/Playlist";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Menu />
-    <Material/>
+    <Playlist/>
   </React.StrictMode>
 );
