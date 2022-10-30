@@ -5,11 +5,13 @@ import Redes from "./Redes.js";
 
 export default function Conta() {
   return (
-    <div className="bg-verde h-36 shadow-xl w-full">
+    <div className="bg-verde h-36 shadow-xl w-full flex flex-wrap justify-evenly">
       <Perfil />
-      <Sobre />
-      <Desafios />
-      <Redes />
+      <div className="w-fit h-[60vh] mt-[20vh]">
+        <Sobre />
+        <Desafios />
+        <Redes /> 
+      </div>
     </div>
   );
 }
