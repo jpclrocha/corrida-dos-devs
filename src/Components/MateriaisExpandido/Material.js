@@ -1,9 +1,13 @@
-import React from 'react'
+import Faixa from './Faixa.js'
+import Preview from './Preview.js'
+import Descricao from './Descricao.js'
 
 export default function Material() {
   return (
-    <div>
-      <img src="nuvem-download.svg"/>
+    <div className='flex flex-wrap justify-evenly'>
+      <Faixa/>
+      <Preview/>
+      <Descricao/>
     </div>
   )
 }
