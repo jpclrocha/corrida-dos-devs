@@ -18,6 +18,7 @@ module.exports = {
         rodape: 'rgba(0,0,0,0.5)',
         vermelho: '#FF1A1A',
         verdeDesbotado: '#507061',
+        cinzaLg: "#94A2AB",
       },
     },
   },
