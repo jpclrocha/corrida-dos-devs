@@ -1,4 +1,5 @@
 import '../../Stylesheets/LandingPage/Card.css'
+import { Link } from 'react-router-dom'
 
 export default function Card(props) {
     const texto = () =>{
@@ -10,9 +11,9 @@ export default function Card(props) {
     
       const btnVazado = () => {
         if (props.botao === "vazado") {
-          return <button type="button" className="card-btn-vazado">{props.btnTxt}</button>
+          return <button type="button" className="card-btn-vazado"><Link to={`${props.rota}`}>{props.btnTxt}</Link></button>
         } else {
-          return <button type="button" className="card-btn">{props.btnTxt}</button>
+          return <button type="button" className="card-btn"><Link to={`${props.rota}`}>{props.btnTxt}</Link></button>
         }
       }
     

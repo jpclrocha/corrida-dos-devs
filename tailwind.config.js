@@ -19,6 +19,7 @@ module.exports = {
         vermelho: '#FF1A1A',
         verdeDesbotado: '#507061',
         cinzaLg: "#94A2AB",
+        cinzaAdm: 'rgba(255,255,255,0.23)',
       },
     },
   },

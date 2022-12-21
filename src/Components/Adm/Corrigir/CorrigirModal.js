@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function Modal({ aluno }) {
+export default function CorrigirModal({ aluno }) {
   return (
     <div className="bg-branco w-[70vw] h-28 rounded-full inline-flex mb-6 shadow-xl justify-between">
       <div className="inline-flex">
@@ -10,7 +8,6 @@ export default function Modal({ aluno }) {
             alt="Foto de perfil"
             className="mx-auto my-auto"
           />
-          {/*<h1 className="text-white text-7xl self-center mx-auto">1°</h1> */}
         </div>
 
         <div className="self-center ml-6">
@@ -18,17 +15,18 @@ export default function Modal({ aluno }) {
             Nome: {aluno.nome}
           </h1>
           <h2 className="text-xl font-extrabold text-verde">
-            Turma: {aluno.turma}
+            Link: {aluno.link}
           </h2>
         </div>
-      </div>
 
-      <div className="self-center text-center p-5">
-        <h1 className="text-4xl font-extrabold text-verde">
-          {aluno.pontuacao}
-        </h1>
-        <h2 className="text-2xl font-extrabold text-verde">Pontos</h2>
       </div>
+        <div className="bg-verde w-28 h-28 rounded-full flex">
+          <img
+            src="certoDesafio.svg"
+            alt="Foto de perfil"
+            className="mx-auto my-auto"
+          />
+        </div>
     </div>
   );
 }

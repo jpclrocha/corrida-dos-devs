@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 export default function CadastroModal() {
   return (
@@ -34,10 +34,10 @@ export default function CadastroModal() {
           type="submit"
           className="bg-verde w-full rounded-lg h-[40px] text-branco mb-[20px]"
         >
-          Cadastrar
+          <Link to='/MinhaConta'>Cadastrar</Link>
         </button>
         <h1 className="text-center">
-          Já tem conta? <a className="text-verde font-bold">Entrar</a>
+          Já tem conta? <a className="text-verde font-bold"><Link to='/Login'>Entrar</Link></a>
         </h1>
       </form>
     </div>

@@ -13,6 +13,7 @@ export default function Conteudo() {
         subir no Ranking"
           textoPqn="Cada desafio contém uma pontuação para te ajudar a alcançar uma nova posição"
           btnTxt="Desafios Semanais"
+          rota='/Desafio'
         />
 
         <Card
@@ -22,6 +23,7 @@ export default function Conteudo() {
           textoPqn="Escolha entre nossos materiais online com novas adições publicadas mensalmente"
           botao="vazado"
           btnTxt="Materiais"
+          rota='/PlaylistMateriais'
         />
       </div>
 

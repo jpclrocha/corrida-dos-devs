@@ -1,5 +1,6 @@
 import SenhaModal from "./senhaModal";
 import RodapeCs from "./RodapeCs";
+import { Link } from "react-router-dom";
 
 export default function recuperarSenha() {
   return (
@@ -10,8 +11,8 @@ export default function recuperarSenha() {
           className="inline-flex text-3xl font-sans font-bold h-fit text-branco mb-5"
           href="#"
         >
-          Corrida dos DEVs
-          <img src="logo.svg" alt="Corrida-dos-devs-logo" className="pl-2" />
+          <Link to='/'>Corrida dos DEVs</Link>
+          <img src="logoBranca.svg" alt="Corrida-dos-devs-logo" className="pl-2" />
         </a>
         <h1 className="text-branco font-medium text-8xl">Recupere a sua senha:</h1>
       </div>

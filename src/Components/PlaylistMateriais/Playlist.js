@@ -1,4 +1,5 @@
 import ModalCurso from "./ModalCurso";
+import Menu from "../LandingPage/Menu";
 
 export default function Playlist() {
   const curso = {
@@ -7,17 +8,35 @@ export default function Playlist() {
     ideal:
       "Ideal para você que está começando do absoluto zero na programação se familiarizar com esse incrível universo",
     conteudo: [
-      {titulo: "Fundamentos básicos",id:1},
-      {titulo: "Pensamento computacional", id:2},
-      {titulo: "Programação Web", id: 3},
-      {titulo: "E muito mais conteúdo pra explorar!", id: 4},
+      { titulo: "Fundamentos básicos", id: 1 },
+      { titulo: "Pensamento computacional", id: 2 },
+      { titulo: "Programação Web", id: 3 },
+      { titulo: "E muito mais conteúdo pra explorar!", id: 4 },
     ],
+    rota:'/MateriaisExpandido'
   };
   return (
-    <div className="flex flex-wrap justify-evenly">
-      <h1 className="text-5xl font-extrabold text-branco my-20">Materiais de estudo:</h1>
-      <ModalCurso nome={curso.nome} descricao={curso.descricao} ideal={curso.ideal} conteudo={curso.conteudo}/>
-      <ModalCurso nome={curso.nome} descricao={curso.descricao} ideal={curso.ideal} conteudo={curso.conteudo}/>
-    </div>
+    <>
+      <Menu />
+      <div className="flex flex-wrap justify-evenly">
+        <h1 className="text-5xl font-extrabold text-branco my-20">
+          Materiais de estudo:
+        </h1>
+        <ModalCurso
+          nome={curso.nome}
+          descricao={curso.descricao}
+          ideal={curso.ideal}
+          conteudo={curso.conteudo}
+          rota={curso.rota}
+        />
+        <ModalCurso
+          nome={curso.nome}
+          descricao={curso.descricao}
+          ideal={curso.ideal}
+          conteudo={curso.conteudo}
+          rota={curso.rota}
+        />
+      </div>
+    </>
   );
 }

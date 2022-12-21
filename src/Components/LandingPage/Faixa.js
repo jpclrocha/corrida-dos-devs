@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 export default function Faixa() {
   return (
     <div className="inline-flex items-center justify-evenly bg-branco w-full h-40 shadow-2xl ">
@@ -13,7 +13,7 @@ export default function Faixa() {
         </p>
       </div>
       <button type="button" className="card-btn">
-        Confira o Ranking
+        <Link to='/Ranking'>Confira o Ranking</Link>
       </button>
     </div>
   );

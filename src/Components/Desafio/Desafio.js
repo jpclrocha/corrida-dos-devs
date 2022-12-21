@@ -1,4 +1,5 @@
 import ModalDesafio from "./ModalDesafio";
+import Menu from "../LandingPage/Menu";
 
 export default function Desafio() {
   const desafioSemanal = {
@@ -9,6 +10,8 @@ export default function Desafio() {
     imagem: "calc.svg",
   };
   return (
+    <>
+    <Menu/>
     <div className="m-10 justify-evenly flex flex-wrap">
       <div className="text-4xl font-extrabold text-branco mb-5 w-[90vw]">
         Desafio da semana:
@@ -21,5 +24,6 @@ export default function Desafio() {
         imagem={desafioSemanal.imagem}
       />
     </div>
+    </>
   );
 }

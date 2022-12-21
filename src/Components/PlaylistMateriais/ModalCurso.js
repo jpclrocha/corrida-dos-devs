@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 export default function ModalCurso(props) {
   const nome = props.nome;
@@ -28,7 +28,7 @@ export default function ModalCurso(props) {
         <ul className="w-full h-fit bg-verde p-7 rounded-xl">
           {gera}
         </ul>
-        <button className="bg-verde mt-5 w-full h-[5vh] text-branco rounded-xl">Iniciar jornada</button>
+        <button className="bg-verde mt-5 w-full h-[5vh] text-branco rounded-xl"><Link to={props.rota}>Iniciar jornada</Link></button>
       </div>
 
     </div>

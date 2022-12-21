@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 export default function LoginModal() {
   return (
@@ -16,14 +16,14 @@ export default function LoginModal() {
           placeholder="digite sua senha aqui"
           className="border border-black rounded-lg w-full mb-2 h-[50px] p-5"
         />
-        <h1 className="mb-3"><a className="cursor-pointer font-bold">Esqueceu sua senha?</a></h1>
+        <h1 className="mb-3"><a className="cursor-pointer font-bold"><Link to='/EsqueciSenha'>Esqueceu sua senha?</Link></a></h1>
         <button
           type="submit"
           className="bg-verde w-full rounded-lg h-[40px] text-branco mb-[20px]"
         >
-          ENTRAR
+          <Link to='/MinhaConta'>ENTRAR</Link>
         </button>
-        <h1 className="text-center">Não tem conta? <a className="text-verde font-bold">Criar conta</a></h1>
+        <h1 className="text-center">Não tem conta? <a className="text-verde font-bold"><Link to='/Cadastro'>Criar conta</Link></a></h1>
       </form>
     </div>
   );
