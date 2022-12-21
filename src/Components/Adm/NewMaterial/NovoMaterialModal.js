@@ -1,13 +1,6 @@
-import AdminMenu from "../AdminMenu";
-import FaixaMaterial from "./FaixaMaterial";
-
-export default function NewMaterial() {
+export default function NovoMaterialModal() {
   return (
-    <>
-      <AdminMenu />
-      <FaixaMaterial />
-
-      <div className="flex justify-evenly">
+    <div className="flex justify-evenly">
         <div className="w-[50%]">
           <div className="bg-branco p-5 mb-10 rounded-2xl">
             <h1 className="text-verde text-xl font-bold">
@@ -51,6 +44,5 @@ export default function NewMaterial() {
           </div>
         </div>
       </div>
-    </>
-  );
+  )
 }

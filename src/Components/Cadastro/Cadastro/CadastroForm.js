@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function CadastroModal() {
+export default function CadastroForm() {
   return (
     <div className="bg-branco w-[30vw] h-fit p-10 rounded-lg ">
       <form>
@@ -29,15 +29,19 @@ export default function CadastroModal() {
           placeholder="confirme sua senha"
           className="border border-black rounded-lg w-full mb-2 h-[50px] p-5"
         />
-
-        <button
-          type="submit"
-          className="bg-verde w-full rounded-lg h-[40px] text-branco mb-[20px]"
-        >
-          <Link to='/MinhaConta'>Cadastrar</Link>
-        </button>
+        <Link to="/conta">
+          <button
+            type="submit"
+            className="bg-verde w-full rounded-lg h-[40px] text-branco mb-[20px]"
+          >
+            Cadastrar
+          </button>
+        </Link>
         <h1 className="text-center">
-          Já tem conta? <a className="text-verde font-bold"><Link to='/Login'>Entrar</Link></a>
+          Já tem conta?{" "}
+          <Link to="/login" className="text-verde font-bold">
+            Entrar
+          </Link>
         </h1>
       </form>
     </div>

@@ -1,14 +1,7 @@
-import AdminMenu from "../AdminMenu";
-import FaixaDesafio from "./FaixaDesafio";
 
-export default function NewDesafio() {
+export default function NovoDesafioModal() {
   return (
-    <>
-      <AdminMenu />
-      <FaixaDesafio />
-      
-
-      <div className="flex justify-evenly w-[97vw]">
+    <div className="flex justify-evenly w-[97vw]">
         <div className="w-[50vw]">
           <div className="bg-branco p-4 mb-10 rounded-2xl">
             <h1 className="text-verde text-xl font-bold">
@@ -54,9 +47,9 @@ export default function NewDesafio() {
               Data de visibilidade:
             </h1>
             <input
-              type="text"
+              type="date"
               placeholder="Data de visibilidade"
-              className="border border-black rounded-lg w-full mb-2 p"
+              className="border border-black rounded-lg w-full mb-2 p-2"
             />
           </div>
 
@@ -67,11 +60,10 @@ export default function NewDesafio() {
             <input
               type="number"
               placeholder="Quantidade de pontos"
-              className="border border-black rounded-lg w-full mb-2 p"
+              className="border border-black rounded-lg w-full mb-2 p-2"
             />
           </div>
         </div>
       </div>
-    </>
-  );
+  )
 }

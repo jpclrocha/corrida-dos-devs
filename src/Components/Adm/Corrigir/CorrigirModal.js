@@ -1,32 +1,31 @@
-export default function CorrigirModal({ aluno }) {
+import CorrigirItem from "./CorrigirItem";
+
+export default function CorrigirModal() {
+    const alunos = [
+        {
+          nome: "João Pedro",
+          link: "github.com/jpclrocha",
+        },
+        {
+          nome: "João Pedro",
+          link: "github.com/jpclrocha",
+        },
+      ];
   return (
-    <div className="bg-branco w-[70vw] h-28 rounded-full inline-flex mb-6 shadow-xl justify-between">
-      <div className="inline-flex">
-        <div className="bg-vermelho w-28 h-28 rounded-full">
-          <img
-            src="ft-perfil.svg"
-            alt="Foto de perfil"
-            className="mx-auto my-auto"
-          />
-        </div>
-
-        <div className="self-center ml-6">
-          <h1 className="text-2xl font-extrabold text-verde">
-            Nome: {aluno.nome}
+    <div className="mx-20 my-20 flex justify-evenly flex-wrap">
+        <div className="inline-flex mb-4 justify-between w-[70vw]">
+          <h1 className="text-4xl font-extrabold text-branco ml-8">
+            Aluno que fizeram o desafio:
           </h1>
-          <h2 className="text-xl font-extrabold text-verde">
-            Link: {aluno.link}
-          </h2>
-        </div>
-
-      </div>
-        <div className="bg-verde w-28 h-28 rounded-full flex">
-          <img
-            src="certoDesafio.svg"
-            alt="Foto de perfil"
-            className="mx-auto my-auto"
+          <input
+            className="bg-branco w-96 self-center h-8 rounded-full p-4 shadow-2xl placeholder-preto placeholder:font-bold"
+            placeholder="Buscar"
           />
         </div>
-    </div>
-  );
+
+        {alunos.map((item) => {
+          return <CorrigirItem aluno={item} />;
+        })}
+      </div>
+  )
 }

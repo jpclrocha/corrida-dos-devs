@@ -1,17 +1,17 @@
 import ModalDesafio from "./ModalDesafio";
-import Menu from "../LandingPage/Menu";
 
-export default function Desafio() {
+export default function GeraDesafio() {
   const desafioSemanal = {
     nome: "Desafio calculadora",
     descricao: "Objetivo: desenvolver uma calculadora web",
-    requisitos: [{ titulo: "Utilizar: HTML, CSS e JS;", id: 1 }, {titulo: "Ambiente de desenvolvimento a critério do usuário;", id: 2 }],
+    requisitos: [
+      { titulo: "Utilizar: HTML, CSS e JS;", id: 1 },
+      { titulo: "Ambiente de desenvolvimento a critério do usuário;", id: 2 },
+    ],
     pontos: 50,
     imagem: "calc.svg",
   };
   return (
-    <>
-    <Menu/>
     <div className="m-10 justify-evenly flex flex-wrap">
       <div className="text-4xl font-extrabold text-branco mb-5 w-[90vw]">
         Desafio da semana:
@@ -24,6 +24,5 @@ export default function Desafio() {
         imagem={desafioSemanal.imagem}
       />
     </div>
-    </>
   );
 }
