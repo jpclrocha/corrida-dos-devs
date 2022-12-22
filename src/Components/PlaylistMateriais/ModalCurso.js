@@ -19,11 +19,11 @@ export default function ModalCurso(props) {
   //nome, descricao, ideal, conteudo
   return (
     <div className="bg-branco flex w-4/5 rounded-[75px] h-fit justify-around items-center mb-10 shadow-2xl">
-      <div className="ml-10 bg-verde rounded-[50%] flex xl:w-[225px] xl:h-[200px]">
+      <div className="ml-10 bg-verde rounded-[50%] flex xl:w-[200px] xl:h-[200px]">
         <img
           src="playBtn.svg"
           alt="Play Button"
-          className="mx-auto my-auto w-[256px]"
+          className="w-[256px]"
         />
       </div>
 

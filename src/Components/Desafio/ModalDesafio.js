@@ -13,7 +13,7 @@ export default function ModalDesafio(props) {
     );
   });
   return (
-    <div className="w-[90vw] h-[70vh] bg-branco rounded-[75px] p-10 shadow-2xl flex-wrap flex justify-evenly">
+    <div className="w-[70vw] h-[50vh] bg-branco rounded-[75px] p-10 shadow-2xl flex-wrap flex justify-evenly">
       <div className="bg-verde w-[200px] h-[200px] flex rounded-[50%]">
         <img
           src={imagem}

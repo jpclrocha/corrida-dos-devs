@@ -6,7 +6,7 @@ export default function SenhaModal() {
   return (
     <div>
       <div className="flex items-center justify-evenly bg-cinzaLg h-[90vh]">
-        <div className="h-[50vh] w-[50vw]">
+        <div className="h-[30vh] w-[50vw]">
           <Link
             to="/"
             className="inline-flex text-4xl font-sans font-bold h-fit text-branco mb-5"

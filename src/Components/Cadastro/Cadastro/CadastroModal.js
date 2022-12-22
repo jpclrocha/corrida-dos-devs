@@ -1,12 +1,23 @@
 import CadastroForm from "./CadastroForm.js";
 import RodapeCs from "../RodapeCs";
 import { Link } from "react-router-dom";
+import userList from "../../../data.js";
+import { useState } from "react";
 
 export default function CadastroModal() {
+
+  const [users, setUsers] = useState(userList)
+
+  const addUser = user => {
+    user.id = users.length + 1;
+    setUsers([...users, user]);
+  }
+
   return (
     <div>
       <div className="flex items-center justify-evenly bg-cinzaLg h-[90vh]">
-        <CadastroForm />
+        <CadastroForm addUser={addUser}/>
+        {console.log(users)}
         <div className="h-[50vh] w-[50vw]">
           <Link
             to="/"
