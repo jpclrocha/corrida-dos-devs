@@ -1,0 +1,35 @@
+.ranking-component-container {
+	display: flex;
+	margin: 5rem;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+
+	.ranking-input-container {
+		display: inline-flex;
+		justify-content: space-between;
+		width: 80vw;
+		margin-bottom: 1rem;
+
+		.ranking-heading {
+			font-size: 2.25rem;
+			line-height: 2.5rem;
+			font-weight: 900;
+			margin-left: 2rem;
+			color: white;
+		}
+
+		.ranking-input-box {
+			background-color: white;
+			width: 24rem;
+			height: 2rem;
+			align-self: center;
+			border: none;
+			border-radius: 9999px;
+			padding: 1rem;
+			padding-left: 2rem;
+			box-shadow: 1px 1px 10px black;
+			font-weight: 900;
+			font-size: 1.5rem;
+		}
+	}
+}

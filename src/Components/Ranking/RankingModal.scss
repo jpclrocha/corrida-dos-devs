@@ -1,0 +1,65 @@
+.ranking-modal {
+	background-color: white;
+	display: inline-flex;
+	width: 80vw;
+	height: fit-content;
+	border-radius: 9999px;
+	margin-bottom: 1.5rem;
+	justify-content: space-between;
+	box-shadow: 1px 1px 10px black;
+
+	.student-ranking {
+		display: inline-flex;
+
+		.ranking-modal-image-container {
+			background-color: red;
+			width: 8rem;
+			height: 8rem;
+			border-radius: 9999px;
+			display: flex;
+
+			.ranking-modal-image {
+				margin: auto;
+				width: 7rem;
+				height: 7rem;
+			}
+		}
+
+		.student-ranking-info {
+			margin: 2rem;
+
+			h1 {
+				font-size: 2rem;
+				line-height: 2.5rem;
+				font-weight: 900;
+				color: #1c7a1f;
+			}
+
+			h2 {
+				font-size: 1.75rem;
+				line-height: 1.25rem;
+				font-weight: 900;
+				color: #1c7a1f;
+			}
+		}
+	}
+
+	.student-ranking-pontuacao {
+		align-self: center;
+		text-align: center;
+		margin-right: 2rem;
+		height: fit-content;
+
+		h1 {
+			font-size: 3rem;
+			font-weight: 900;
+			color: #1c7a1f;
+		}
+
+		h2 {
+			font-size: 2rem;
+			font-weight: 900;
+			color: #1c7a1f;
+		}
+	}
+}
