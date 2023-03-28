@@ -1,3 +1,6 @@
+$verde: #1c7a1f;
+$branco: #ffffff;
+
 .navbar-container {
 	display: inline-flex;
 	width: 100%;
@@ -6,7 +9,7 @@
 	padding-bottom: 1.25rem;
 	justify-content: space-between;
 	align-items: center;
-	background-color: white;
+	background-color: $branco;
 
 	.navbar-logo-link {
 		display: inline-flex;
@@ -16,8 +19,13 @@
 		height: fit-content;
 		margin-left: 5%;
 
-		.navbar-logo {
-			padding-left: 0.5rem;
+		.link-router {
+			text-decoration: none;
+			color: black;
+
+			.navbar-logo {
+				padding-left: 0.5rem;
+			}
 		}
 	}
 
@@ -30,34 +38,37 @@
 		margin-right: 2rem;
 
 		.navbar-list-item {
-			li {
+			display: inline-flex;
+			list-style: none;
+
+			.navbar-list-item-link {
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				font-size: 1.5rem;
 				line-height: 2rem;
 				font-weight: 700;
+				text-decoration: none;
 				height: 2.5rem;
 				width: 8rem;
 				margin: 0px;
 				color: black;
 				cursor: pointer;
-				list-style: none;
 				height: 100%;
 			}
 		}
 
 		.navbar-last-item {
-			li {
-				border: 1px solid #1c7a1f;
+			.navbar-list-item-link {
+				border: 1px solid $verde;
 				border-radius: 0.75rem;
-				background-color: #1c7a1f;
-				color: white;
+				background-color: $verde;
+				color: $branco;
 			}
 
 			:hover {
-				background-color: white;
-				color: #1c7a1f;
+				background-color: $branco;
+				color: $verde;
 				transition-duration: 200ms;
 			}
 		}

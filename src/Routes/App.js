@@ -1,14 +1,32 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import LandingPage from '../Pages/LandingPage.jsx'
+import Ranking from '../Pages/Ranking'
+
 import './App.scss'
-import RankingComponent from '../Components/Ranking/RankingComponent'
-import Navbar from '../Components/Navbar/Navbar'
+
+const router = createBrowserRouter([
+	{
+		path: '/',
+		element: <LandingPage />,
+		errorElement: <></>,
+		children: [
+			{
+				path: '/ranking',
+				element: <Ranking />,
+				errorElement: <></>,
+			},
+			{
+				path: '/cadastro',
+			},
+			{
+				path: '/login',
+			},
+		],
+	},
+])
 
 function App() {
-	return (
-		<div>
-			<Navbar />
-			<RankingComponent />
-		</div>
-	)
+	return <RouterProvider router={router} />
 }
 
 export default App

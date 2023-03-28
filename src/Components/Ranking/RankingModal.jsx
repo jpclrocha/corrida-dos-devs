@@ -5,7 +5,7 @@ export default function RankingModal({ student }) {
 			<div className='student-ranking'>
 				<div className='ranking-modal-image-container'>
 					<img
-						src='ft-perfil.svg'
+						src='assets/ft-perfil.svg'
 						alt='Foto de perfil'
 						className='ranking-modal-image'
 					/>
