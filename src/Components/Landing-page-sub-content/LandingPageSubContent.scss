@@ -1,0 +1,54 @@
+$verde: #1c7a1f;
+$branco: #ffffff;
+$preto: #000000;
+
+.landing-page-sub-content-container {
+	display: inline-flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: $branco;
+	width: 100%;
+	height: 10rem;
+
+	.sub-content-text-container {
+		width: 45vw;
+		text-align: justify;
+
+		.sub-content-title {
+			font-size: 1.5rem;
+			line-height: 1.75rem;
+			font-weight: 700;
+			margin-bottom: 1rem;
+			.text-verde {
+				color: $verde;
+			}
+		}
+
+		.sub-content-text {
+			font-size: 1rem;
+			line-height: 1.5rem;
+		}
+	}
+
+	.sub-content-button {
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+		border-width: 0px;
+		border-radius: 0.375rem;
+		color: $branco;
+		background-color: $verde;
+		text-align: center;
+		width: 15vw;
+		height: 5vh;
+		cursor: pointer;
+		transition-duration: 300ms;
+	}
+
+	.sub-content-button:hover {
+		background-color: $branco;
+		color: $preto;
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+		border: 1px solid $verde;
+	}
+}

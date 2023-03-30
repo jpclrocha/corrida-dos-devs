@@ -1,9 +1,16 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
 
 import './Navbar.scss'
 
 export default function Navbar() {
+	const [openMenu, setOpenMenu] = useState(false)
+
+	const toggleMenu = () => {
+		setOpenMenu(!openMenu)
+	}
+
 	return (
 		<>
 			<nav className='navbar-container'>

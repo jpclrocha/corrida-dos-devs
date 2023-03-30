@@ -1,0 +1,33 @@
+$branco: #ffffff;
+$rodape: rgba(0, 0, 0, 0.5);
+
+.landing-page-footer-container {
+	background-color: $branco;
+	width: 100%;
+	height: 8rem;
+	margin-top: 4rem;
+	padding: 0.5rem;
+	padding-top: 1rem;
+
+	.landing-page-footer-list {
+		list-style: none;
+		display: inline-flex;
+		align-items: center;
+		height: 6rem;
+
+		.landing-page-footer-list-item {
+			font-size: 1rem;
+			line-height: 1.5rem;
+			color: $rodape;
+			margin-left: 3vw;
+			padding-right: 3vw;
+		}
+	}
+
+	.landing-page-footer-line {
+		height: 1px;
+		background-color: $rodape;
+		margin-left: 3vw;
+		margin-right: 3vw;
+	}
+}
