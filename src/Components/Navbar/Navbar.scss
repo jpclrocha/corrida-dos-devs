@@ -1,5 +1,6 @@
 $verde: #1c7a1f;
 $branco: #ffffff;
+$preto: #000000;
 
 .navbar-container {
 	display: inline-flex;
@@ -11,9 +12,6 @@ $branco: #ffffff;
 	align-items: center;
 	background-color: $branco;
 
-	.toggle-btn {
-	}
-
 	.navbar-logo-link {
 		display: inline-flex;
 		font-size: 2.25rem;
@@ -24,7 +22,7 @@ $branco: #ffffff;
 
 		.link-router {
 			text-decoration: none;
-			color: black;
+			color: $preto;
 
 			.navbar-logo {
 				padding-left: 0.5rem;
@@ -55,7 +53,7 @@ $branco: #ffffff;
 				height: 2.5rem;
 				width: 8rem;
 				margin: 0px;
-				color: black;
+				color: $preto;
 				cursor: pointer;
 				height: 100%;
 			}
@@ -78,6 +76,19 @@ $branco: #ffffff;
 	}
 }
 
+.hamburger {
+	border: 0;
+	height: 40px;
+	width: 40px;
+	padding: 0.5rem;
+	border-radius: 50%;
+	background-color: $verde;
+	display: none;
+	cursor: pointer;
+	margin-right: 5vw;
+	transition: background-color 0.3s ease-in-out;
+}
+
 @media screen and (max-width: 1024px) {
 	.navbar-container {
 		.navbar-logo-link {
@@ -98,42 +109,42 @@ $branco: #ffffff;
 }
 
 @media screen and (max-width: 768px) {
+	.hamburger {
+		display: block;
+	}
+
 	.navbar-container {
-		.navbar-logo-link {
-			font-size: 1.5rem;
-
-			.navbar-logo {
-				height: 1.3rem;
-			}
-		}
-
 		.navbar-list {
-			.navbar-list-item {
-				align-items: center;
+			display: none;
+			align-items: center;
+			position: absolute;
+			top: 90px;
+			left: 0;
+			flex-direction: column;
+			width: 100%;
+			height: 20vh;
+			background-color: $verde;
+			transition-duration: 300ms;
 
+			.navbar-list-item {
+				margin: 2vh;
+			}
+
+			.navbar-last-item {
 				.navbar-list-item-link {
-					font-size: 1.25rem;
-					height: 2rem;
-					width: 6rem;
-					margin: 1rem;
+					background-color: $verde;
+					color: $branco;
+				}
+
+				:hover {
+					background-color: $verde;
+					color: $preto;
+					transition-duration: 200ms;
 				}
 			}
 		}
-	}
-}
-
-@media screen and (max-width: 650px) {
-	.navbar-container {
-		flex-wrap: wrap;
-
-		.navbar-list {
+		.navbar-list.expanded {
 			display: flex;
-			flex-direction: column;
-			background-color: #f3efef;
-			width: 100vw;
-			height: 25vh;
-			margin-top: 4vh;
-			margin-bottom: 50vh;
 		}
 	}
 }

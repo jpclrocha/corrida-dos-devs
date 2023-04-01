@@ -5,11 +5,12 @@ export default function LandingPageMainContent() {
 		<div className='landing-page-main-content-container'>
 			<LandingPageCard
 				texto='Conheça nossos'
-				verde='desafios da semana'
-				texto2='para te ajudar a
-  subir no Ranking'
+				verde='desafios semanais'
+				texto2='para 
+  conquistar pontos e subir no Ranking'
 				textoPqn='Cada desafio contém uma pontuação para te ajudar a alcançar uma nova posição'
-				btnTxt='Desafios Semanais'
+				botao='verde'
+				btnTxt='Desafios'
 				rota='/desafio'
 			/>
 

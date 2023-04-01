@@ -1,7 +1,7 @@
 import './RankingModal.scss'
 export default function RankingModal({ student }) {
 	return (
-		<div className='ranking-modal'>
+		<div className='ranking-modal' key={student.id}>
 			<div className='student-ranking'>
 				<div className='ranking-modal-image-container'>
 					<img

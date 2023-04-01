@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Button from '../Button/Button'
 import './LandingPageSubContent.scss'
 
 export default function LandingPageSubContent() {
@@ -6,7 +7,7 @@ export default function LandingPageSubContent() {
 		<div className='landing-page-sub-content-container'>
 			<div className='sub-content-text-container'>
 				<h1 className='sub-content-title'>
-					<span className='text-verde'>A Corrida dos DEVs</span>, site
+					<span className='text-verde'>Corrida dos DEVs</span>, site
 					que pretende avaliar objetivamente estudantes de
 					programação;
 				</h1>
@@ -16,9 +17,7 @@ export default function LandingPageSubContent() {
 				</p>
 			</div>
 			<Link to='/ranking'>
-				<button type='button' className='sub-content-button'>
-					Confira o Ranking
-				</button>
+				<Button buttonType={'verde'}>Confira o Ranking</Button>
 			</Link>
 		</div>
 	)

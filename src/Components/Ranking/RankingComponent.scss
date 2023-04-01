@@ -2,7 +2,8 @@
 	display: flex;
 	margin: 5rem;
 	justify-content: space-evenly;
-	flex-wrap: wrap;
+	flex-direction: column;
+	height: fit-content;
 
 	.ranking-input-container {
 		display: inline-flex;
@@ -30,6 +31,30 @@
 			box-shadow: 1px 1px 10px black;
 			font-weight: 900;
 			font-size: 1.2rem;
+		}
+	}
+}
+
+@media screen and (min-width: 480px) {
+	.ranking-component-container {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		height: fit-content;
+
+		.ranking-input-container {
+			flex-wrap: wrap;
+
+			.ranking-heading {
+				font-size: 2rem;
+				line-height: 2.5rem;
+				font-weight: 900;
+				color: white;
+			}
+
+			.ranking-input-box {
+				width: 100%;
+			}
 		}
 	}
 }

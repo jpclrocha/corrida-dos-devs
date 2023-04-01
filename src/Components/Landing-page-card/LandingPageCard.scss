@@ -3,9 +3,9 @@ $branco: #ffffff;
 $preto: #000000;
 
 .main-content-card-container {
-	height: 15rem;
+	height: fit-content;
 	width: 30vw;
-	padding: 2vw;
+	padding: 30px;
 	background-color: $branco;
 	border-radius: 0.75rem;
 
@@ -13,61 +13,28 @@ $preto: #000000;
 		text-align: left;
 		font-size: 1.5rem;
 		line-height: 1.75rem;
-		margin-bottom: 0.5rem;
 		font-weight: 700;
 	}
 
 	.landing-page-text {
 		font-size: 0.875rem;
 		line-height: 1.25rem;
-		margin-bottom: 1.5rem;
+		margin-bottom: 10px;
 	}
 
 	.card-text-verde {
 		color: $verde;
 	}
+}
 
-	.card-btn {
-		font-size: 1.125rem;
-		line-height: 1.75rem;
-		border-width: 0px;
-		border-radius: 0.375rem;
-		color: $branco;
-		background-color: $verde;
-		text-align: center;
-		width: 15vw;
-		height: 5vh;
-		cursor: pointer;
-		transition-duration: 300ms;
+@media screen and (max-width: 1250px) {
+	.main-content-card-container {
+		width: 40vw;
 	}
+}
 
-	.card-btn:hover {
-		background-color: $branco;
-		color: $preto;
-		font-size: 1.25rem;
-		line-height: 1.75rem;
-		border: 1px solid $verde;
-	}
-
-	.card-btn-vazado {
-		font-size: 1.125rem;
-		line-height: 1.75rem;
-		border: 1px solid $verde;
-		border-radius: 0.375rem;
-		color: $preto;
-		background-color: $branco;
-		text-align: center;
-		width: 15vw;
-		height: 5vh;
-		cursor: pointer;
-		transition-duration: 300ms;
-	}
-
-	.card-btn-vazado:hover {
-		background-color: $verde;
-		color: $branco;
-		border: 0px;
-		font-size: 1.25rem;
-		line-height: 1.75rem;
+@media screen and (max-width: 1024px) {
+	.main-content-card-container {
+		width: 70vw;
 	}
 }

@@ -1,18 +1,23 @@
+$verde: #1c7a1f;
+$branco: #ffffff;
+$preto: #000000;
+$vermelho: #ff1a1a;
+
 .ranking-modal {
-	background-color: white;
+	background-color: $branco;
 	display: inline-flex;
 	width: 80vw;
 	height: fit-content;
 	border-radius: 9999px;
 	margin-bottom: 1.5rem;
 	justify-content: space-between;
-	box-shadow: 1px 1px 10px black;
+	box-shadow: 1px 1px 10px $preto;
 
 	.student-ranking {
 		display: inline-flex;
 
 		.ranking-modal-image-container {
-			background-color: red;
+			background-color: $vermelho;
 			width: 8rem;
 			height: 8rem;
 			border-radius: 9999px;
@@ -27,19 +32,17 @@
 
 		.student-ranking-info {
 			margin: 2rem;
+			color: $verde;
 
 			h1 {
+				font-weight: 900;
 				font-size: 2rem;
 				line-height: 2.5rem;
-				font-weight: 900;
-				color: #1c7a1f;
 			}
 
 			h2 {
 				font-size: 1.75rem;
 				line-height: 1.25rem;
-				font-weight: 900;
-				color: #1c7a1f;
 			}
 		}
 	}
@@ -49,17 +52,30 @@
 		text-align: center;
 		margin-right: 2rem;
 		height: fit-content;
+		color: $verde;
+		font-weight: 900;
 
 		h1 {
 			font-size: 3rem;
 			font-weight: 900;
-			color: #1c7a1f;
 		}
 
 		h2 {
 			font-size: 2rem;
 			font-weight: 900;
-			color: #1c7a1f;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.ranking-modal {
+		background-color: red;
+		width: 80vw;
+
+		.student-ranking {
+			.ranking-modal-image-container {
+				display: none;
+			}
 		}
 	}
 }

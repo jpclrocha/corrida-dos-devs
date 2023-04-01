@@ -3,30 +3,40 @@ import LandingPage from '../Pages/LandingPage.jsx'
 import Ranking from '../Pages/Ranking'
 
 import './App.scss'
+import Navbar from '../Components/Navbar/Navbar.jsx'
 
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <LandingPage />,
+		element: <Navbar />,
 		errorElement: <></>,
 		children: [
 			{
-				path: '/ranking',
+				index: true,
+				element: <LandingPage />,
+				errorElement: <></>,
+			},
+			{
+				path: 'ranking',
 				element: <Ranking />,
 				errorElement: <></>,
 			},
 			{
-				path: '/cadastro',
+				path: 'cadastro',
 			},
 			{
-				path: '/login',
+				path: 'login',
 			},
 		],
 	},
 ])
 
 function App() {
-	return <RouterProvider router={router} />
+	return (
+		<div>
+			<RouterProvider router={router} />
+		</div>
+	)
 }
 
 export default App

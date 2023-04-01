@@ -3,13 +3,10 @@ import { Link } from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
 
 import './Navbar.scss'
+import Button from '../Button/Button'
 
 export default function Navbar() {
-	const [openMenu, setOpenMenu] = useState(false)
-
-	const toggleMenu = () => {
-		setOpenMenu(!openMenu)
-	}
+	const [isNavExpanded, setIsNavExpanded] = useState(false)
 
 	return (
 		<>
@@ -24,7 +21,31 @@ export default function Navbar() {
 						/>
 					</Link>
 				</div>
-				<ul className='navbar-list'>
+
+				<Button
+					className={isNavExpanded ? 'hamburger rotate' : 'hamburger'}
+					onClick={() => setIsNavExpanded(!isNavExpanded)}
+				>
+					<svg
+						xmlns='http://www.w3.org/2000/svg'
+						fill='none'
+						viewBox='0 0 24 24'
+						strokeWidth='1.5'
+						stroke='currentColor'
+					>
+						<path
+							strokeLinecap='round'
+							strokeLinejoin='round'
+							d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
+						/>
+					</svg>
+				</Button>
+
+				<ul
+					className={
+						isNavExpanded ? 'navbar-list expanded' : 'navbar-list'
+					}
+				>
 					<div className='navbar-list-item'>
 						<li>
 							<Link

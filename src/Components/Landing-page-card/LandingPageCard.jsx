@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Button from '../Button/Button'
 import './LandingPageCard.scss'
 
 export default function LandingPageCard(props) {
@@ -14,31 +15,15 @@ export default function LandingPageCard(props) {
 		)
 	}
 
-	const btnVazado = () => {
-		if (props.botao === 'vazado') {
-			return (
-				<Link to={`${props.rota}`}>
-					<button type='button' className='card-btn-vazado'>
-						{props.btnTxt}
-					</button>
-				</Link>
-			)
-		} else {
-			return (
-				<Link to={`${props.rota}`}>
-					<button type='button' className='card-btn'>
-						{props.btnTxt}
-					</button>
-				</Link>
-			)
-		}
-	}
-
 	return (
 		<div className='main-content-card-container'>
-			{texto()}
-			<p className='landing-page-text'>{props.textoPqn}</p>
-			{btnVazado()}
+			<div className='teste'>
+				{texto()}
+				<p className='landing-page-text'>{props.textoPqn}</p>
+				<Link to={`${props.rota}`}>
+					<Button buttonType={props.botao}>{props.btnTxt}</Button>
+				</Link>
+			</div>
 		</div>
 	)
 }
