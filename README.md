@@ -7,23 +7,13 @@
 # Color Palette:
 
 -   $verde: #1c7a1f;
-
 -   $branco: #ffffff;
-
--   $cinza: #606D75;
-
 -   $preto: #000000;
-
--   $branco: #FFFFFF;
-
+-   $cinza: #606D75;
 -   $rodape: rgba(0,0,0,0.5);
-
 -   $vermelho: #FF1A1A;
-
 -   $verdeDesbotado: #507061;
-
 -   $cinzaLg: "#94A2AB";
-
 -   $cinzaAdm: rgba(255;255;255;0.23);
 
 # Breakpoints:

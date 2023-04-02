@@ -1,0 +1,116 @@
+$verde: #1c7a1f;
+$branco: #ffffff;
+$preto: #000000;
+
+.desafio-container {
+	display: flex;
+	flex-wrap: wrap;
+	width: 70vw;
+	height: 50vh;
+	padding: 2.5rem;
+	border-radius: 75px;
+	justify-content: space-evenly;
+	background-color: $branco;
+
+	.imagem-container {
+		display: flex;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		background-color: $verde;
+
+		.desafio-imagem {
+			margin: 0 auto;
+			width: 100px;
+		}
+	}
+
+	.desafio-info-container {
+		display: flex;
+		flex-wrap: wrap;
+		width: 75%;
+		height: 66%;
+		justify-content: space-evenly;
+
+		.titulo {
+			width: 45%;
+			height: fit-content;
+			padding-top: 2.5rem;
+			color: $verde;
+
+			h1 {
+				font-size: 2.25rem;
+				line-height: 2.5rem;
+				font-weight: 800;
+				margin-bottom: 0.5rem;
+			}
+
+			p {
+				font-size: 1.25rem;
+				line-height: 1.75rem;
+			}
+		}
+
+		.requisitos-container {
+			width: 45%;
+			height: fit-content;
+			padding: 2.5rem;
+
+			.requisitos {
+				font-size: 1.25rem;
+				line-height: 1.75rem;
+				font-weight: 600;
+				color: $branco;
+				background-color: $verde;
+			}
+
+			.requisitos-btn {
+				width: 100%;
+				height: 3rem;
+				border-radius: 0.75rem;
+				color: $branco;
+				background-color: $preto;
+			}
+		}
+
+		.secondary-info-container {
+			display: flex;
+			flex-wrap: wrap;
+			width: 96%;
+			height: fit-content;
+			justify-content: space-between;
+
+			.response-container {
+				width: 50%;
+
+				.response-title {
+					font-size: 1.25rem;
+					line-height: 1.75rem;
+					font-weight: 800;
+					color: $verde;
+				}
+
+				.input-response {
+					width: 70%;
+					height: 60px;
+					border: 1px solid black;
+					border-radius: 1rem;
+					color: $verde;
+					padding: 1.25rem;
+				}
+			}
+
+			.pontuacao {
+				width: 39%;
+				padding-left: 2.5rem;
+
+				h1 {
+					color: $verde;
+					font-weight: 800;
+					font-size: 1.5rem;
+					line-height: 2rem;
+				}
+			}
+		}
+	}
+}

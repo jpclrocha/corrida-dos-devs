@@ -2,8 +2,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import LandingPage from '../Pages/LandingPage.jsx'
 import Ranking from '../Pages/Ranking'
 
-import './App.scss'
 import Navbar from '../Components/Navbar/Navbar.jsx'
+import Challenge from '../Pages/Challenge.jsx'
+import './App.scss'
 
 const router = createBrowserRouter([
 	{
@@ -22,7 +23,9 @@ const router = createBrowserRouter([
 				errorElement: <></>,
 			},
 			{
-				path: 'cadastro',
+				path: 'desafio',
+				element: <Challenge />,
+				errorElement: <></>,
 			},
 			{
 				path: 'login',
