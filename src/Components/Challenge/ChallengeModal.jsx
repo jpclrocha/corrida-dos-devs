@@ -59,6 +59,7 @@ export default function ChallengeModal({
 						name='submitBtn'
 						value='desafio'
 						buttonType={'verde'}
+						id='submitBtn'
 					>
 						Enviar
 					</Button>

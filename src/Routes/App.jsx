@@ -4,7 +4,6 @@ import Ranking from '../Pages/Ranking'
 
 import Navbar from '../Components/Navbar/Navbar.jsx'
 import Challenge from '../Pages/Challenge.jsx'
-import './App.scss'
 
 const router = createBrowserRouter([
 	{
