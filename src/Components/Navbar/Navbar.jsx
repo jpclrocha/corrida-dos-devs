@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 
-import './Navbar.scss'
 import Button from '../Button/Button'
+import './Navbar.scss'
 
 export default function Navbar() {
 	const [isNavExpanded, setIsNavExpanded] = useState(false)
