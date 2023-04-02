@@ -18,35 +18,35 @@ export default function ChallengeModal({
 
 	return (
 		<div className='desafio-container'>
-			<div className='imagem-container'>
-				<img
-					src={imagem}
-					alt='desafio-imagem'
-					className='desafio-imagem'
-				/>
-			</div>
-
-			<div className='desafio-info-container'>
-				<div className='titulo'>
-					<h1>{nome}</h1>
-					<p>{descricao}</p>
+			<div className='img-and-info'>
+				<div className='imagem-container'>
+					<img
+						src={imagem}
+						alt='desafio-imagem'
+						className='desafio-imagem'
+					/>
 				</div>
-
-				<div className='requisitos-container'>
-					<div className='requisitos'>
-						<h1>Requisitos</h1>
-						{gera}
+				<div className='desafio-info-container'>
+					<div className='titulo'>
+						<h1>{nome}</h1>
+						<p>{descricao}</p>
 					</div>
-					<Button className='requisitos-btn'>
-						Clique para ver referência
-					</Button>
+					<div className='requisitos-container'>
+						<div className='requisitos'>
+							<h1>Requisitos</h1>
+							{gera}
+						</div>
+						<Button className='requisitos-btn'>
+							Clique para ver referência
+						</Button>
+					</div>
 				</div>
 			</div>
 
 			<div className='secondary-info-container'>
 				<div className='response-container'>
 					<h1 className='response-title'>
-						Adicione o link para que possamos corrigir
+						Adicione o link para correção
 					</h1>
 					<input
 						type='text'
@@ -67,8 +67,7 @@ export default function ChallengeModal({
 
 				<div className='pontuacao'>
 					<h1>Valendo:</h1>
-					<h1>{pontos},0</h1>
-					<h1>Pontos</h1>
+					<h1>{pontos} Pontos</h1>
 				</div>
 			</div>
 		</div>

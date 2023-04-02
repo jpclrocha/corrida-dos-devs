@@ -41,3 +41,15 @@ $preto: #000000;
 		width: 50vw;
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.main-content-card-container {
+		width: 90vw;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.main-content-card-container {
+		width: 80vw;
+	}
+}

@@ -4,6 +4,7 @@ import Ranking from '../Pages/Ranking'
 
 import Navbar from '../Components/Navbar/Navbar.jsx'
 import Challenge from '../Pages/Challenge.jsx'
+import StudyMaterial from '../Pages/StudyMaterial.jsx'
 
 const router = createBrowserRouter([
 	{
@@ -27,7 +28,9 @@ const router = createBrowserRouter([
 				errorElement: <></>,
 			},
 			{
-				path: 'login',
+				path: 'materials',
+				element: <StudyMaterial />,
+				errorElement: <></>,
 			},
 		],
 	},

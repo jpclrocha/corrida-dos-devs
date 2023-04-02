@@ -1,6 +1,6 @@
-import LandingPageMainContent from '../Components/Landing-page-main-content/LandingPageMainContent'
-import LandingPageSubContent from '../Components/Landing-page-sub-content/LandingPageSubContent'
-import LandingPageFooter from '../Components/Landing-page-footer/LandingPageFooter'
+import LandingPageFooter from '../Components/LandingPageFooter/LandingPageFooter'
+import LandingPageMainContent from '../Components/LandingPageMainContent/LandingPageMainContent'
+import LandingPageSubContent from '../Components/LandingPageSubContent/LandingPageSubContent'
 
 export default function LandingPage() {
 	return (

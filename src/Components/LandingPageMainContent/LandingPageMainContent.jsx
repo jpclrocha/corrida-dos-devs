@@ -1,4 +1,4 @@
-import LandingPageCard from '../Landing-page-card/LandingPageCard'
+import LandingPageCard from '../LandingPageCard/LandingPageCard'
 import './LandingPageMainContent.scss'
 export default function LandingPageMainContent() {
 	return (
@@ -11,7 +11,7 @@ export default function LandingPageMainContent() {
 				textoPqn='Cada desafio contém uma pontuação para te ajudar a alcançar uma nova posição'
 				botao='verde'
 				btnTxt='Desafios'
-				rota='/desafio'
+				rota='desafio'
 			/>
 
 			<LandingPageCard
@@ -21,7 +21,7 @@ export default function LandingPageMainContent() {
 				textoPqn='Escolha entre nossos materiais online com novas adições publicadas mensalmente'
 				botao='vazado'
 				btnTxt='Materiais'
-				rota='/playlist'
+				rota='materials'
 			/>
 		</div>
 	)

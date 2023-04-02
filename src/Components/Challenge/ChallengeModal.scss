@@ -6,84 +6,98 @@ $preto: #000000;
 	display: flex;
 	flex-wrap: wrap;
 	width: 70vw;
-	height: 50vh;
 	padding: 2.5rem;
 	border-radius: 75px;
-	justify-content: space-evenly;
 	background-color: $branco;
 
-	.imagem-container {
+	.img-and-info {
 		display: flex;
-		width: 200px;
-		height: 200px;
-		border-radius: 50%;
-		background-color: $verde;
+		width: fit-content;
+		height: fit-content;
+		justify-content: space-between;
+		.imagem-container {
+			display: flex;
+			width: 256px;
+			height: 256px;
+			border-radius: 50%;
+			background-color: $verde;
 
-		.desafio-imagem {
-			margin: 0 auto;
-			width: 100px;
+			.desafio-imagem {
+				margin: 0 auto;
+				width: 128px;
+			}
+		}
+
+		.desafio-info-container {
+			display: flex;
+			flex-wrap: wrap;
+			width: 95%;
+			height: 66%;
+			justify-content: space-evenly;
+
+			.titulo {
+				width: 45%;
+				height: fit-content;
+				padding-top: 2.5rem;
+				color: $verde;
+
+				h1 {
+					font-size: 2.25rem;
+					line-height: 2.5rem;
+					font-weight: 800;
+					margin-bottom: 0.5rem;
+				}
+
+				p {
+					font-size: 1.25rem;
+					line-height: 1.75rem;
+				}
+			}
+
+			.requisitos-container {
+				width: 45%;
+				height: fit-content;
+				padding: 2.5rem;
+
+				.requisitos {
+					font-size: 1.25rem;
+					line-height: 1.75rem;
+					font-weight: 600;
+					color: $branco;
+					background-color: $verde;
+					padding: 1rem;
+					border-radius: 24px;
+					margin-bottom: 1vh;
+				}
+
+				.requisitos-btn {
+					width: 100%;
+					height: 3rem;
+					border-radius: 0.75rem;
+					color: $branco;
+					background-color: $preto;
+					border: 0px;
+					cursor: pointer;
+				}
+
+				.requisitos-btn:hover {
+					background-color: $branco;
+					color: $preto;
+					border: 1px solid $preto;
+				}
+			}
 		}
 	}
 
-	.desafio-info-container {
-		display: flex;
-		flex-wrap: wrap;
-		width: 75%;
-		height: 66%;
-		justify-content: space-evenly;
-
-		.titulo {
-			width: 45%;
-			height: fit-content;
-			padding-top: 2.5rem;
-			color: $verde;
-
-			h1 {
-				font-size: 2.25rem;
-				line-height: 2.5rem;
-				font-weight: 800;
-				margin-bottom: 0.5rem;
-			}
-
-			p {
-				font-size: 1.25rem;
-				line-height: 1.75rem;
-			}
-		}
-
-		.requisitos-container {
-			width: 45%;
-			height: fit-content;
-			padding: 2.5rem;
-
-			.requisitos {
-				font-size: 1.25rem;
-				line-height: 1.75rem;
-				font-weight: 600;
-				color: $branco;
-				background-color: $verde;
-			}
-
-			.requisitos-btn {
-				width: 100%;
-				height: 3rem;
-				border-radius: 0.75rem;
-				color: $branco;
-				background-color: $preto;
-			}
-		}
-	}
 	.secondary-info-container {
 		display: flex;
 		flex-wrap: wrap;
 		width: 96%;
 		height: fit-content;
-		justify-content: space-between;
-		background-color: blue;
+		align-items: center;
 
 		.response-container {
-			width: 50%;
-
+			width: 60%;
 			.response-title {
 				font-size: 1.25rem;
 				line-height: 1.75rem;
@@ -94,26 +108,88 @@ $preto: #000000;
 			.input-response {
 				width: 70%;
 				height: 60px;
+
 				border: 1px solid black;
 				border-radius: 1rem;
 				color: $verde;
 				padding: 1.25rem;
+				margin-right: 0.5vw;
 			}
 
 			#submitBtn {
 				width: 20%;
+				height: 60px;
+				border-radius: 1rem;
 			}
 		}
 
 		.pontuacao {
-			width: 39%;
+			width: 29%;
 			padding-left: 2.5rem;
+			margin: 0 auto;
 
 			h1 {
 				color: $verde;
 				font-weight: 800;
 				font-size: 1.5rem;
 				line-height: 2rem;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.desafio-container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: fit-content;
+		padding: 1rem;
+		border-radius: 24px;
+
+		.img-and-info {
+			.imagem-container {
+				display: none;
+
+				.desafio-imagem {
+					display: none;
+				}
+			}
+
+			.desafio-info-container {
+				display: flex;
+				width: 100%;
+				padding: 10px;
+
+				.titulo,
+				.requisitos-container {
+					width: 100%;
+					padding: 0px;
+				}
+			}
+		}
+
+		.secondary-info-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			flex-direction: column-reverse;
+
+			.response-container {
+				width: 100%;
+
+				#submitBtn {
+					width: 29%;
+				}
+			}
+
+			.pontuacao {
+				display: inline-flex;
+				width: 100%;
+				margin: 0px;
+				padding: 0px;
+				justify-content: center;
+				margin-bottom: 1vh;
 			}
 		}
 	}
