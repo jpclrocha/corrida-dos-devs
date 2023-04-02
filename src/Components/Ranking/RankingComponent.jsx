@@ -12,7 +12,6 @@ export default function RankingComponent() {
 		)
 	}, [])
 
-	const teste = [{ id: 0, name: 'joao', turma: null, pontuacao: 0 }]
 	return (
 		<div className='ranking-component-container'>
 			<div className='ranking-input-container'>
@@ -20,7 +19,7 @@ export default function RankingComponent() {
 				<input className='ranking-input-box' placeholder='Buscar' />
 			</div>
 
-			{teste.map((item) => {
+			{students.map((item) => {
 				return <RankingModal student={item} key={item.id} />
 			})}
 		</div>

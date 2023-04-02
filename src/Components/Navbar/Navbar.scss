@@ -8,25 +8,38 @@ $preto: #000000;
 	height: 6rem;
 	padding-top: 1.25rem;
 	padding-bottom: 1.25rem;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	background-color: $branco;
 
-	.navbar-logo-link {
+	.teste {
 		display: inline-flex;
-		font-size: 2.25rem;
-		line-height: 2.5rem;
-		font-weight: 700;
-		height: fit-content;
-		margin-left: 5%;
+		justify-content: space-around;
 
-		.link-router {
+		.navbar-logo-link {
+			display: inline-flex;
+			font-size: 2.25rem;
+			line-height: 2.5rem;
+			font-weight: 700;
+			height: fit-content;
 			text-decoration: none;
 			color: $preto;
+			align-items: center;
 
 			.navbar-logo {
 				padding-left: 0.5rem;
 			}
+		}
+
+		.hamburger {
+			border: 0;
+			height: 40px;
+			width: 40px;
+			padding: 0.5rem;
+			border-radius: 50%;
+			background-color: $verde;
+			display: none;
+			cursor: pointer;
 		}
 	}
 
@@ -76,23 +89,12 @@ $preto: #000000;
 	}
 }
 
-.hamburger {
-	border: 0;
-	height: 40px;
-	width: 40px;
-	padding: 0.5rem;
-	border-radius: 50%;
-	background-color: $verde;
-	display: none;
-	cursor: pointer;
-	margin-right: 5vw;
-	transition: background-color 0.3s ease-in-out;
-}
-
 @media screen and (max-width: 1024px) {
 	.navbar-container {
+		justify-content: space-between;
 		.navbar-logo-link {
 			font-size: 1.75rem;
+			margin-left: 2rem;
 
 			.navbar-logo {
 				height: 1.5rem;
@@ -109,33 +111,40 @@ $preto: #000000;
 }
 
 @media screen and (max-width: 768px) {
-	.hamburger {
-		display: block;
-	}
-
 	.navbar-container {
+		flex-wrap: wrap;
+		height: 10vh;
+		margin-bottom: 10vh;
+
+		.teste {
+			width: 100%;
+			height: 100%;
+			align-items: center;
+
+			.hamburger {
+				display: block;
+				width: 40px;
+				height: 40px;
+			}
+		}
+
 		.navbar-list {
 			display: none;
-			align-items: center;
-			position: absolute;
-			top: 90px;
-			left: 0;
-			flex-direction: column;
-			width: 100%;
-			height: 20vh;
-			background-color: $verde;
-			transition-duration: 300ms;
 
 			.navbar-list-item {
-				margin: 2vh;
+				.navbar-list-item-link {
+					color: $branco;
+					display: block;
+				}
+
+				.navbar-list-item-link:hover {
+					background-color: $verde;
+					color: $preto;
+					transition-duration: 200ms;
+				}
 			}
 
 			.navbar-last-item {
-				.navbar-list-item-link {
-					background-color: $verde;
-					color: $branco;
-				}
-
 				:hover {
 					background-color: $verde;
 					color: $preto;
@@ -143,8 +152,15 @@ $preto: #000000;
 				}
 			}
 		}
+
 		.navbar-list.expanded {
 			display: flex;
+			align-items: center;
+			flex-direction: column;
+			height: 20vh;
+			width: 100%;
+			margin: 0;
+			background-color: $verde;
 		}
 	}
 }

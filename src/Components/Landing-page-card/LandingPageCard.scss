@@ -8,18 +8,21 @@ $preto: #000000;
 	padding: 30px;
 	background-color: $branco;
 	border-radius: 0.75rem;
+	margin-bottom: 5vh;
 
 	.landing-page-card-title {
-		text-align: left;
+		text-align: justify;
 		font-size: 1.5rem;
 		line-height: 1.75rem;
 		font-weight: 700;
+		margin-bottom: 1vw;
 	}
 
 	.landing-page-text {
+		text-align: justify;
 		font-size: 0.875rem;
 		line-height: 1.25rem;
-		margin-bottom: 10px;
+		margin-bottom: 1vw;
 	}
 
 	.card-text-verde {
@@ -35,6 +38,6 @@ $preto: #000000;
 
 @media screen and (max-width: 1024px) {
 	.main-content-card-container {
-		width: 70vw;
+		width: 50vw;
 	}
 }

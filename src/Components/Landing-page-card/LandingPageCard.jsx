@@ -17,13 +17,11 @@ export default function LandingPageCard(props) {
 
 	return (
 		<div className='main-content-card-container'>
-			<div className='teste'>
-				{texto()}
-				<p className='landing-page-text'>{props.textoPqn}</p>
-				<Link to={`${props.rota}`}>
-					<Button buttonType={props.botao}>{props.btnTxt}</Button>
-				</Link>
-			</div>
+			{texto()}
+			<p className='landing-page-text'>{props.textoPqn}</p>
+			<Link to={`${props.rota}`}>
+				<Button buttonType={props.botao}>{props.btnTxt}</Button>
+			</Link>
 		</div>
 	)
 }

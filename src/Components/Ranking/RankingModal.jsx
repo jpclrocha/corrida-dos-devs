@@ -12,8 +12,13 @@ export default function RankingModal({ student }) {
 				</div>
 
 				<div className='student-ranking-info'>
-					<h1>Nome: {student.name}</h1>
-					<h2>Turma: {student.turma}</h2>
+					<h1>
+						{student.name.charAt(0).toUpperCase() +
+							student.name.slice(1)}
+					</h1>
+					<h2>
+						{student.turma ? student.turma : 'Estudante sem turma'}
+					</h2>
 				</div>
 			</div>
 

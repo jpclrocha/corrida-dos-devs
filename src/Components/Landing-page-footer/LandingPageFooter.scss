@@ -4,10 +4,10 @@ $rodape: rgba(0, 0, 0, 0.5);
 .landing-page-footer-container {
 	background-color: $branco;
 	width: 100%;
-	height: 8rem;
+	height: fit-content;
 	margin-top: 4rem;
-	padding: 0.5rem;
 	padding-top: 1rem;
+	padding-bottom: 1rem;
 
 	.landing-page-footer-list {
 		list-style: none;
@@ -25,9 +25,10 @@ $rodape: rgba(0, 0, 0, 0.5);
 	}
 
 	.landing-page-footer-line {
+		margin: 0 auto;
+
 		height: 1px;
+		width: 95%;
 		background-color: $rodape;
-		margin-left: 3vw;
-		margin-right: 3vw;
 	}
 }

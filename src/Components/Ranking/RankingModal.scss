@@ -20,8 +20,9 @@ $vermelho: #ff1a1a;
 			background-color: $vermelho;
 			width: 8rem;
 			height: 8rem;
-			border-radius: 9999px;
+			border-radius: 50%;
 			display: flex;
+			margin-right: 2vw;
 
 			.ranking-modal-image {
 				margin: auto;
@@ -31,8 +32,12 @@ $vermelho: #ff1a1a;
 		}
 
 		.student-ranking-info {
-			margin: 2rem;
+			display: flex;
+			flex-direction: column;
+			width: 40vw;
+			height: 100%;
 			color: $verde;
+			justify-content: space-evenly;
 
 			h1 {
 				font-weight: 900;
@@ -67,14 +72,61 @@ $vermelho: #ff1a1a;
 	}
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
 	.ranking-modal {
-		background-color: red;
-		width: 80vw;
+		border-radius: 14px;
 
 		.student-ranking {
 			.ranking-modal-image-container {
+				width: 7rem;
+				height: 7rem;
+				border-radius: 14px;
+
+				.ranking-modal-image {
+					width: 6rem;
+					height: 6rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.ranking-modal {
+		padding: 20px;
+		.student-ranking {
+			.ranking-modal-image-container {
 				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.ranking-modal {
+		height: 15vh;
+		border-radius: 14px;
+
+		.student-ranking {
+			.student-ranking-info {
+				h1 {
+					font-weight: 800;
+				}
+
+				h2 {
+					font-size: 1.5rem;
+				}
+			}
+
+			.ranking-modal-image-container {
+				display: none;
+			}
+		}
+
+		.student-ranking-pontuacao {
+			h1 {
+				font-weight: 800;
+				font-size: 3rem;
 			}
 		}
 	}

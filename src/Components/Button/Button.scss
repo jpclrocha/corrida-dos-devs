@@ -12,6 +12,7 @@ $preto: #000000;
 	height: 5vh;
 	cursor: pointer;
 	transition-duration: 300ms;
+	padding: 0px 16px 0px 16px;
 }
 
 .bg-verde {
@@ -21,8 +22,6 @@ $preto: #000000;
 	.bg-verde:hover {
 		background-color: $branco;
 		color: $preto;
-		font-size: 1.25rem;
-		line-height: 1.75rem;
 		border: 1px solid $verde;
 	}
 }
@@ -36,8 +35,6 @@ $preto: #000000;
 		background-color: $verde;
 		color: $branco;
 		border: 0px;
-		font-size: 1.25rem;
-		line-height: 1.75rem;
 	}
 }
 
@@ -50,8 +47,7 @@ $preto: #000000;
 	.bg-verde:hover {
 		background-color: $branco;
 		color: $preto;
-		font-size: 1.25rem;
-		line-height: 1.75rem;
+
 		border: 1px solid $verde;
 	}
 
@@ -65,8 +61,6 @@ $preto: #000000;
 		background-color: $verde;
 		color: $branco;
 		border: 0px;
-		font-size: 1.25rem;
-		line-height: 1.75rem;
 	}
 }
 
@@ -74,8 +68,6 @@ $preto: #000000;
 	.button-container {
 		font-size: 1rem;
 		line-height: 1.5rem;
-		//width: 15vw;
-		height: 5vh;
 	}
 
 	.bg-verde:hover {
@@ -95,7 +87,6 @@ $preto: #000000;
 	.button-container {
 		font-size: 0.9rem;
 		line-height: 0rem;
-		//width: 100%;
 		height: 5vh;
 	}
 
@@ -114,7 +105,6 @@ $preto: #000000;
 
 @media screen and (max-width: 770px) {
 	.button-container {
-		//width: 100%;
 		padding: 1rem;
 	}
 }
