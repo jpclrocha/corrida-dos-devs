@@ -23,7 +23,7 @@ const router = createBrowserRouter([
 				errorElement: <></>,
 			},
 			{
-				path: 'desafio',
+				path: 'challenges',
 				element: <Challenge />,
 				errorElement: <></>,
 			},

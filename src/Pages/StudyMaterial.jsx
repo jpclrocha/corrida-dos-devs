@@ -1,3 +1,5 @@
+import StudyMaterialPlaylist from '../Components/StudyMaterial/StudyMaterialPlaylist'
+
 export default function StudyMaterial() {
-	return <div></div>
+	return <StudyMaterialPlaylist />
 }

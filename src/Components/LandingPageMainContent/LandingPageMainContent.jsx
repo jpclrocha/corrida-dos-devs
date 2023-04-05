@@ -11,7 +11,7 @@ export default function LandingPageMainContent() {
 				textoPqn='Cada desafio contém uma pontuação para te ajudar a alcançar uma nova posição'
 				botao='verde'
 				btnTxt='Desafios'
-				rota='desafio'
+				rota='challenges'
 			/>
 
 			<LandingPageCard

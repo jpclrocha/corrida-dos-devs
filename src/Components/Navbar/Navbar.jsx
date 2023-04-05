@@ -52,13 +52,13 @@ export default function Navbar() {
 					</li>
 
 					<li className='navbar-list-item'>
-						<Link to={'cadastro'} className='navbar-list-item-link'>
+						<Link to={'signup'} className='navbar-list-item-link'>
 							Cadastro
 						</Link>
 					</li>
 
 					<li className='navbar-last-item navbar-list-item'>
-						<Link to={'login'} className='navbar-list-item-link'>
+						<Link to={'signin'} className='navbar-list-item-link'>
 							Login
 						</Link>
 					</li>

@@ -3,9 +3,7 @@ $branco: #ffffff;
 $preto: #000000;
 
 .desafio-container {
-	display: flex;
 	flex-wrap: wrap;
-	width: fit-content;
 	padding: 2.5rem;
 	border-radius: 75px;
 	background-color: $branco;

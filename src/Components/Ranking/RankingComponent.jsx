@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
-import RankingModal from './RankingModal'
 import './RankingComponent.scss'
+import RankingModal from './RankingModal'
 
 export default function RankingComponent() {
 	const [students, setStudents] = useState([])
+	/*
 	useEffect(() => {
 		fetch('https://APiRestAula.j0p3.repl.co/users').then((response) =>
 			response.json().then((studentsList) => {
@@ -11,6 +12,7 @@ export default function RankingComponent() {
 			})
 		)
 	}, [])
+	*/
 
 	return (
 		<div className='ranking-component-container'>
