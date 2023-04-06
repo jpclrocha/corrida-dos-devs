@@ -5,6 +5,7 @@ import LandingPage from '../Pages/LandingPage.jsx'
 import Ranking from '../Pages/Ranking'
 import StudyMaterial from '../Pages/StudyMaterial.jsx'
 import StudyMaterialPlaylist from '../Pages/StudyMaterialPlaylist.jsx'
+import UserAccount from '../Pages/UserAccount.jsx'
 
 const router = createBrowserRouter([
 	{
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
 			{
 				path: 'materials',
 				element: <StudyMaterialPlaylist />,
+				errorElement: <></>,
+			},
+			{
+				path: 'myaccount',
+				element: <UserAccount />,
 				errorElement: <></>,
 			},
 			{

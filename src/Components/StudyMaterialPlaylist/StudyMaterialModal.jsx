@@ -39,7 +39,7 @@ export default function StudyMaterialModal({
 			<div className='list-container'>
 				<h1 className='list-title'>{MaterialIdealFor}</h1>
 				<ul className='list-items-container'>{generateList}</ul>
-				<Link to={`material/${MaterialId}`}>
+				<Link to={'/teste'}>
 					<Button buttonType={'verde'}>Iniciar jornada</Button>
 				</Link>
 			</div>
