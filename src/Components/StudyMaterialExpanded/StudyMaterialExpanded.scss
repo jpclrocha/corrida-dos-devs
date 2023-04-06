@@ -1,0 +1,11 @@
+$verdeDesbotado: #507061;
+$verde: #1c7a1f;
+$branco: #ffffff;
+$preto: #000000;
+
+.expanded-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-content: space-between;
+}

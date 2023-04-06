@@ -1,5 +1,5 @@
-import StudyMaterialPlaylist from '../Components/StudyMaterialPlaylist/StudyMaterialPlaylist'
+import StudyMaterialExpanded from '../Components/StudyMaterialExpanded/StudyMaterialExpanded'
 
 export default function StudyMaterial() {
-	return <StudyMaterialPlaylist />
+	return <StudyMaterialExpanded />
 }

@@ -1,0 +1,31 @@
+$verdeDesbotado: #507061;
+$branco: #ffffff;
+
+.faixa-verde {
+	display: flex;
+	width: 100vw;
+	height: 6rem;
+	align-items: center;
+
+	background-color: $verdeDesbotado;
+	--tw-shadow: 0 25px 50px -12px rgba(0 0 0 / 0.25);
+	--tw-shadow-colored: 0 25px 50px -12px rgba(0 0 0 / 0.25) var(--tw-shadow-color);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+		var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+	.titulo-faixa {
+		font-size: 2.25rem;
+		line-height: 2.5rem;
+		font-weight: 800;
+		color: $branco;
+		margin: 0 auto;
+		margin-left: 8rem;
+		height: fit-content;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.faixa-verde {
+		margin-top: 7rem;
+	}
+}
