@@ -1,0 +1,51 @@
+$verde: #1c7a1f;
+$branco: #ffffff;
+$preto: #000000;
+
+.login-form-container {
+	display: flex;
+	flex-direction: column;
+	width: 30vw;
+	height: fit-content;
+	padding: 2.5rem;
+	border-radius: 8px;
+	background-color: $branco;
+	--tw-shadow: 0 25px 50px -12px rgba(0 0 0 / 0.25);
+	--tw-shadow-colored: 0 25px 50px -12px rgba(0 0 0 / 0.25) var(--tw-shadow-color);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+		var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+	.forgot-password {
+		cursor: pointer;
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+	}
+
+	.text-center {
+		text-align: center;
+		margin-top: 1rem;
+
+		.sign-up {
+			color: $verde;
+			font-weight: 700;
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.login-form-container {
+		width: 40vw;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.login-form-container {
+		width: 60vw;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.login-form-container {
+		width: 80vw;
+	}
+}

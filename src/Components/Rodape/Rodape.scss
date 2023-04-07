@@ -1,0 +1,12 @@
+$branco: #ffffff;
+$cinza: #606d75;
+
+.rodape-lg {
+	display: flex;
+	width: 100vw;
+	height: 10vh;
+	justify-content: center;
+	align-items: center;
+	background-color: $branco;
+	color: $cinza;
+}

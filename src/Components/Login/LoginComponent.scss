@@ -1,0 +1,81 @@
+$cinzaLg: #94a2ab;
+$branco: #ffffff;
+
+.login-container {
+	display: flex;
+	width: 100vw;
+	height: 90vh;
+	justify-content: center;
+	align-items: center;
+	background-color: $cinzaLg;
+
+	.login-logo {
+		width: 50vw;
+		height: 50vh;
+
+		.login-link {
+			display: inline-flex;
+			height: fit-content;
+			color: $branco;
+			font-size: 2.25rem;
+			line-height: 2.5rem;
+			font-weight: 700;
+			margin-bottom: 1.25rem;
+			text-decoration: none;
+
+			.login-img {
+				margin-left: 0.5rem;
+			}
+		}
+
+		.login-title {
+			font-size: 5rem;
+			line-height: 1;
+			font-weight: 600;
+			color: $branco;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.login-container {
+		flex-direction: column;
+
+		.login-logo {
+			width: 60vw;
+			height: 30vh;
+
+			.login-link {
+				font-size: 2rem;
+			}
+
+			.login-title {
+				font-size: 2.5rem;
+				line-height: 1;
+				font-weight: 600;
+				color: $branco;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.login-container {
+		justify-content: start;
+		padding-top: 5rem;
+		.login-logo {
+			height: 20vh;
+
+			.login-link {
+				font-size: 1.5rem;
+			}
+
+			.login-title {
+				font-size: 1.5rem;
+				line-height: 1;
+				font-weight: 600;
+				color: $branco;
+			}
+		}
+	}
+}

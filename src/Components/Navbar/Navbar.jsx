@@ -58,7 +58,7 @@ export default function Navbar() {
 					</li>
 
 					<li className='navbar-last-item navbar-list-item'>
-						<Link to={'signin'} className='navbar-list-item-link'>
+						<Link to='login' className='navbar-list-item-link'>
 							Login
 						</Link>
 					</li>

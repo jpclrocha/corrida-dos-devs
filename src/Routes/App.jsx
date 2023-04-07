@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Navbar from '../Components/Navbar/Navbar.jsx'
 import Challenge from '../Pages/Challenge.jsx'
 import LandingPage from '../Pages/LandingPage.jsx'
+import Login from '../Pages/Login.jsx'
 import Ranking from '../Pages/Ranking'
 import StudyMaterial from '../Pages/StudyMaterial.jsx'
 import StudyMaterialPlaylist from '../Pages/StudyMaterialPlaylist.jsx'
@@ -34,16 +35,21 @@ const router = createBrowserRouter([
 				errorElement: <></>,
 			},
 			{
-				path: 'myaccount',
-				element: <UserAccount />,
-				errorElement: <></>,
-			},
-			{
 				path: 'teste',
 				element: <StudyMaterial />,
 				errorElement: <></>,
 			},
+			{
+				path: 'myaccount',
+				element: <UserAccount />,
+				errorElement: <></>,
+			},
 		],
+	},
+	{
+		path: 'login',
+		element: <Login />,
+		errorElement: <></>,
 	},
 ])
 
