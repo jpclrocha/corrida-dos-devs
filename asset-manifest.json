@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/corrida-dos-devs-flask/static/css/main.fab27423.css",
+    "main.js": "/corrida-dos-devs-flask/static/js/main.e613bde6.js",
+    "index.html": "/corrida-dos-devs-flask/index.html",
+    "main.fab27423.css.map": "/corrida-dos-devs-flask/static/css/main.fab27423.css.map",
+    "main.e613bde6.js.map": "/corrida-dos-devs-flask/static/js/main.e613bde6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fab27423.css",
+    "static/js/main.e613bde6.js"
+  ]
+}
