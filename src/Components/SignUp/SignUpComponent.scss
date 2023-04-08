@@ -1,0 +1,94 @@
+$cinzaLg: #94a2ab;
+$verde: #1c7a1f;
+$branco: #ffffff;
+
+.sign-up-container {
+	display: flex;
+	width: 100vw;
+	height: 90vh;
+	justify-content: center;
+	align-items: center;
+	background-color: $cinzaLg;
+
+	.signup-logo {
+		width: 50vw;
+		height: 50vh;
+		margin-left: 5vw;
+
+		.signup-link {
+			display: inline-flex;
+			height: fit-content;
+			color: $branco;
+			font-size: 2.25rem;
+			line-height: 2.5rem;
+			font-weight: 700;
+			margin-bottom: 1.25rem;
+			text-decoration: none;
+
+			.signup-img {
+				margin-left: 0.5rem;
+			}
+		}
+
+		.signup-title {
+			font-size: 3rem;
+			line-height: 1;
+			font-weight: 600;
+			color: $branco;
+		}
+
+		.signup-text {
+			margin-top: 1.25rem;
+			font-size: 1.25rem;
+			line-height: 1.75rem;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.sign-up-container {
+		flex-direction: column-reverse;
+
+		.signup-logo {
+			width: 60vw;
+			height: 20vh;
+
+			.signup-link {
+				font-size: 1.75rem;
+			}
+
+			.signup-title {
+				font-size: 1.75rem;
+				line-height: 1;
+				font-weight: 600;
+				color: $branco;
+			}
+
+			.signup-text {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.sign-up-container {
+		justify-content: start;
+		padding-top: 1rem;
+		.signup-logo {
+			width: 60vw;
+			height: 20vh;
+
+			.signup-link {
+				font-size: 1.5rem;
+			}
+
+			.signup-title {
+				font-size: 1.5rem;
+				line-height: 1;
+				font-weight: 600;
+				color: $branco;
+			}
+		}
+	}
+}

@@ -4,6 +4,7 @@ import Challenge from '../Pages/Challenge.jsx'
 import LandingPage from '../Pages/LandingPage.jsx'
 import Login from '../Pages/Login.jsx'
 import Ranking from '../Pages/Ranking'
+import SignUp from '../Pages/SignUp.jsx'
 import StudyMaterial from '../Pages/StudyMaterial.jsx'
 import StudyMaterialPlaylist from '../Pages/StudyMaterialPlaylist.jsx'
 import UserAccount from '../Pages/UserAccount.jsx'
@@ -51,14 +52,20 @@ const router = createBrowserRouter([
 		element: <Login />,
 		errorElement: <></>,
 	},
+	{
+		path: 'signup',
+		element: <SignUp />,
+		errorElement: <></>,
+	},
+	{
+		path: 'admin',
+		element: <></>,
+		errorElement: <></>,
+	},
 ])
 
 function App() {
-	return (
-		<div>
-			<RouterProvider router={router} />
-		</div>
-	)
+	return <RouterProvider router={router} />
 }
 
 export default App
