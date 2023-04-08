@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import Button from '../Button/Button'
+import Button from '../../Utils/Button/Button'
 import './LandingPageCard.scss'
 
 export default function LandingPageCard(props) {

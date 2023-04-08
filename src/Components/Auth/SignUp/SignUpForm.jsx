@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import Button from '../Button/Button'
-import Input from '../Input/Input'
+import Button from '../../Utils/Button/Button'
+import Input from '../../Utils/Input/Input'
 import './SignUpForm.scss'
 
 export default function SignUpForm() {

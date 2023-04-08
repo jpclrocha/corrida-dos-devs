@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Navbar from '../Components/Navbar/Navbar.jsx'
+import Admin from '../Pages/Admin.jsx'
 import Challenge from '../Pages/Challenge.jsx'
 import LandingPage from '../Pages/LandingPage.jsx'
 import Login from '../Pages/Login.jsx'
@@ -12,53 +12,72 @@ import UserAccount from '../Pages/UserAccount.jsx'
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <Navbar />,
+		element: <LandingPage />,
 		errorElement: <></>,
-		children: [
-			{
-				index: true,
-				element: <LandingPage />,
-				errorElement: <></>,
-			},
-			{
-				path: 'ranking',
-				element: <Ranking />,
-				errorElement: <></>,
-			},
-			{
-				path: 'challenges',
-				element: <Challenge />,
-				errorElement: <></>,
-			},
-			{
-				path: 'materials',
-				element: <StudyMaterialPlaylist />,
-				errorElement: <></>,
-			},
-			{
-				path: 'teste',
-				element: <StudyMaterial />,
-				errorElement: <></>,
-			},
-			{
-				path: 'myaccount',
-				element: <UserAccount />,
-				errorElement: <></>,
-			},
-		],
 	},
 	{
-		path: 'login',
+		path: '/login',
 		element: <Login />,
 		errorElement: <></>,
 	},
 	{
-		path: 'signup',
+		path: '/signup',
 		element: <SignUp />,
 		errorElement: <></>,
 	},
+
 	{
-		path: 'admin',
+		path: '/ranking',
+		element: <Ranking />,
+		errorElement: <></>,
+	},
+	{
+		path: '/challenges',
+		element: <Challenge />,
+		errorElement: <></>,
+	},
+	{
+		path: '/materials',
+		element: <StudyMaterialPlaylist />,
+		errorElement: <></>,
+	},
+	{
+		path: '/teste',
+		element: <StudyMaterial />,
+		errorElement: <></>,
+	},
+	{
+		path: '/myaccount',
+		element: <UserAccount />,
+		errorElement: <></>,
+	},
+	{
+		path: '/admin',
+		element: <Admin />,
+		errorElement: <></>,
+	},
+	{
+		path: '/manageUsers',
+		element: <></>,
+		errorElement: <></>,
+	},
+	{
+		path: '/registerMaterial',
+		element: <></>,
+		errorElement: <></>,
+	},
+	{
+		path: '/manageMaterial',
+		element: <></>,
+		errorElement: <></>,
+	},
+	{
+		path: '/registerChallenge',
+		element: <></>,
+		errorElement: <></>,
+	},
+	{
+		path: '/rateChallenge',
 		element: <></>,
 		errorElement: <></>,
 	},

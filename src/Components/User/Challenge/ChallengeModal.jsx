@@ -1,4 +1,4 @@
-import Button from '../Button/Button'
+import Button from '../../Utils/Button/Button'
 import './ChallengeModal.scss'
 
 export default function ChallengeModal({

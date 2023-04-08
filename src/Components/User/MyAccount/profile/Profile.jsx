@@ -10,7 +10,7 @@ export default function Profile({ userName, userRankPoints }) {
 			<h1 className='profile-username'>{userName}</h1>
 			<div className='line'></div>
 			<h1 className='profile-points'>
-				Pontuação no ranking:{userRankPoints}
+				Pontuação no ranking: {userRankPoints}
 			</h1>
 		</div>
 	)

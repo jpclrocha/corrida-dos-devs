@@ -1,5 +1,11 @@
-import RankingComponent from '../Components/Ranking/RankingComponent'
+import RankingComponent from '../Components/User/Ranking/RankingComponent'
+import Navbar from '../Components/Utils/Navbar/Navbar'
 
 export default function Ranking() {
-	return <RankingComponent />
+	return (
+		<>
+			<Navbar />
+			<RankingComponent />
+		</>
+	)
 }

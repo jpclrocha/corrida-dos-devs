@@ -46,19 +46,19 @@ export default function Navbar() {
 					}
 				>
 					<li className='navbar-list-item'>
-						<Link to={'ranking'} className='navbar-list-item-link'>
+						<Link to={'/ranking'} className='navbar-list-item-link'>
 							Ranking
 						</Link>
 					</li>
 
 					<li className='navbar-list-item'>
-						<Link to={'signup'} className='navbar-list-item-link'>
+						<Link to={'/signup'} className='navbar-list-item-link'>
 							Cadastro
 						</Link>
 					</li>
 
 					<li className='navbar-last-item navbar-list-item'>
-						<Link to='login' className='navbar-list-item-link'>
+						<Link to='/login' className='navbar-list-item-link'>
 							Login
 						</Link>
 					</li>

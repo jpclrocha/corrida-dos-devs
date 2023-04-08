@@ -1,0 +1,45 @@
+$verde: #1c7a1f;
+$branco: #ffffff;
+
+.card-admin-container {
+	display: flex;
+	width: 80vw;
+	height: 10vh;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2rem;
+	padding: 2.5rem;
+	border-radius: 48px;
+	background-color: $branco;
+
+	.card-admin-image-container {
+		display: inline-flex;
+		width: 50%;
+
+		.admin-image {
+			width: 2.5rem;
+			height: 2.5rem;
+			margin-right: 1.25rem;
+		}
+
+		.card-admin-title {
+			font-size: 1.875rem;
+			line-height: 2.25rem;
+			font-weight: 700;
+			color: $verde;
+		}
+	}
+
+	.admin-btn {
+		display: flex;
+		width: 15%;
+		height: 2.5rem;
+		justify-items: end;
+		border-radius: 24px;
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+		font-weight: 700;
+		color: $branco;
+		text-decoration: none;
+	}
+}
