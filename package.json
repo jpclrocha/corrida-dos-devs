@@ -1,7 +1,7 @@
 {
 	"name": "corrida-dos-devs",
+	"homepage": "https://jpclrocha.github.io/corrida-dos-devs-flask/#",
 	"version": "0.1.0",
-	"homepage": "https://jpclrocha.github.io/corrida-dos-devs-flask",
 	"private": true,
 	"theme": "Time machine",
 	"dependencies": {
