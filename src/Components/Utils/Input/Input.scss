@@ -18,6 +18,10 @@ $preto: #000000;
 	}
 }
 
+.texto-verde {
+	color: $verde;
+}
+
 @media screen and (max-width: 768px) {
 	.input-container {
 		.input-label {

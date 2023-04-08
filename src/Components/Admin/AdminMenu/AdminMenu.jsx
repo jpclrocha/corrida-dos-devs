@@ -28,14 +28,14 @@ export default function AdminMenu() {
 			/>
 
 			<CardAdmin
-				title='Adicionar desafios semanais'
+				title='Adicionar desafios'
 				image='assets/raio.svg'
 				textBtn='Adicionar!'
 				route='/registerChallenge'
 			/>
 
 			<CardAdmin
-				title='Corrigir desafios semanais'
+				title='Corrigir desafios'
 				image='assets/certo.svg'
 				textBtn='Corrigir!'
 				route='/rateChallenge'

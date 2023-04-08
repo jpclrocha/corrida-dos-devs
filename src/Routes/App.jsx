@@ -4,6 +4,8 @@ import Challenge from '../Pages/Challenge.jsx'
 import LandingPage from '../Pages/LandingPage.jsx'
 import Login from '../Pages/Login.jsx'
 import Ranking from '../Pages/Ranking'
+import RegisterChallenge from '../Pages/RegisterChallenge.jsx'
+import RegisterMaterial from '../Pages/RegisterMaterial.jsx'
 import SignUp from '../Pages/SignUp.jsx'
 import StudyMaterial from '../Pages/StudyMaterial.jsx'
 import StudyMaterialPlaylist from '../Pages/StudyMaterialPlaylist.jsx'
@@ -63,7 +65,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: '/registerMaterial',
-		element: <></>,
+		element: <RegisterMaterial />,
 		errorElement: <></>,
 	},
 	{
@@ -73,7 +75,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: '/registerChallenge',
-		element: <></>,
+		element: <RegisterChallenge />,
 		errorElement: <></>,
 	},
 	{

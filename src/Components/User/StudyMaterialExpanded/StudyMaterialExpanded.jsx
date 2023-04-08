@@ -1,5 +1,5 @@
+import Faixa from '../../Utils/Faixa/Faixa'
 import Descricao from './Descricao/Descricao'
-import Faixa from './Faixa/Faixa'
 import Preview from './Preview/Preview'
 import './StudyMaterialExpanded.scss'
 
@@ -24,7 +24,7 @@ export default function StudyMaterialExpanded() {
 
 	return (
 		<div className='expanded-container'>
-			<Faixa {...curso} />
+			<Faixa {...curso} colorType='verde' />
 			<Preview {...curso} />
 			<Descricao {...curso} />
 		</div>

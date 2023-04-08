@@ -45,19 +45,19 @@ export default function AdminNav() {
 				}
 			>
 				<li className='admin-navbar-list-item'>
-					<Link to='/' className='admin-navbar-list-item-link'>
+					<Link to='/admin' className='admin-navbar-list-item-link'>
 						Home
 					</Link>
 				</li>
 				<li className='admin-navbar-list-item'>
-					<Link to='ranking' className='admin-navbar-list-item-link'>
+					<Link to='/ranking' className='admin-navbar-list-item-link'>
 						Ranking
 					</Link>
 				</li>
 
 				<li className='admin-navbar-list-item'>
 					<Link
-						to='materials'
+						to='/materials'
 						className='admin-navbar-list-item-link'
 					>
 						Material
@@ -66,7 +66,7 @@ export default function AdminNav() {
 
 				<li className='admin-navbar-last-item admin-navbar-list-item'>
 					<Link
-						to='myaccount'
+						to='/myaccount'
 						className='admin-navbar-list-item-link'
 					>
 						Minha conta

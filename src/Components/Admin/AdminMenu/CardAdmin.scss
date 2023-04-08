@@ -29,17 +29,28 @@ $branco: #ffffff;
 			color: $verde;
 		}
 	}
+}
 
-	.admin-btn {
-		display: flex;
-		width: 15%;
-		height: 2.5rem;
-		justify-items: end;
-		border-radius: 24px;
-		font-size: 1.25rem;
-		line-height: 1.75rem;
-		font-weight: 700;
-		color: $branco;
-		text-decoration: none;
+@media screen and (max-width: 768px) {
+	.card-admin-container {
+		display: inline-flex;
+		width: 90vw;
+
+		.card-admin-image-container {
+			width: fit-content;
+			align-items: center;
+			.admin-image {
+				width: 2rem;
+				height: 2rem;
+				margin-right: 1.25rem;
+			}
+
+			.card-admin-title {
+				font-size: 1.25rem;
+				line-height: 1rem;
+				font-weight: 700;
+				color: $verde;
+			}
+		}
 	}
 }

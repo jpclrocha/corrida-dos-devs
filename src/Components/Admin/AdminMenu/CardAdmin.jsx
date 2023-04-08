@@ -13,7 +13,7 @@ export default function CardAdmin({ image, title, route, textBtn }) {
 				/>
 				<h1 className='card-admin-title'>{title}</h1>
 			</div>
-			<Link to={route} className='admin-btn'>
+			<Link to={route}>
 				<Button type='submit' buttonType='verde'>
 					{textBtn}
 				</Button>

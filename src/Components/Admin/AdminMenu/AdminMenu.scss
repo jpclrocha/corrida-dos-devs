@@ -1,5 +1,7 @@
 $branco: #ffffff;
 .admin-menu-container {
+	display: flex;
+	flex-wrap: wrap;
 	padding: 8rem;
 
 	.admin-title {
@@ -9,5 +11,15 @@ $branco: #ffffff;
 		color: $branco;
 		margin-bottom: 1.25rem;
 		padding-left: 1.25rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.admin-menu-container {
+		padding: 0rem;
+		justify-content: center;
+		.admin-title {
+			font-size: 1.5rem;
+		}
 	}
 }

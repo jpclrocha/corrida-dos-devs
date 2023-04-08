@@ -1,13 +1,11 @@
 $verdeDesbotado: #507061;
 $branco: #ffffff;
-
-.faixa-verde {
+$cinzaAdm: rgba(255, 255, 255, 0.23);
+.faixa-container {
 	display: flex;
-	width: 100vw;
 	height: 6rem;
 	align-items: center;
 
-	background-color: $verdeDesbotado;
 	--tw-shadow: 0 25px 50px -12px rgba(0 0 0 / 0.25);
 	--tw-shadow-colored: 0 25px 50px -12px rgba(0 0 0 / 0.25) var(--tw-shadow-color);
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
@@ -18,14 +16,26 @@ $branco: #ffffff;
 		line-height: 2.5rem;
 		font-weight: 800;
 		color: $branco;
-		margin: 0 auto;
 		margin-left: 8rem;
 		height: fit-content;
 	}
 }
 
+.faixa-verde {
+	background-color: $verdeDesbotado;
+}
+
+.faixa-cinza {
+	background-color: $cinzaAdm;
+}
+
 @media screen and (max-width: 768px) {
-	.faixa-verde {
+	.faixa-container {
 		margin-top: 7rem;
+
+		.titulo-faixa {
+			margin: 0 auto;
+			font-size: 1.5rem;
+		}
 	}
 }
