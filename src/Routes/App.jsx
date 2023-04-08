@@ -4,6 +4,7 @@ import Challenge from '../Pages/Challenge.jsx'
 import LandingPage from '../Pages/LandingPage.jsx'
 import Login from '../Pages/Login.jsx'
 import Ranking from '../Pages/Ranking'
+import RateChallenge from '../Pages/RateChallenge.jsx'
 import RegisterChallenge from '../Pages/RegisterChallenge.jsx'
 import RegisterMaterial from '../Pages/RegisterMaterial.jsx'
 import SignUp from '../Pages/SignUp.jsx'
@@ -80,7 +81,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: '/rateChallenge',
-		element: <></>,
+		element: <RateChallenge />,
 		errorElement: <></>,
 	},
 ])
