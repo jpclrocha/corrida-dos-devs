@@ -9,7 +9,7 @@ export default function AdminNav() {
 	return (
 		<nav className='admin-nav'>
 			<div className='teste'>
-				<Link to={'/'} className='admin-navbar-logo-link'>
+				<Link to={'/admin'} className='admin-navbar-logo-link'>
 					<img
 						src={logo}
 						alt='Corrida-dos-devs-logo'
@@ -46,7 +46,7 @@ export default function AdminNav() {
 				}
 			>
 				<li className='admin-navbar-list-item'>
-					<Link to='/admin' className='admin-navbar-list-item-link'>
+					<Link to='/' className='admin-navbar-list-item-link'>
 						Home
 					</Link>
 				</li>

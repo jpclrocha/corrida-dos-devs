@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+import { api } from '../../../services/api.js'
 import StudyMaterialModal from './StudyMaterialModal.jsx'
 import './StudyMaterialPlaylist.scss'
 
@@ -23,16 +25,29 @@ export default function StudyMaterialPlaylist() {
 		},
 	]
 
+	const [course, setCourse] = useState([])
+
+	useEffect(() => {
+		const getMaterial = async () => {
+			const response = await api.get('/material')
+
+			const data = await response.data
+			setCourse(data)
+		}
+		getMaterial()
+	}, [])
+
 	return (
 		<div className='study-material-playlist-container'>
 			<h1 className='study-material-playlist-title'>
 				Materiais de estudo:
 			</h1>
-			{curso.map((materialInfo) => {
+			{console.log(course)}
+			{curso.map((informacoes) => {
 				return (
 					<StudyMaterialModal
-						{...materialInfo}
-						key={materialInfo.MaterialId}
+						{...informacoes}
+						key={informacoes.MaterialId}
 					/>
 				)
 			})}

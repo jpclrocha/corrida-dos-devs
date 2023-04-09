@@ -1,9 +1,9 @@
 import image from '../../../assets/ft-perfil.svg'
 import './RankingModal.scss'
 
-export default function RankingModal({ student }) {
+export default function RankingModal({ id, userName, userRankPoints, turma }) {
 	return (
-		<div className='ranking-modal' key={student.id}>
+		<div className='ranking-modal' key={id}>
 			<div className='student-ranking'>
 				<div className='ranking-modal-image-container'>
 					<img
@@ -15,17 +15,14 @@ export default function RankingModal({ student }) {
 
 				<div className='student-ranking-info'>
 					<h1>
-						{student.name.charAt(0).toUpperCase() +
-							student.name.slice(1)}
+						{userName.charAt(0).toUpperCase() + userName.slice(1)}
 					</h1>
-					<h2>
-						{student.turma ? student.turma : 'Estudante sem turma'}
-					</h2>
+					<h2>{turma ? turma : 'Estudante sem turma'}</h2>
 				</div>
 			</div>
 
 			<div className='student-ranking-pontuacao'>
-				<h1>{student.pontuacao ? student.pontuacao : 0}</h1>
+				<h1>{userRankPoints ? userRankPoints : 0}</h1>
 				<h2>Pontos</h2>
 			</div>
 		</div>

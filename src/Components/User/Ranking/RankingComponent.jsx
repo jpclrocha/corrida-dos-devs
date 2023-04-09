@@ -3,7 +3,7 @@ import './RankingComponent.scss'
 import RankingModal from './RankingModal'
 
 export default function RankingComponent() {
-	const [students, setStudents] = useState([])
+	//const [students, setStudents] = useState([])
 	/*
 	useEffect(() => {
 		fetch('https://APiRestAula.j0p3.repl.co/users').then((response) =>
@@ -14,6 +14,16 @@ export default function RankingComponent() {
 	}, [])
 	*/
 
+	const students = [
+		{
+			id: 8,
+			userName: 'DSerao Montegrego',
+			userBio: 'Eu acho que nao sobe.',
+			userEmail: 'Goldorayl@gmail.com',
+			userRankPoints: 1000,
+			userSocialNetworks: ['jpclrocha', 'teste'],
+		},
+	]
 	return (
 		<div className='ranking-component-container'>
 			<div className='ranking-input-container'>
@@ -21,8 +31,8 @@ export default function RankingComponent() {
 				<input className='ranking-input-box' placeholder='Buscar' />
 			</div>
 
-			{students.map((item) => {
-				return <RankingModal student={item} key={item.id} />
+			{students.map((user) => {
+				return <RankingModal {...user} />
 			})}
 		</div>
 	)

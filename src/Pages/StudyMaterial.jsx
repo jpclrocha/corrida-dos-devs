@@ -2,10 +2,5 @@ import StudyMaterialExpanded from '../Components/User/StudyMaterialExpanded/Stud
 import Navbar from '../Components/Utils/Navbar/Navbar'
 
 export default function StudyMaterial() {
-	return (
-		<>
-			<Navbar />
-			<StudyMaterialExpanded />
-		</>
-	)
+	return <StudyMaterialExpanded />
 }

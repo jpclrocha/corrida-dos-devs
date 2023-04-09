@@ -7,9 +7,9 @@ export default function LoginForm() {
 	return (
 		<form className='login-form-container'>
 			<Input
-				label='Email:'
+				label='Username:'
 				type='email'
-				placeholder='Digite seu email aqui'
+				placeholder='Digite seu usuario aqui'
 			/>
 			<Input
 				label='Senha:'
@@ -19,8 +19,8 @@ export default function LoginForm() {
 			<Link to='/esqueciSenha' className='forgot-password'>
 				Esqueci minha senha
 			</Link>
-
-			<Link to='/myaccount'>
+			<Link>
+				{/*to='/myaccount'*/}
 				<Button type='submit' buttonType='verde'>
 					ENTRAR
 				</Button>

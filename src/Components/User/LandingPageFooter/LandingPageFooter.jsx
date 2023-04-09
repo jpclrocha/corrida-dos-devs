@@ -13,7 +13,10 @@ export default function LandingPageFooter() {
 			<ul className='landing-page-footer-list'>
 				{footer.map((item) => {
 					return (
-						<li className='landing-page-footer-list-item'>
+						<li
+							className='landing-page-footer-list-item'
+							key={item}
+						>
 							{item}
 						</li>
 					)

@@ -11,6 +11,7 @@ export default function Navbar() {
 
 	const toggleNav = () => {
 		setIsNavExpanded(!isNavExpanded)
+		document.body.style.overflow = isNavExpanded ? 'unset' : 'hidden'
 	}
 
 	return (

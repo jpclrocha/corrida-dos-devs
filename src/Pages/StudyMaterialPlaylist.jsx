@@ -2,10 +2,5 @@ import StudyMaterialPlaylist from '../Components/User/StudyMaterialPlaylist/Stud
 import Navbar from '../Components/Utils/Navbar/Navbar'
 
 export default function StudyMaterial() {
-	return (
-		<>
-			<Navbar />
-			<StudyMaterialPlaylist />
-		</>
-	)
+	return <StudyMaterialPlaylist />
 }
