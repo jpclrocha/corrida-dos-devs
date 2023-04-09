@@ -1,8 +1,4 @@
-import {
-	RouterProvider,
-	createBrowserRouter,
-	createHashRouter,
-} from 'react-router-dom'
+import { RouterProvider, createHashRouter } from 'react-router-dom'
 import Admin from '../Pages/Admin.jsx'
 import Challenge from '../Pages/Challenge.jsx'
 import LandingPage from '../Pages/LandingPage.jsx'
@@ -16,7 +12,7 @@ import StudyMaterial from '../Pages/StudyMaterial.jsx'
 import StudyMaterialPlaylist from '../Pages/StudyMaterialPlaylist.jsx'
 import UserAccount from '../Pages/UserAccount.jsx'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
 	{
 		exact: true,
 		path: '/',
