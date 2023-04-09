@@ -1,3 +1,6 @@
+import certo from '../../../assets/certo.svg'
+import livro from '../../../assets/livro.svg'
+import raio from '../../../assets/raio.svg'
 import './AdminMenu.scss'
 import CardAdmin from './CardAdmin'
 
@@ -8,35 +11,35 @@ export default function AdminMenu() {
 
 			<CardAdmin
 				title='Gerenciar usuários'
-				image='assets/certo.svg'
+				image={certo}
 				textBtn='Gerenciar!'
 				route='/manageUsers'
 			/>
 
 			<CardAdmin
 				title='Adicionar material'
-				image='assets/livro.svg'
+				image={livro}
 				textBtn='Adicionar!'
 				route='/registerMaterial'
 			/>
 
 			<CardAdmin
 				title='Gerenciar materiais'
-				image='assets/certo.svg'
+				image={certo}
 				textBtn='Gerenciar!'
 				route='/manageMaterial'
 			/>
 
 			<CardAdmin
 				title='Adicionar desafios'
-				image='assets/raio.svg'
+				image={raio}
 				textBtn='Adicionar!'
 				route='/registerChallenge'
 			/>
 
 			<CardAdmin
 				title='Corrigir desafios'
-				image='assets/certo.svg'
+				image={certo}
 				textBtn='Corrigir!'
 				route='/rateChallenge'
 			/>

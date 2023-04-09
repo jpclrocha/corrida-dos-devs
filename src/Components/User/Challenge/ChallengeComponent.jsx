@@ -1,3 +1,4 @@
+import image from '../../../assets/calc.svg'
 import './ChallengeComponent.scss'
 import ChallengeModal from './ChallengeModal'
 
@@ -13,7 +14,7 @@ export default function ChallengeComponent() {
 			},
 		],
 		pontos: 50,
-		imagem: 'assets/calc.svg',
+		imagem: image,
 	}
 
 	return (

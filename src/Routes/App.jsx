@@ -16,7 +16,7 @@ import StudyMaterial from '../Pages/StudyMaterial.jsx'
 import StudyMaterialPlaylist from '../Pages/StudyMaterialPlaylist.jsx'
 import UserAccount from '../Pages/UserAccount.jsx'
 
-const router = createHashRouter([
+const router = createBrowserRouter([
 	{
 		exact: true,
 		path: '/',

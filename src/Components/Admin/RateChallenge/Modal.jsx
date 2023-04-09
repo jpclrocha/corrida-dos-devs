@@ -1,12 +1,13 @@
+import certo from '../../../assets/certoDesafio.svg'
+import image from '../../../assets/ft-perfil.svg'
 import './Modal.scss'
-
 export default function Modal({ userName, challengeLinkResponse }) {
 	return (
 		<div className='rate-modal-container'>
 			<div className='rate-userinfo-container'>
 				<div className='rate-img-container'>
 					<img
-						src='assets/ft-perfil.svg'
+						src={image}
 						alt='Foto de perfil'
 						className='rate-img'
 					/>
@@ -25,11 +26,7 @@ export default function Modal({ userName, challengeLinkResponse }) {
 				</div>
 			</div>
 			<div className='rate-challenge-button'>
-				<img
-					src='assets/certoDesafio.svg'
-					alt='Foto de perfil'
-					className='rate-button'
-				/>
+				<img src={certo} alt='Foto de perfil' className='rate-button' />
 			</div>
 		</div>
 	)

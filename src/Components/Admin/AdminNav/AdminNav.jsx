@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import logo from '../../../assets/logoBranca.svg'
 import Button from '../../Utils/Button/Button'
 import './AdminNav.scss'
 
@@ -10,7 +11,7 @@ export default function AdminNav() {
 			<div className='teste'>
 				<Link to={'/'} className='admin-navbar-logo-link'>
 					<img
-						src='assets/logoBranca.svg'
+						src={logo}
 						alt='Corrida-dos-devs-logo'
 						className='admin-navbar-logo'
 					/>

@@ -1,11 +1,13 @@
+import image from '../../../assets/ft-perfil.svg'
 import './RankingModal.scss'
+
 export default function RankingModal({ student }) {
 	return (
 		<div className='ranking-modal' key={student.id}>
 			<div className='student-ranking'>
 				<div className='ranking-modal-image-container'>
 					<img
-						src='assets/ft-perfil.svg'
+						src={image}
 						alt='Foto de perfil'
 						className='ranking-modal-image'
 					/>

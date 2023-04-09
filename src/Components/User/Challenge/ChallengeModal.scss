@@ -37,18 +37,19 @@ $preto: #000000;
 				width: 45%;
 				height: fit-content;
 				padding-top: 2.5rem;
-				color: $verde;
 
 				h1 {
 					font-size: 2.25rem;
 					line-height: 2.5rem;
 					font-weight: 800;
 					margin-bottom: 0.5rem;
+					color: $verde;
 				}
 
 				p {
 					font-size: 1.25rem;
 					line-height: 1.75rem;
+					color: $verde;
 				}
 			}
 
@@ -56,6 +57,10 @@ $preto: #000000;
 				width: 45%;
 				height: fit-content;
 				padding: 2.5rem;
+
+				h1 {
+					color: $branco;
+				}
 
 				.requisitos {
 					font-size: 1.25rem;

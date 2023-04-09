@@ -4,6 +4,8 @@ import { Link, Outlet } from 'react-router-dom'
 import Button from '../Button/Button'
 import './Navbar.scss'
 
+import image from '../../../assets/logo.svg'
+
 export default function Navbar() {
 	const [isNavExpanded, setIsNavExpanded] = useState(false)
 
@@ -14,7 +16,7 @@ export default function Navbar() {
 					<Link to={'/'} className='navbar-logo-link'>
 						Corrida dos DEVs
 						<img
-							src='assets/logo.svg'
+							src={image}
 							alt='Corrida-dos-devs-logo'
 							className='navbar-logo'
 						/>

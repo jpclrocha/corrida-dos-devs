@@ -1,3 +1,4 @@
+import image from '../../../assets/nuvem-download.svg'
 import Button from '../../Utils/Button/Button'
 import Faixa from '../../Utils/Faixa/Faixa'
 import Input from '../../Utils/Input/Input'
@@ -33,10 +34,7 @@ export default function RegisterMaterialAdmin() {
 				<div className='upload-container'>
 					<div className='upload-input-container'>
 						<div className='upload-image'>
-							<img
-								src='assets/nuvem-download.svg'
-								alt='material-upload'
-							/>
+							<img src={image} alt='material-upload' />
 						</div>
 						<Input
 							label='Adicione link do vídeo:'

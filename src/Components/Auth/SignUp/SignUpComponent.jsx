@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import image from '../../../assets/logoBranca.svg'
 import Rodape from '../Rodape/Rodape'
 import './SignUpComponent.scss'
 import SignUpForm from './SignUpForm'
@@ -13,7 +14,7 @@ export default function SignUpComponent() {
 					<Link to='/' className='signup-link'>
 						Corrida dos DEVs
 						<img
-							src='assets/logoBranca.svg'
+							src={image}
 							alt='Corrida-dos-devs-logo'
 							className='signup-img'
 						/>
