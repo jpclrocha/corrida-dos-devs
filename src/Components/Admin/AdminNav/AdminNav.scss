@@ -114,12 +114,11 @@ $preto: #000000;
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
 	.admin-nav {
 		flex-wrap: wrap;
-		height: 10vh;
+		height: 60px;
 		margin-bottom: 10vh;
-
 		.teste {
 			width: 100%;
 			height: 100%;
@@ -131,44 +130,49 @@ $preto: #000000;
 
 			.hamburger {
 				display: block;
-				width: 35px;
-				height: 35px;
+				cursor: pointer;
 			}
 		}
 
 		.admin-navbar-list {
-			display: none;
+			flex-direction: column;
+			position: absolute;
+			left: 0;
+			top: 60px;
+			background-color: #fef7e5;
+			width: 0px;
+			height: calc(100vh - 60px);
+			transition: all 0.3s ease-in;
+			overflow: hidden;
+			justify-content: start;
 
 			.admin-navbar-list-item {
-				.admin-navbar-list-item-link {
-					color: $branco;
-					display: block;
-				}
+				width: 50%;
+				height: fit-content;
+				flex-direction: column;
+				margin-left: 50px;
+				margin-top: 30px;
 
-				.admin-navbar-list-item-link:hover {
-					background-color: $verde;
-					color: $preto;
-					transition-duration: 200ms;
+				.admin-navbar-list-item-link {
+					justify-content: start;
+					height: fit-content;
+					font-weight: 600;
+					color: $verde;
 				}
 			}
 
 			.admin-navbar-last-item {
-				:hover {
-					background-color: $verde;
-					color: $preto;
-					transition-duration: 200ms;
+				width: fit-content;
+				.admin-navbar-list-item-link {
+					padding: 0px;
+					border: 0px;
+					border-radius: 0px;
+					background-color: #fef7e5;
 				}
 			}
 		}
-
 		.admin-navbar-list.expanded {
-			display: flex;
-			align-items: center;
-			flex-direction: column;
-			height: 30vh;
-			width: 100%;
-			margin: 0;
-			background-color: $verde;
+			width: 250px;
 		}
 	}
 }

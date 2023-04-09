@@ -9,6 +9,10 @@ import image from '../../../assets/logo.svg'
 export default function Navbar() {
 	const [isNavExpanded, setIsNavExpanded] = useState(false)
 
+	const toggleNav = () => {
+		setIsNavExpanded(!isNavExpanded)
+	}
+
 	return (
 		<>
 			<nav className='navbar-container'>
@@ -22,10 +26,7 @@ export default function Navbar() {
 						/>
 					</Link>
 
-					<Button
-						className='hamburger'
-						onClick={() => setIsNavExpanded(!isNavExpanded)}
-					>
+					<Button className='hamburger' onClick={toggleNav}>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							fill='none'
