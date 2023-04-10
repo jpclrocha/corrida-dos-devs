@@ -8,7 +8,7 @@ import image from '../../../assets/logo.svg'
 
 export default function Navbar() {
 	const [isNavExpanded, setIsNavExpanded] = useState(false)
-	const { signed } = useContext(AuthContext)
+	const { signed, signOut } = useContext(AuthContext)
 
 	const toggleNav = () => {
 		setIsNavExpanded(!isNavExpanded)
@@ -79,7 +79,9 @@ export default function Navbar() {
 							</Link>
 						</li>
 
-						<button className='logout-btn'>Sair</button>
+						<button className='logout-btn' onClick={signOut}>
+							Sair
+						</button>
 					</ul>
 				) : (
 					<ul

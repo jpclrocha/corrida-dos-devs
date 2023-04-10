@@ -1,4 +1,5 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../../Contexts/AuthContext'
 import './MyAccount.scss'
 import AboutMe from './aboutMe/AboutMe'
@@ -7,18 +8,28 @@ import Profile from './profile/Profile'
 import SocialNetworks from './socialNetworks/SocialNetworks'
 
 export default function MyAccount() {
-	const { user } = useContext(AuthContext)
+	const { user, signed } = useContext(AuthContext)
+	const navigate = useNavigate()
+	console.log(user)
 
-	return (
-		<div className='myaccount-container'>
-			<div className='teste'>
-				<Profile {...user} />
-				<div className='info-container'>
-					<AboutMe {...user} />
-					<Challenges {...user} />
-					<SocialNetworks {...user} />
+	useEffect(() => {
+		//return navigate('/myaccount')
+	})
+
+	if (!signed) {
+		return navigate('/login')
+	} else {
+		return (
+			<div className='myaccount-container'>
+				<div className='teste'>
+					<Profile {...user} />
+					<div className='info-container'>
+						<AboutMe {...user} />
+						<Challenges {...user} />
+						<SocialNetworks {...user} />
+					</div>
 				</div>
 			</div>
-		</div>
-	)
+		)
+	}
 }

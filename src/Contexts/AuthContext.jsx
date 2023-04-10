@@ -12,7 +12,21 @@ export const AuthProvider = ({ children }) => {
 			const storageToken = localStorage.getItem('@Auth:token')
 
 			if (storageUser && storageToken) {
-				setUser(storageUser)
+				const userChallengesResponse = await api.get(
+					`/challengesresponse/${storageUser.id}`
+				)
+				const userRule = await api.get(`/category/${storageUser.id}`)
+				const socialName = await api.get(
+					`/socialnetwork/${storageUser.id}`
+				)
+
+				const attUser = {
+					...storageUser,
+					userChallengesResponse: userChallengesResponse.data,
+					userRule: userRule.data,
+					socialName: socialName.data,
+				}
+				setUser(attUser)
 			}
 		}
 		loadingStorageData()
@@ -21,10 +35,25 @@ export const AuthProvider = ({ children }) => {
 	const signIn = async ({ login, password }) => {
 		const response = await api.post('/login', { login, password })
 
-		if (response.data.message === 403) {
-			alert('Credenciais incorretas!')
+		if (response.data.message === 'Crendenciais inválidas') {
+			alert(response.data.message)
 		} else {
 			const teste = await api.get(`/usersbylogin/${login}`)
+			const userChallengesResponse = await api.get(
+				`/challengesresponse/${teste.data[0].id}`
+			)
+			const userRule = await api.get(`/category/${teste.data[0].id}`)
+			const socialName = await api.get(
+				`/socialnetwork/${teste.data[0].id}`
+			)
+
+			const userObj = {
+				...teste.data[0],
+				userChallengesResponse: userChallengesResponse.data,
+				userRule: userRule.data,
+				socialName: socialName.data,
+			}
+			console.log(userObj)
 			setUser(JSON.stringify(teste.data[0]))
 			api.defaults.headers.common[
 				'Authorization'
@@ -34,8 +63,13 @@ export const AuthProvider = ({ children }) => {
 		}
 	}
 
+	const signOut = () => {
+		localStorage.clear()
+		setUser(null)
+	}
+
 	return (
-		<AuthContext.Provider value={{ user, signed: !!user, signIn }}>
+		<AuthContext.Provider value={{ user, signed: !!user, signIn, signOut }}>
 			{children}
 		</AuthContext.Provider>
 	)

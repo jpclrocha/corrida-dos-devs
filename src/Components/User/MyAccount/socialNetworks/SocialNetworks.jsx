@@ -1,11 +1,10 @@
 import './SocialNetworks.scss'
 
-export default function SocialNetworks({ userSocialNetworks }) {
-	const generator = userSocialNetworks?.map((social) => {
+export default function SocialNetworks({ socialName }) {
+	const generator = socialName?.map((social) => {
 		return (
-			<h1 className='social-text' key={social}>
-				{' '}
-				@{social}
+			<h1 className='social-text' key={social.socialName}>
+				{social.socialName}
 			</h1>
 		)
 	})

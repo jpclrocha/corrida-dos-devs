@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../../Contexts/AuthContext'
 import image from '../../../assets/logoBranca.svg'
@@ -10,32 +10,32 @@ export default function LoginComponent() {
 	const { signed } = useContext(AuthContext)
 	const navigate = useNavigate()
 
-	if (signed) {
-		return navigate('/myaccount')
-	} else {
-		return (
-			<div>
-				<div className='login-container'>
-					<div className='login-logo'>
-						<Link to='/' className='login-link'>
-							Corrida dos DEVs
-							<img
-								src={image}
-								alt='Corrida-dos-devs-logo'
-								className='login-img'
-							/>
-						</Link>
+	useEffect(() => {
+		if (signed) return navigate('/')
+	})
 
-						<h1 className='login-title'>
-							Faça seu login na plataforma
-						</h1>
-					</div>
+	return (
+		<div>
+			<div className='login-container'>
+				<div className='login-logo'>
+					<Link to='/' className='login-link'>
+						Corrida dos DEVs
+						<img
+							src={image}
+							alt='Corrida-dos-devs-logo'
+							className='login-img'
+						/>
+					</Link>
 
-					<LoginForm />
+					<h1 className='login-title'>
+						Faça seu login na plataforma
+					</h1>
 				</div>
 
-				<Rodape />
+				<LoginForm />
 			</div>
-		)
-	}
+
+			<Rodape />
+		</div>
+	)
 }
