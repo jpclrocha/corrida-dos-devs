@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/corrida-dos-devs-flask/static/css/main.0a38899f.css",
-    "main.js": "/corrida-dos-devs-flask/static/js/main.70837bc2.js",
+    "main.css": "/corrida-dos-devs-flask/static/css/main.7ab4e764.css",
+    "main.js": "/corrida-dos-devs-flask/static/js/main.0c908bb6.js",
     "static/media/ft-perfil.svg": "/corrida-dos-devs-flask/static/media/ft-perfil.0c5deb820ad70e9c985cf5f315bded5d.svg",
     "static/media/calc.svg": "/corrida-dos-devs-flask/static/media/calc.eb8e65596586c0cd61c6851412167db1.svg",
     "static/media/raio.svg": "/corrida-dos-devs-flask/static/media/raio.78f9f7ca52b4faa91ab8ca75cbca21ed.svg",
@@ -13,11 +13,11 @@
     "static/media/logo.svg": "/corrida-dos-devs-flask/static/media/logo.7fe7a2f8766c7eaf112c8d6a0d1dce2a.svg",
     "static/media/playBtn.svg": "/corrida-dos-devs-flask/static/media/playBtn.6d6c1735777b822379f321f84da2524f.svg",
     "static/media/logoBranca.svg": "/corrida-dos-devs-flask/static/media/logoBranca.e7fde9ae6e0e4a02892a3dcf34d8a896.svg",
-    "main.0a38899f.css.map": "/corrida-dos-devs-flask/static/css/main.0a38899f.css.map",
-    "main.70837bc2.js.map": "/corrida-dos-devs-flask/static/js/main.70837bc2.js.map"
+    "main.7ab4e764.css.map": "/corrida-dos-devs-flask/static/css/main.7ab4e764.css.map",
+    "main.0c908bb6.js.map": "/corrida-dos-devs-flask/static/js/main.0c908bb6.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a38899f.css",
-    "static/js/main.70837bc2.js"
+    "static/css/main.7ab4e764.css",
+    "static/js/main.0c908bb6.js"
   ]
 }
