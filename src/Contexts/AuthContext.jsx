@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
 	useEffect(() => {
 		const loadingStorageData = async () => {
 			const storageUser = JSON.parse(localStorage.getItem('@Auth:user'))
-			const storageToken = JSON.parse(localStorage.getItem('@Auth:token'))
+			const storageToken = localStorage.getItem('@Auth:token')
 
 			if (storageUser && storageToken) {
 				setUser(storageUser)
@@ -21,15 +21,16 @@ export const AuthProvider = ({ children }) => {
 	const signIn = async ({ login, password }) => {
 		const response = await api.post('/login', { login, password })
 
-		if (response.data.error) {
-			alert(response.data.errorr)
+		if (response.data.message === 403) {
+			alert('Credenciais incorretas!')
 		} else {
-			setUser(response.data)
+			const teste = await api.get(`/usersbylogin/${login}`)
+			setUser(JSON.stringify(teste.data[0]))
 			api.defaults.headers.common[
 				'Authorization'
 			] = `Bearer ${response.data.JWT}`
 			localStorage.setItem('@Auth:token', response.data.JWT)
-			localStorage.setItem('@Auth:user', response.data.user)
+			localStorage.setItem('@Auth:user', JSON.stringify(teste.data[0]))
 		}
 	}
 

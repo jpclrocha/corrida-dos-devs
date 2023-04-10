@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
-
+import { AuthContext } from '../../../Contexts/AuthContext'
 import Button from '../Button/Button'
 import './Navbar.scss'
 
@@ -8,6 +8,7 @@ import image from '../../../assets/logo.svg'
 
 export default function Navbar() {
 	const [isNavExpanded, setIsNavExpanded] = useState(false)
+	const { signed } = useContext(AuthContext)
 
 	const toggleNav = () => {
 		setIsNavExpanded(!isNavExpanded)
@@ -43,30 +44,76 @@ export default function Navbar() {
 						</svg>
 					</Button>
 				</div>
+				{signed ? (
+					<ul
+						className={
+							isNavExpanded
+								? 'navbar-list expanded'
+								: 'navbar-list'
+						}
+					>
+						<li className='navbar-list-item'>
+							<Link
+								to={'/ranking'}
+								className='navbar-list-item-link'
+							>
+								Ranking
+							</Link>
+						</li>
 
-				<ul
-					className={
-						isNavExpanded ? 'navbar-list expanded' : 'navbar-list'
-					}
-				>
-					<li className='navbar-list-item'>
-						<Link to={'/ranking'} className='navbar-list-item-link'>
-							Ranking
-						</Link>
-					</li>
+						<li className='navbar-list-item'>
+							<Link
+								to={'/materials'}
+								className='navbar-list-item-link'
+							>
+								Material
+							</Link>
+						</li>
 
-					<li className='navbar-list-item'>
-						<Link to={'/signup'} className='navbar-list-item-link'>
-							Cadastro
-						</Link>
-					</li>
+						<li className='navbar-list-item'>
+							<Link
+								to='/myaccount'
+								className='navbar-list-item-link'
+							>
+								Minha conta
+							</Link>
+						</li>
 
-					<li className='navbar-last-item navbar-list-item'>
-						<Link to='/login' className='navbar-list-item-link'>
-							Login
-						</Link>
-					</li>
-				</ul>
+						<button className='logout-btn'>Sair</button>
+					</ul>
+				) : (
+					<ul
+						className={
+							isNavExpanded
+								? 'navbar-list expanded'
+								: 'navbar-list'
+						}
+					>
+						<li className='navbar-list-item'>
+							<Link
+								to={'/ranking'}
+								className='navbar-list-item-link'
+							>
+								Ranking
+							</Link>
+						</li>
+
+						<li className='navbar-list-item'>
+							<Link
+								to={'/signup'}
+								className='navbar-list-item-link'
+							>
+								Cadastro
+							</Link>
+						</li>
+
+						<li className='navbar-last-item navbar-list-item'>
+							<Link to='/login' className='navbar-list-item-link'>
+								Login
+							</Link>
+						</li>
+					</ul>
+				)}
 			</nav>
 			<Outlet />
 		</>

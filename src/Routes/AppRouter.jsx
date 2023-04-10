@@ -56,16 +56,8 @@ const router = createBrowserRouter([
 				element: <Admin />,
 			},
 			{
-				path: 'manageUsers',
-				element: <></>,
-			},
-			{
 				path: 'registerMaterial',
 				element: <RegisterMaterial />,
-			},
-			{
-				path: 'manageMaterial',
-				element: <></>,
 			},
 			{
 				path: 'registerChallenge',
@@ -74,6 +66,14 @@ const router = createBrowserRouter([
 			{
 				path: 'rateChallenge',
 				element: <RateChallenge />,
+			},
+			{
+				path: 'manageUsers',
+				element: <></>,
+			},
+			{
+				path: 'manageMaterial',
+				element: <></>,
 			},
 		],
 	},

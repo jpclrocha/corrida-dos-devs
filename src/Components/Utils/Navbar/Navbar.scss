@@ -45,10 +45,11 @@ $preto: #000000;
 
 	.navbar-list {
 		display: inline-flex;
-		width: 33%;
+
+		width: 50%;
+		height: 4rem;
 		justify-content: space-evenly;
 		object-position: right;
-		height: 4rem;
 		margin-right: 2rem;
 
 		.navbar-list-item {
@@ -56,15 +57,16 @@ $preto: #000000;
 			list-style: none;
 
 			.navbar-list-item-link {
+				width: 100%;
 				display: flex;
+				padding: 10px;
+
 				justify-content: center;
 				align-items: center;
 				font-size: 1.5rem;
 				line-height: 2rem;
 				font-weight: 700;
 				text-decoration: none;
-				height: 2.5rem;
-				width: 8rem;
 				margin: 0px;
 				color: $preto;
 				cursor: pointer;
@@ -78,6 +80,7 @@ $preto: #000000;
 				border-radius: 0.75rem;
 				background-color: $verde;
 				color: $branco;
+				padding: 5px;
 			}
 
 			:hover {
@@ -85,6 +88,22 @@ $preto: #000000;
 				color: $verde;
 				transition-duration: 200ms;
 			}
+		}
+
+		.logout-btn {
+			width: 20%;
+			font-size: 1.5rem;
+			font-weight: 700;
+			background-color: $verde;
+			color: $branco;
+			border: 0px;
+			border-radius: 1rem;
+			cursor: pointer;
+		}
+		.logout-btn:hover {
+			background-color: $branco;
+			border: 1px solid $verde;
+			color: $verde;
 		}
 	}
 }
