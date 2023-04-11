@@ -10,26 +10,21 @@ import SocialNetworks from './socialNetworks/SocialNetworks'
 export default function MyAccount() {
 	const { user, signed } = useContext(AuthContext)
 	const navigate = useNavigate()
-	console.log(user)
 
 	useEffect(() => {
-		//return navigate('/myaccount')
-	})
+		if (!signed) return navigate('/login')
+	}, [signed])
 
-	if (!signed) {
-		return navigate('/login')
-	} else {
-		return (
-			<div className='myaccount-container'>
-				<div className='teste'>
-					<Profile {...user} />
-					<div className='info-container'>
-						<AboutMe {...user} />
-						<Challenges {...user} />
-						<SocialNetworks {...user} />
-					</div>
+	return (
+		<div className='myaccount-container'>
+			<div className='teste'>
+				<Profile {...user} />
+				<div className='info-container'>
+					<AboutMe {...user} />
+					<Challenges {...user} />
+					<SocialNetworks {...user} />
 				</div>
 			</div>
-		)
-	}
+		</div>
+	)
 }

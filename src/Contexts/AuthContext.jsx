@@ -12,21 +12,12 @@ export const AuthProvider = ({ children }) => {
 			const storageToken = localStorage.getItem('@Auth:token')
 
 			if (storageUser && storageToken) {
-				const userChallengesResponse = await api.get(
-					`/challengesresponse/${storageUser.id}`
+				const attUser = await api.get(
+					`/usersbylogin/${storageUser.userName}`
 				)
-				const userRule = await api.get(`/category/${storageUser.id}`)
-				const socialName = await api.get(
-					`/socialnetwork/${storageUser.id}`
-				)
-
-				const attUser = {
-					...storageUser,
-					userChallengesResponse: userChallengesResponse.data,
-					userRule: userRule.data,
-					socialName: socialName.data,
+				if (storageUser !== attUser.data) {
+					setUser(attUser.data)
 				}
-				setUser(attUser)
 			}
 		}
 		loadingStorageData()
@@ -35,31 +26,17 @@ export const AuthProvider = ({ children }) => {
 	const signIn = async ({ login, password }) => {
 		const response = await api.post('/login', { login, password })
 
-		if (response.data.message === 'Crendenciais inválidas') {
+		if (response.data.message) {
 			alert(response.data.message)
 		} else {
-			const teste = await api.get(`/usersbylogin/${login}`)
-			const userChallengesResponse = await api.get(
-				`/challengesresponse/${teste.data[0].id}`
-			)
-			const userRule = await api.get(`/category/${teste.data[0].id}`)
-			const socialName = await api.get(
-				`/socialnetwork/${teste.data[0].id}`
-			)
+			const userObj = await api.get(`/usersbylogin/${login}`)
 
-			const userObj = {
-				...teste.data[0],
-				userChallengesResponse: userChallengesResponse.data,
-				userRule: userRule.data,
-				socialName: socialName.data,
-			}
-			console.log(userObj)
-			setUser(JSON.stringify(teste.data[0]))
 			api.defaults.headers.common[
 				'Authorization'
 			] = `Bearer ${response.data.JWT}`
 			localStorage.setItem('@Auth:token', response.data.JWT)
-			localStorage.setItem('@Auth:user', JSON.stringify(teste.data[0]))
+			localStorage.setItem('@Auth:user', JSON.stringify(userObj.data))
+			setUser(userObj.data)
 		}
 	}
 

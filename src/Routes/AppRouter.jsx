@@ -23,15 +23,6 @@ const router = createBrowserRouter([
 				element: <LandingPage />,
 			},
 			{
-				path: 'login',
-				element: <Login />,
-			},
-			{
-				path: 'signup',
-				element: <SignUp />,
-			},
-
-			{
 				path: 'ranking',
 				element: <Ranking />,
 			},
@@ -76,6 +67,14 @@ const router = createBrowserRouter([
 				element: <></>,
 			},
 		],
+	},
+	{
+		path: 'login',
+		element: <Login />,
+	},
+	{
+		path: 'signup',
+		element: <SignUp />,
 	},
 ])
 

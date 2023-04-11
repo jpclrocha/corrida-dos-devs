@@ -4,31 +4,38 @@ import Button from '../../Utils/Button/Button'
 import Input from '../../Utils/Input/Input'
 import './SignUpForm.scss'
 
-export default function SignUpForm() {
-	const initUser = {
-		id: null,
-		name: '',
-		email: '',
-		password: '',
-		passwordConfirm: '',
-	}
+const initUser = {
+	userName: '',
+	userEmail: '',
+	userPassword: '',
+	userPasswordConfirm: '',
+	userBio: '',
+	userRankPoints: 0,
+}
 
+export default function SignUpForm() {
 	const [user, setUser] = useState(initUser)
 
-	const handleChange = (e) => {
-		const { name, value } = e.target
+	const handleChange = (event) => {
+		const { name, value } = event.target
 		setUser({ ...user, [name]: value })
 	}
 
-	const handleSubmit = (e) => {}
+	const handleSubmit = (event) => {
+		event.preventDefault()
+		console.log(user)
+		if (user.userPassword === user.userPasswordConfirm) {
+		}
+		//alert('Passwords do not match')
+	}
 
 	return (
-		<form className='signup-form-container'>
+		<form className='signup-form-container' onSubmit={handleSubmit}>
 			<Input
 				label='Nome Completo:'
 				type='text'
-				name='name'
-				value={user.name}
+				name='userName'
+				value={user.userName}
 				placeholder='Digite seu nome completo'
 				onChange={handleChange}
 			/>
@@ -36,8 +43,8 @@ export default function SignUpForm() {
 			<Input
 				label='Email:'
 				type='email'
-				name='email'
-				value={user.email}
+				name='userEmail'
+				value={user.userEmail}
 				placeholder='Digite seu email'
 				onChange={handleChange}
 			/>
@@ -45,8 +52,8 @@ export default function SignUpForm() {
 			<Input
 				label='Senha:'
 				type='password'
-				name='password'
-				value={user.password}
+				name='userPassword'
+				value={user.userPassword}
 				placeholder='Digite sua senha'
 				onChange={handleChange}
 			/>
@@ -54,8 +61,8 @@ export default function SignUpForm() {
 			<Input
 				label='Digite sua senha novamente:'
 				type='password'
-				name='passwordConfirm'
-				value={user.passwordConfirm}
+				name='userPasswordConfirm'
+				value={userPasswordConfirm}
 				placeholder='Confirme sua senha'
 				onChange={handleChange}
 			/>

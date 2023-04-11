@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../../Contexts/AuthContext'
 import Button from '../../Utils/Button/Button'
 import Input from '../../Utils/Input/Input'
@@ -13,7 +13,8 @@ const defaultLogin = {
 export default function LoginForm() {
 	const [data, setData] = useState(defaultLogin)
 	const { login, password } = data
-	const { signIn } = useContext(AuthContext)
+	const { signIn, signed } = useContext(AuthContext)
+	const navigate = useNavigate()
 
 	const onChangeHandler = (event) => {
 		const { name, value } = event.target
@@ -23,6 +24,7 @@ export default function LoginForm() {
 	const handleSubmit = async (event) => {
 		event.preventDefault()
 		await signIn(data)
+		if (signed) return navigate('/myaccount')
 	}
 
 	return (
