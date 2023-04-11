@@ -1,29 +1,18 @@
 import { useEffect, useState } from 'react'
+import { api } from '../../../services/api'
 import './RankingComponent.scss'
 import RankingModal from './RankingModal'
 
 export default function RankingComponent() {
-	//const [students, setStudents] = useState([])
-	/*
+	const [users, setUsers] = useState([])
 	useEffect(() => {
-		fetch('https://APiRestAula.j0p3.repl.co/users').then((response) =>
-			response.json().then((studentsList) => {
-				setStudents(studentsList)
-			})
-		)
+		const getRankings = async () => {
+			const ranking = await api.get('/users')
+			setUsers(ranking.data)
+		}
+		getRankings()
 	}, [])
-	*/
 
-	const students = [
-		{
-			id: 8,
-			userName: 'DSerao Montegrego',
-			userBio: 'Eu acho que nao sobe.',
-			userEmail: 'Goldorayl@gmail.com',
-			userRankPoints: 1000,
-			userSocialNetworks: ['jpclrocha', 'teste'],
-		},
-	]
 	return (
 		<div className='ranking-component-container'>
 			<div className='ranking-input-container'>
@@ -31,8 +20,8 @@ export default function RankingComponent() {
 				<input className='ranking-input-box' placeholder='Buscar' />
 			</div>
 
-			{students.map((user) => {
-				return <RankingModal {...user} />
+			{users.map((user) => {
+				return <RankingModal {...user} key={user.id} />
 			})}
 		</div>
 	)

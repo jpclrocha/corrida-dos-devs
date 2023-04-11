@@ -2,6 +2,8 @@ import image from '../../../assets/ft-perfil.svg'
 import './RankingModal.scss'
 
 export default function RankingModal({ id, userName, userRankPoints, turma }) {
+	const name = userName.split(' ')
+
 	return (
 		<div className='ranking-modal' key={id}>
 			<div className='student-ranking'>
@@ -14,10 +16,11 @@ export default function RankingModal({ id, userName, userRankPoints, turma }) {
 				</div>
 
 				<div className='student-ranking-info'>
-					<h1>
-						{userName.charAt(0).toUpperCase() + userName.slice(1)}
-					</h1>
-					<h2>{turma ? turma : 'Estudante sem turma'}</h2>
+					{name.length > 1 ? (
+						<h1>{`${name[0]} ${name[name.length - 1]}`}</h1>
+					) : (
+						<h1>{name}</h1>
+					)}
 				</div>
 			</div>
 

@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react'
 import image from '../../../assets/calc.svg'
+import { api } from '../../../services/api'
 import './ChallengeComponent.scss'
 import ChallengeModal from './ChallengeModal'
 
@@ -6,27 +8,30 @@ export default function ChallengeComponent() {
 	const desafioSemanal = {
 		nome: 'Desafio calculadora',
 		descricao: 'Objetivo: desenvolver uma calculadora web',
-		requisitos: [
-			{ titulo: 'Utilizar: HTML, CSS e JS;', id: 1 },
-			{
-				titulo: 'Ambiente de desenvolvimento a critério do usuário;',
-				id: 2,
-			},
-		],
+		requisitos:
+			'Utilizar: HTML, CSS e JS; Ambiente de desenvolvimento a critério do usuário',
 		pontos: 50,
 		imagem: image,
 	}
 
+	const [desafio, setDesafio] = useState([])
+
+	/*useEffect(() => {
+		const getMaterial = async () => {
+			try {
+				const res = await api.get('/material')
+				setDesafio(res.data)
+			} catch (error) {
+				console.log(error.message)
+			}
+		}
+		getMaterial()
+	}, [])*/
+
 	return (
 		<div className='desafio-component-container'>
-			<div className='titulo'>Desafio da semana:</div>
-			<ChallengeModal
-				nome={desafioSemanal.nome}
-				descricao={desafioSemanal.descricao}
-				requisitos={desafioSemanal.requisitos}
-				pontos={desafioSemanal.pontos}
-				imagem={desafioSemanal.imagem}
-			/>
+			<div className='titulo'>Desafios da semana:</div>
+			<ChallengeModal {...desafioSemanal} />
 		</div>
 	)
 }

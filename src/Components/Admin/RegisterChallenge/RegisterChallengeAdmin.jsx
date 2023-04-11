@@ -35,7 +35,7 @@ export default function RegisterChallengeAdmin() {
 
 					<div className='register-material-input'>
 						<Input
-							label='Requisitos: (Se mais de 1, separe por vírgula)'
+							label='Requisitos: (Se mais de 1, separe por ponto e vírgula (;) )'
 							type='text'
 							placeholder='Descreva os requisitos que os participantes devem seguir para serem avaliados corretamente'
 							required

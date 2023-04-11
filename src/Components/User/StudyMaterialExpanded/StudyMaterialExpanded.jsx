@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useContext, useEffect, useState } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
+import { AuthContext } from '../../../Contexts/AuthContext'
 import { api } from '../../../services/api'
 import Faixa from '../../Utils/Faixa/Faixa'
 import Descricao from './Descricao/Descricao'
@@ -9,6 +10,8 @@ import './StudyMaterialExpanded.scss'
 export default function StudyMaterialExpanded() {
 	const [curso, setCurso] = useState(null)
 	const { id } = useParams()
+	const { signed } = useContext(AuthContext)
+	const navigate = useNavigate()
 
 	useEffect(() => {
 		const getMaterial = async (id) => {
@@ -17,6 +20,8 @@ export default function StudyMaterialExpanded() {
 		}
 		getMaterial(id)
 	}, [id])
+
+	if (!signed) return navigate('/login')
 
 	return (
 		<div className='expanded-container'>

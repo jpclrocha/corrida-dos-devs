@@ -8,10 +8,12 @@ export default function ChallengeModal({
 	pontos,
 	requisitos,
 }) {
-	const gera = requisitos.map((item) => {
+	const requisitosArr = requisitos.split(';')
+	console.log(requisitosArr)
+	const gera = requisitosArr.map((item) => {
 		return (
-			<li key={item.id} style={{ color: '#ffffff' }}>
-				{item.titulo}
+			<li key={item} style={{ color: '#ffffff' }}>
+				{item}
 			</li>
 		)
 	})
@@ -33,7 +35,7 @@ export default function ChallengeModal({
 					</div>
 					<div className='requisitos-container'>
 						<div className='requisitos'>
-							<h1>Requisitos</h1>
+							<h1>Requisitos:</h1>
 							{gera}
 						</div>
 						<Button className='requisitos-btn'>

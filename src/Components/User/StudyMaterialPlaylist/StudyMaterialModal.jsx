@@ -4,21 +4,21 @@ import Button from '../../Utils/Button/Button'
 import './StudyMaterialModal.scss'
 
 export default function StudyMaterialModal({
-	MaterialId,
-	MaterialTitle,
-	MaterialDetailedInformation,
-	MaterialShortInformation,
-	MaterialIdealFor,
-	MaterialVideoUrl,
-	MateiralContentList,
+	id,
+	materialTitle,
+	materialDetailedInformation,
+	materialShortInformation,
+	materialIdealFor,
+	materialVideoUrl,
+	materialContentList,
 }) {
-	const generateList = MateiralContentList.map((item) => {
+	/*const generateList = materialContentList.map((item) => {
 		return (
 			<li className='list-item' key={item.id}>
 				{item.title}
 			</li>
 		)
-	})
+	})*/
 
 	return (
 		<div className='material-modal-container'>
@@ -27,16 +27,16 @@ export default function StudyMaterialModal({
 			</div>
 
 			<div className='info-container'>
-				<h1 className='title'>{MaterialTitle}</h1>
+				<h1 className='title'>{materialTitle}</h1>
 				<div className='description'>
-					<p>{MaterialShortInformation}</p>
+					<p>{materialShortInformation}</p>
 				</div>
 			</div>
 
 			<div className='list-container'>
-				<h1 className='list-title'>{MaterialIdealFor}</h1>
-				<ul className='list-items-container'>{generateList}</ul>
-				<Link to={`/materials/${MaterialId}`}>
+				<h1 className='list-title'>{materialIdealFor}</h1>
+				<ul className='list-items-container'>{}</ul>
+				<Link to={`/materials/${id}`}>
 					<Button buttonType={'verde'}>Iniciar jornada</Button>
 				</Link>
 			</div>

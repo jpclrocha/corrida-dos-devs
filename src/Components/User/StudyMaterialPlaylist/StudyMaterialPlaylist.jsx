@@ -1,55 +1,34 @@
 import { useEffect, useState } from 'react'
+import StudyMaterialModal from './StudyMaterialModal'
+
 import { api } from '../../../services/api.js'
-import StudyMaterialModal from './StudyMaterialModal.jsx'
+
 import './StudyMaterialPlaylist.scss'
 
 export default function StudyMaterialPlaylist() {
-	const curso = [
-		{
-			MaterialId: 1,
-			MaterialTitle: 'HTML, CSS e JS',
-			MaterialDetailedInformation:
-				'Você vai construir os primeiros conhecimentos sobre programação e tecnologia. Desde a diferenciação entre hardware e software, internet e seu papel no desenvolvimento, até o pensamento computacional e lógico, passando por tipos de aplicações web e linguagem de programação. Este é o lugar para aprender sobre o funcionamento de sistemas operacionais e a escolha do melhor sistema operacional pra você. Você vai ganhar clareza sobre as bases da programação para web e aprender palavras e conceitos desse novo universo.',
-			MaterialShortInformation:
-				'Trilha de conhecimento para primeiro contato com a programação',
-			MaterialIdealFor:
-				'Ideal para você que está começando do absoluto zero na programação se familiarizar com esse incrível universo',
-			MaterialVideoUrl:
-				'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley',
-			MateiralContentList: [
-				{ title: 'Fundamentos básicos', id: 1 },
-				{ title: 'Pensamento computacional', id: 2 },
-				{ title: 'Programação Web', id: 3 },
-				{ title: 'E muito mais conteúdo pra explorar!', id: 4 },
-			],
-		},
-	]
-
 	const [course, setCourse] = useState([])
-
 	useEffect(() => {
 		const getMaterial = async () => {
-			const response = await api.get('/material')
-
-			const data = await response.data
-			setCourse(data)
+			try {
+				const res = await api.get('/material')
+				setCourse(res.data)
+			} catch (error) {
+				console.log(error.message)
+			}
 		}
 		getMaterial()
 	}, [])
+
+	if (!course.length) return <h3>Loading...</h3>
 
 	return (
 		<div className='study-material-playlist-container'>
 			<h1 className='study-material-playlist-title'>
 				Materiais de estudo:
 			</h1>
-			{console.log(course)}
-			{curso.map((informacoes) => {
-				return (
-					<StudyMaterialModal
-						{...informacoes}
-						key={informacoes.MaterialId}
-					/>
-				)
+
+			{course.map((item) => {
+				return <StudyMaterialModal {...item} key={item.id} />
 			})}
 		</div>
 	)
