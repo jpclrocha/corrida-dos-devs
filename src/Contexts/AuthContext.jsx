@@ -24,17 +24,17 @@ export const AuthProvider = ({ children }) => {
 	}, [])
 
 	const signIn = async ({ login, password }) => {
-		const response = await api.post('/login', { login, password })
+		const request = await api.post('/login', { login, password })
 
-		if (response.data.message) {
-			alert(response.data.message)
+		if (request.data.message) {
+			alert(request.data.message)
 		} else {
 			const userObj = await api.get(`/usersbylogin/${login}`)
 
 			api.defaults.headers.common[
 				'Authorization'
-			] = `Bearer ${response.data.JWT}`
-			localStorage.setItem('@Auth:token', response.data.JWT)
+			] = `Bearer ${request.data.JWT}`
+			localStorage.setItem('@Auth:token', request.data.JWT)
 			localStorage.setItem('@Auth:user', JSON.stringify(userObj.data))
 			setUser(userObj.data)
 		}

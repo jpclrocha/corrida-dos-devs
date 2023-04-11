@@ -1,10 +1,19 @@
-import { Link } from 'react-router-dom'
+import { useContext, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { AuthContext } from '../../../Contexts/AuthContext'
 import image from '../../../assets/logoBranca.svg'
 import Rodape from '../Rodape/Rodape'
 import './SignUpComponent.scss'
 import SignUpForm from './SignUpForm'
 
 export default function SignUpComponent() {
+	const { signed } = useContext(AuthContext)
+	const navigate = useNavigate()
+
+	useEffect(() => {
+		if (signed) return navigate('/')
+	})
+
 	return (
 		<div>
 			<div className='sign-up-container'>

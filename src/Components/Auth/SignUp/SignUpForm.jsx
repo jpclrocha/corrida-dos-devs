@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { api } from '../../../services/api'
 import Button from '../../Utils/Button/Button'
 import Input from '../../Utils/Input/Input'
 import './SignUpForm.scss'
@@ -15,30 +16,33 @@ const initUser = {
 
 export default function SignUpForm() {
 	const [user, setUser] = useState(initUser)
+	const navigate = useNavigate()
 
 	const handleChange = (event) => {
 		const { name, value } = event.target
 		setUser({ ...user, [name]: value })
 	}
 
-	const handleSubmit = (event) => {
+	const handleSubmit = async (event) => {
 		event.preventDefault()
-		let emailRegex = new RegExp(
-			"/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/"
-		)
-
-		let usernameRegex = new RegExp(`/[!@#$%^&*(),.?"':{}|<>]/g`)
+		const emailRegex =
+			/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 
 		if (
 			user.userPassword !== user.userPasswordConfirm ||
-			!emailRegex.test(user.userEmail) ||
-			usernameRegex.test(user.userName)
+			!user.userEmail.match(emailRegex)
 		) {
 			alert('Campos inválidos')
 			return
 		}
 
-		console.log(user)
+		const newUser = await api.post('/users', user)
+		await api.post('/category', {
+			categoryRule: 3,
+			categoryName: 'STUDENT',
+			userId: newUser.data[0].id,
+		})
+		return navigate('/login')
 	}
 
 	return (

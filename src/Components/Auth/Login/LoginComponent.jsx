@@ -11,7 +11,7 @@ export default function LoginComponent() {
 	const navigate = useNavigate()
 
 	useEffect(() => {
-		if (signed) return navigate('/')
+		if (signed) return navigate('/myaccount')
 	})
 
 	return (
