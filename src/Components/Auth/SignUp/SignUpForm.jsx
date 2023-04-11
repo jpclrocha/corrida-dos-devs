@@ -23,10 +23,22 @@ export default function SignUpForm() {
 
 	const handleSubmit = (event) => {
 		event.preventDefault()
-		console.log(user)
-		if (user.userPassword === user.userPasswordConfirm) {
+		let emailRegex = new RegExp(
+			"/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/"
+		)
+
+		let usernameRegex = new RegExp(`/[!@#$%^&*(),.?"':{}|<>]/g`)
+
+		if (
+			user.userPassword !== user.userPasswordConfirm ||
+			!emailRegex.test(user.userEmail) ||
+			usernameRegex.test(user.userName)
+		) {
+			alert('Campos inválidos')
+			return
 		}
-		//alert('Passwords do not match')
+
+		console.log(user)
 	}
 
 	return (
@@ -62,7 +74,7 @@ export default function SignUpForm() {
 				label='Digite sua senha novamente:'
 				type='password'
 				name='userPasswordConfirm'
-				value={userPasswordConfirm}
+				value={user.userPasswordConfirm}
 				placeholder='Confirme sua senha'
 				onChange={handleChange}
 			/>
