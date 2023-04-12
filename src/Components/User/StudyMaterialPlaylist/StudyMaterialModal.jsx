@@ -12,13 +12,13 @@ export default function StudyMaterialModal({
 	materialVideoUrl,
 	materialContentList,
 }) {
-	/*const generateList = materialContentList.map((item) => {
+	const generateList = materialContentList.map((item) => {
 		return (
 			<li className='list-item' key={item.id}>
-				{item.title}
+				{item.materialContent}
 			</li>
 		)
-	})*/
+	})
 
 	return (
 		<div className='material-modal-container'>
@@ -35,7 +35,7 @@ export default function StudyMaterialModal({
 
 			<div className='list-container'>
 				<h1 className='list-title'>{materialIdealFor}</h1>
-				<ul className='list-items-container'>{}</ul>
+				<ul className='list-items-container'>{generateList}</ul>
 				<Link to={`/materials/${id}`}>
 					<Button buttonType={'verde'}>Iniciar jornada</Button>
 				</Link>

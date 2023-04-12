@@ -1,19 +1,20 @@
+import image from '../../../assets/calc.svg'
 import Button from '../../Utils/Button/Button'
 import './ChallengeModal.scss'
 
 export default function ChallengeModal({
-	imagem,
-	nome,
-	descricao,
-	pontos,
-	requisitos,
+	challengeImageURL,
+	challengeTitle,
+	challengeDescription,
+	challengePoints,
+	challengeContentList,
+	challengeDeadline,
 }) {
-	const requisitosArr = requisitos.split(';')
-	console.log(requisitosArr)
-	const gera = requisitosArr.map((item) => {
+	console.log(challengeContentList)
+	const gera = challengeContentList.map((item) => {
 		return (
 			<li key={item} style={{ color: '#ffffff' }}>
-				{item}
+				{item.challengeContent}
 			</li>
 		)
 	})
@@ -23,24 +24,30 @@ export default function ChallengeModal({
 			<div className='img-and-info'>
 				<div className='imagem-container'>
 					<img
-						src={imagem}
+						src={image}
 						alt='desafio-imagem'
 						className='desafio-imagem'
 					/>
 				</div>
 				<div className='desafio-info-container'>
 					<div className='titulo'>
-						<h1>{nome}</h1>
-						<p>{descricao}</p>
+						<h1>{challengeTitle}</h1>
+						<p>{challengeDescription}</p>
 					</div>
 					<div className='requisitos-container'>
 						<div className='requisitos'>
 							<h1>Requisitos:</h1>
 							{gera}
 						</div>
-						<Button className='requisitos-btn'>
-							Clique para ver referência
-						</Button>
+						<div className='requisitos-btn'>
+							<a
+								href={challengeImageURL}
+								target='_blank'
+								rel='noreferrer'
+							>
+								Clique para ver referência
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -69,7 +76,7 @@ export default function ChallengeModal({
 
 				<div className='pontuacao'>
 					<h1>Valendo:</h1>
-					<h1>{pontos} Pontos</h1>
+					<h1>{challengePoints} pontos</h1>
 				</div>
 			</div>
 		</div>
