@@ -17,13 +17,18 @@ const defaultMaterial = {
 
 export default function RegisterMaterialAdmin() {
 	const [listaChave, setListaChave] = useState('')
-	//const listaMaterialContent = listaChave.split('; ')
 
 	const listaChange = (event) => {
 		const { name, value } = event.target
 		setListaChave({ ...listaChave, [name]: value })
 	}
+
 	const [postar, setPostar] = useState(defaultMaterial)
+
+	const resetFormFields = () => {
+		setPostar(defaultMaterial)
+		setListaChave('')
+	}
 
 	const handleChange = (event) => {
 		const { name, value } = event.target
@@ -32,14 +37,20 @@ export default function RegisterMaterialAdmin() {
 
 	const handleSubmit = async (event) => {
 		event.preventDefault()
-		const response = await api.post('/material', postar)
+		const response = await api.post('/material').catch((error) => {
+			if (error.response.status === 400) alert('Campos invalidos')
+		})
+
 		const lista = listaChave.listaChave.split('; ')
-		lista.map((item) => {
-			api.post('/materialcontent', {
+		lista.map(async (item) => {
+			await api.post('/materialcontent', {
 				materialId: response.data[0].id,
 				materialContent: item,
 			})
 		})
+
+		alert('Material adicionado com sucesso')
+		resetFormFields()
 	}
 
 	return (

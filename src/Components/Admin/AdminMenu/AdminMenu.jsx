@@ -9,12 +9,12 @@ export default function AdminMenu() {
 		<div className='admin-menu-container'>
 			<h1 className='admin-title'>Espaço Administrador:</h1>
 
-			<CardAdmin
+			{/*<CardAdmin
 				title='Gerenciar usuários'
 				image={certo}
 				textBtn='Gerenciar!'
 				route='/manageUsers'
-			/>
+	/>*/}
 
 			<CardAdmin
 				title='Adicionar material'
@@ -23,12 +23,12 @@ export default function AdminMenu() {
 				route='/registerMaterial'
 			/>
 
-			<CardAdmin
+			{/*<CardAdmin
 				title='Gerenciar materiais'
 				image={certo}
 				textBtn='Gerenciar!'
 				route='/manageMaterial'
-			/>
+/>*/}
 
 			<CardAdmin
 				title='Adicionar desafios'

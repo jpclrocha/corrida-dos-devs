@@ -7,7 +7,7 @@ export default function RankingComponent() {
 	const [users, setUsers] = useState([])
 	useEffect(() => {
 		const getRankings = async () => {
-			const ranking = await api.get('/users')
+			const ranking = await api.get('/usersby10')
 			setUsers(ranking.data)
 		}
 		getRankings()
