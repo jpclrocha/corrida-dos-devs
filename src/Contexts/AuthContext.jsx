@@ -18,6 +18,7 @@ export const AuthProvider = ({ children }) => {
 				if (storageUser !== attUser.data) {
 					setUser(attUser.data)
 				}
+				setUser(storageUser)
 			}
 		}
 		loadingStorageData()

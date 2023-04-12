@@ -32,7 +32,9 @@ export default function RateChallengeAdmin() {
 				</div>
 
 				{challengesResponseUser.map((item) => {
-					return <Modal {...item} />
+					if (item.rated === 'False') {
+						return <Modal {...item} key={item.id} />
+					}
 				})}
 			</div>
 		</>

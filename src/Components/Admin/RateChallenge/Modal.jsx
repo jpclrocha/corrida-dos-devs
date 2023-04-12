@@ -25,7 +25,13 @@ const defaultChallenge = {
 	challengeContentList: '',
 }
 
-export default function Modal({ userId, challengeId, challengeLinkResponse }) {
+export default function Modal({
+	userId,
+	challengeId,
+	challengeLinkResponse,
+	rated,
+	id,
+}) {
 	const [user, setUser] = useState(defaultUser)
 	const [challenge, setChallenge] = useState(defaultChallenge)
 	const [points, setPoints] = useState('')
@@ -57,7 +63,15 @@ export default function Modal({ userId, challengeId, challengeLinkResponse }) {
 			valueColumn:
 				parseInt(user.userRankPoints) + parseInt(points.points),
 		}
-		const response = await api.patch('/users', patchUser)
+		await api.patch('/users', patchUser)
+
+		await api.patch('/challengesresponse', {
+			challengeResponseId: id,
+			patchColumn: 'rated',
+			valueColumn: 'True',
+		})
+		alert('Nota postada')
+		window.location.reload()
 	}
 
 	if (!user) return <h1>Loading...</h1>

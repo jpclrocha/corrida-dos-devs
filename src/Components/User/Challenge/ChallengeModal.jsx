@@ -40,12 +40,14 @@ export default function ChallengeModal({
 	const handleSubmit = (event) => {
 		event.preventDefault()
 		if (!signed) return navigate('/login')
-		console.log(data.resposta)
-		api.post('/challengesresponse', {
+
+		const resposta = {
 			challengeId: id,
 			userId: user.id,
 			challengeLinkResponse: data.resposta,
-		})
+			challengeRated: 'False',
+		}
+		api.post('/challengesresponse', resposta)
 	}
 
 	return (
