@@ -30,11 +30,16 @@ export default function RegisterMaterialAdmin() {
 		setPostar({ ...postar, [name]: value })
 	}
 
-	const handleSubmit = (event) => {
+	const handleSubmit = async (event) => {
 		event.preventDefault()
-		console.log(listaChave.listaChave.split('; '))
-		console.log(postar)
-		const response = api.post('/material', { postar })
+		const response = await api.post('/material', postar)
+		const lista = listaChave.listaChave.split('; ')
+		lista.map((item) => {
+			api.post('/materialcontent', {
+				materialId: response.data[0].id,
+				materialContent: item,
+			})
+		})
 	}
 
 	return (
