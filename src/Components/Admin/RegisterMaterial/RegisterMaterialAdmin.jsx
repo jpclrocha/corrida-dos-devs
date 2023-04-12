@@ -1,10 +1,42 @@
+import { useState } from 'react'
 import image from '../../../assets/nuvem-download.svg'
+import { api } from '../../../services/api'
 import Button from '../../Utils/Button/Button'
 import Faixa from '../../Utils/Faixa/Faixa'
 import Input from '../../Utils/Input/Input'
 import './RegisterMaterialAdmin.scss'
 
+const defaultMaterial = {
+	materialTitle: '',
+	materialVideoUrl: '',
+	materialIdealFor: '',
+	materialDetailedInformation: '',
+	materialShortInformation: '',
+	materialContentList: [],
+}
+
 export default function RegisterMaterialAdmin() {
+	const [listaChave, setListaChave] = useState('')
+	//const listaMaterialContent = listaChave.split('; ')
+
+	const listaChange = (event) => {
+		const { name, value } = event.target
+		setListaChave({ ...listaChave, [name]: value })
+	}
+	const [postar, setPostar] = useState(defaultMaterial)
+
+	const handleChange = (event) => {
+		const { name, value } = event.target
+		setPostar({ ...postar, [name]: value })
+	}
+
+	const handleSubmit = (event) => {
+		event.preventDefault()
+		console.log(listaChave.listaChave.split('; '))
+		console.log(postar)
+		const response = api.post('/material', { postar })
+	}
+
 	return (
 		<>
 			<Faixa colorType='cinza' materialTitle='Adicionar material:' />
@@ -17,16 +49,48 @@ export default function RegisterMaterialAdmin() {
 							placeholder='Adicione um título aqui'
 							required
 							color='verde'
+							name='materialTitle'
+							value={postar.materialTitle}
+							onChange={handleChange}
 						/>
 					</div>
 
 					<div className='register-material-input'>
 						<Input
-							label='Descrição: (Obrigatório)'
+							label='Conteúdo: (Obrigatório)'
 							type='text'
-							placeholder='Descreva o material para todos os usuários'
+							placeholder='Escreva o conteúdo que complementa o vídeo'
 							required
 							color='verde'
+							name={'materialDetailedInformation'}
+							value={postar.materialDetailedInformation}
+							onChange={handleChange}
+						/>
+					</div>
+
+					<div className='register-material-input'>
+						<Input
+							label='Ideal para:  (Obrigatório)'
+							type='text'
+							placeholder='Descreva para quem o material é adequado'
+							required
+							color='verde'
+							name={'materialIdealFor'}
+							value={postar.materialIdealFor}
+							onChange={handleChange}
+						/>
+					</div>
+
+					<div className='register-material-input'>
+						<Input
+							label='Palavras-chave: (separe por Ponto e Vírgula ( ; )) (Obrigatório)'
+							type='text'
+							placeholder='Escreva palavras-chave sobre o conteúdo'
+							required
+							color='verde'
+							name={'listaChave'}
+							value={listaChave.listaChave}
+							onChange={listaChange}
 						/>
 					</div>
 				</div>
@@ -37,16 +101,31 @@ export default function RegisterMaterialAdmin() {
 							<img src={image} alt='material-upload' />
 						</div>
 						<Input
-							label='Adicione link do vídeo:'
+							label='Adicione link do vídeo:  (Obrigatório)'
 							type='text'
 							placeholder='Link para o vídeo'
 							required
 							color='verde'
+							name={'materialVideoUrl'}
+							value={postar.materialVideoUrl}
+							onChange={handleChange}
+						/>
+					</div>
+					<div className='register-material-input'>
+						<Input
+							label='Descrição:  (Obrigatório)'
+							type='text'
+							placeholder='Descreva o material para todos os usuários'
+							required
+							color='verde'
+							name={'materialShortInformation'}
+							value={postar.materialShortInformation}
+							onChange={handleChange}
 						/>
 					</div>
 				</div>
 			</form>
-			<div className='register-btn-container'>
+			<div className='register-btn-container' onClick={handleSubmit}>
 				<Button type='submit' buttonType='verde'>
 					Enviar
 				</Button>

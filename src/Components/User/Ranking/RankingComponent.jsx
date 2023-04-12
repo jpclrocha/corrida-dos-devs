@@ -16,8 +16,9 @@ export default function RankingComponent() {
 	return (
 		<div className='ranking-component-container'>
 			<div className='ranking-input-container'>
-				<h1 className='ranking-heading'>Ranking dos Alunos</h1>
-				<input className='ranking-input-box' placeholder='Buscar' />
+				<h1 className='ranking-heading'>
+					Ranking dos Alunos (Top 10 corredores)
+				</h1>
 			</div>
 
 			{users.map((user) => {

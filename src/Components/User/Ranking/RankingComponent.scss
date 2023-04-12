@@ -1,3 +1,6 @@
+$verde: #1c7a1f;
+$branco: #ffffff;
+
 .ranking-component-container {
 	display: flex;
 	margin: 0 auto;
@@ -17,11 +20,11 @@
 			font-size: 2.25rem;
 			line-height: 2.5rem;
 			font-weight: 900;
-			color: white;
+			color: $branco;
 		}
 
 		.ranking-input-box {
-			background-color: white;
+			background-color: $branco;
 			width: 40%;
 			height: 0.5rem;
 			align-self: center;
@@ -49,7 +52,7 @@
 				font-size: 2rem;
 				line-height: 2.5rem;
 				font-weight: 900;
-				color: white;
+				color: $branco;
 				width: 100%;
 				margin-bottom: 1rem;
 			}

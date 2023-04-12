@@ -1,8 +1,18 @@
+import { useContext, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { AuthContext } from '../../../Contexts/AuthContext'
 import image from '../../../assets/calc.svg'
+import { api } from '../../../services/api'
 import Button from '../../Utils/Button/Button'
+import Input from '../../Utils/Input/Input'
 import './ChallengeModal.scss'
 
+const defaultResposta = {
+	resposta: '',
+}
+
 export default function ChallengeModal({
+	id,
 	challengeImageURL,
 	challengeTitle,
 	challengeDescription,
@@ -10,14 +20,33 @@ export default function ChallengeModal({
 	challengeContentList,
 	challengeDeadline,
 }) {
-	console.log(challengeContentList)
+	const { signed, user } = useContext(AuthContext)
+	const navigate = useNavigate()
 	const gera = challengeContentList.map((item) => {
 		return (
-			<li key={item} style={{ color: '#ffffff' }}>
+			<li key={item.challengeContent} style={{ color: '#ffffff' }}>
 				{item.challengeContent}
 			</li>
 		)
 	})
+
+	const [data, setData] = useState(defaultResposta)
+
+	const handleChange = (event) => {
+		const { name, value } = event.target
+		setData({ ...data, [name]: value })
+	}
+
+	const handleSubmit = (event) => {
+		event.preventDefault()
+		if (!signed) return navigate('/login')
+		console.log(data.resposta)
+		api.post('/challengesresponse', {
+			challengeId: id,
+			userId: user.id,
+			challengeLinkResponse: data.resposta,
+		})
+	}
 
 	return (
 		<div className='desafio-container'>
@@ -54,21 +83,22 @@ export default function ChallengeModal({
 
 			<div className='secondary-info-container'>
 				<div className='response-container'>
-					<h1 className='response-title'>
-						Adicione o link para correção
-					</h1>
-					<input
+					<Input
+						label={'Adicione o link para correção'}
 						type='text'
 						placeholder='adicione o link aqui'
-						id='resposta'
-						className='input-response'
+						name='resposta'
+						value={data.resposta}
+						onChange={handleChange}
 					/>
+
 					<Button
 						type='submit'
 						name='submitBtn'
 						value='desafio'
 						buttonType={'verde'}
 						id='submitBtn'
+						onClick={handleSubmit}
 					>
 						Enviar
 					</Button>
