@@ -7,6 +7,16 @@ $branco: #ffffff;
 	margin: 1.25rem 0rem 1.25rem 0rem;
 	background-color: $branco;
 
+	.modal-teste {
+		display: inline-flex;
+		width: 100%;
+		justify-content: space-between;
+
+		.btn-modal {
+			width: fit-content;
+		}
+	}
+
 	.social-title {
 		font-size: 1.5rem;
 		line-height: 2rem;

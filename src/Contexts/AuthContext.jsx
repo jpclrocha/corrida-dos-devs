@@ -13,12 +13,12 @@ export const AuthProvider = ({ children }) => {
 
 			if (storageUser && storageToken) {
 				const attUser = await api.get(
-					`/usersbylogin/${storageUser.userName}`
+					`/usersbylogin/${storageUser.userEmail}`
 				)
-				if (storageUser !== attUser.data) {
-					setUser(attUser.data)
+				if (storageUser === attUser.data) {
+					setUser(JSON.stringify(storageUser))
 				}
-				setUser(storageUser)
+				setUser(attUser.data)
 			}
 		}
 		loadingStorageData()
