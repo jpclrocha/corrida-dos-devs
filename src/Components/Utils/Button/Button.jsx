@@ -6,10 +6,10 @@ const BUTTON_TYPE_CLASSES = {
 	hamburger: 'hamburger',
 }
 
-const Button = ({ children, buttonType, ...otherProps }) => {
+const Button = ({ children, buttonType, className, ...otherProps }) => {
 	return (
 		<button
-			className={`button-container ${BUTTON_TYPE_CLASSES[buttonType]}`}
+			className={`button-container ${BUTTON_TYPE_CLASSES[buttonType]} ${className}`}
 			{...otherProps}
 		>
 			{children}

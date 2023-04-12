@@ -1,30 +1,25 @@
+import { useEffect, useState } from 'react'
+import { api } from '../../../services/api'
 import Faixa from '../../Utils/Faixa/Faixa'
 import Input from '../../Utils/Input/Input'
 import Modal from './Modal'
 import './RateChallengeAdmin.scss'
 
-const user = [
-	{
-		id: 8,
-		userName: 'DSerao Montegrego',
-		userBio: 'Eu acho que nao sobe.',
-		userEmail: 'Goldorayl@gmail.com',
-		userRankPoints: 19,
-		userSocialNetworks: ['jpclrocha', 'teste'],
-		challengeLinkResponse: 'youtube.com',
-	},
-	{
-		id: 7,
-		userName: 'D Montegrego',
-		userBio: 'Eu acho que nao sobe.',
-		userEmail: 'Goldorayl@gmail.com',
-		userRankPoints: 19,
-		userSocialNetworks: ['jpclrocha', 'teste'],
-		challengeLinkResponse: 'twitter.com',
-	},
-]
-
 export default function RateChallengeAdmin() {
+	const [challengesResponseUser, setChallengesResponseUser] = useState('')
+	useEffect(() => {
+		const getMaterial = async () => {
+			try {
+				const res = await api.get('/challengesresponse')
+				setChallengesResponseUser(res.data)
+			} catch (error) {
+				console.log(error.message)
+			}
+		}
+		getMaterial()
+	}, [])
+
+	if (!challengesResponseUser.length) return <h1>Loading...</h1>
 	return (
 		<>
 			<Faixa materialTitle={'Corrigir desafios'} colorType={'cinza'} />
@@ -36,7 +31,7 @@ export default function RateChallengeAdmin() {
 					<Input placeholder='Buscar' />
 				</div>
 
-				{user.map((item) => {
+				{challengesResponseUser.map((item) => {
 					return <Modal {...item} />
 				})}
 			</div>

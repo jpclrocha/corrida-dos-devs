@@ -1,7 +1,66 @@
-import certo from '../../../assets/certoDesafio.svg'
+import { useEffect, useState } from 'react'
 import image from '../../../assets/ft-perfil.svg'
+import { api } from '../../../services/api'
+import Button from '../../Utils/Button/Button'
+import Input from '../../Utils/Input/Input'
 import './Modal.scss'
-export default function Modal({ userName, challengeLinkResponse }) {
+
+const defaultUser = {
+	userName: '',
+	userBio: '',
+	userEmail: '',
+	userRankPoints: '',
+	userChallengesResponse: '',
+	userRule: '',
+	socialName: '',
+}
+
+const defaultChallenge = {
+	challengeTitle: '',
+	challengeDescription: '',
+	challengeRequirements: '',
+	challengeDeadline: '',
+	challengePoints: '',
+	challengeImageURL: '',
+	challengeContentList: '',
+}
+
+export default function Modal({ userId, challengeId, challengeLinkResponse }) {
+	const [user, setUser] = useState(defaultUser)
+	const [challenge, setChallenge] = useState(defaultChallenge)
+	const [points, setPoints] = useState('')
+
+	useEffect(() => {
+		const getMaterial = async () => {
+			try {
+				const res = await api.get(`/users/${userId}`)
+				setUser(res.data)
+				const challengeRes = await api.get(`/challenges/${challengeId}`)
+				setChallenge(challengeRes.data[0])
+			} catch (error) {
+				console.log(error.message)
+			}
+		}
+		getMaterial()
+	}, [])
+
+	const handleChange = (event) => {
+		const { name, value } = event.target
+		setPoints({ ...points, [name]: value })
+	}
+
+	const handleSubmit = async (event) => {
+		event.preventDefault()
+		const patchUser = {
+			userId: userId,
+			patchColumn: 'userRankPoints',
+			valueColumn:
+				parseInt(user.userRankPoints) + parseInt(points.points),
+		}
+		const response = await api.patch('/users', patchUser)
+	}
+
+	if (!user) return <h1>Loading...</h1>
 	return (
 		<div className='rate-modal-container'>
 			<div className='rate-userinfo-container'>
@@ -14,20 +73,38 @@ export default function Modal({ userName, challengeLinkResponse }) {
 				</div>
 
 				<div className='rate-info'>
-					<h1 className='rate-username'>{userName}</h1>
+					<h1 className='rate-username'>
+						Nome do aluno: {user.userName}
+					</h1>
+					<h1 className='rate-username'>
+						Desafio: {challenge.challengeTitle}
+					</h1>
+					<h1 className='rate-username'>
+						Vale: {challenge.challengePoints}
+					</h1>
 					<a
-						href={`https://${challengeLinkResponse}`}
+						href={challengeLinkResponse}
 						target='_blank'
 						className='rate-challenge-link'
 						rel='noreferrer'
 					>
-						Link: {challengeLinkResponse}
+						Clique aqui para ver o que o aluno fez
 					</a>
 				</div>
 			</div>
-			<div className='rate-challenge-button'>
-				<img src={certo} alt='Foto de perfil' className='rate-button' />
-			</div>
+			<form className='rate-challenge-button' onSubmit={handleSubmit}>
+				<Input
+					label='Qual nota deseja dar:'
+					placeholder='digite a nota a ser dada'
+					type='number'
+					name='points'
+					value={points.points}
+					onChange={handleChange}
+				/>
+				<Button type='Submit' buttonType='vazado' className='btn-rate'>
+					Enviar
+				</Button>
+			</form>
 		</div>
 	)
 }
