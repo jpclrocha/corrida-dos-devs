@@ -37,9 +37,11 @@ export default function RegisterMaterialAdmin() {
 
 	const handleSubmit = async (event) => {
 		event.preventDefault()
-		const response = await api.post('/material').catch((error) => {
-			if (error.response.status === 400) alert('Campos invalidos')
-		})
+		const response = await api.post('/material')
+		if (response.status !== 200) {
+			alert('Campos invalidos')
+			return
+		}
 
 		const lista = listaChave.listaChave.split('; ')
 		lista.map(async (item) => {
