@@ -37,17 +37,25 @@ export default function ChallengeModal({
 		setData({ ...data, [name]: value })
 	}
 
-	const handleSubmit = (event) => {
+	const handleSubmit = async (event) => {
 		event.preventDefault()
 		if (!signed) return navigate('/login')
 
-		const resposta = {
-			challengeId: id,
-			userId: user.id,
-			challengeLinkResponse: data.resposta,
-			challengeRated: 'False',
+		const userChallenges = await api.get(`/challengesresponse/${user.id}`)
+
+		const multiple = userChallenges.data.includes(id)
+		if (!multiple) {
+			const resposta = {
+				challengeId: id,
+				userId: user.id,
+				challengeLinkResponse: data.resposta,
+				challengeRated: 'False',
+			}
+			await api.post('/challengesresponse', resposta)
+			alert('Resposta enviada com sucesso!')
+			return
 		}
-		api.post('/challengesresponse', resposta)
+		alert('Voce ja respondeu esse desafio')
 	}
 
 	return (
