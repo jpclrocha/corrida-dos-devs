@@ -161,7 +161,7 @@ $preto: #000000;
 			justify-content: start;
 
 			.navbar-list-item {
-				width: 50%;
+				width: fit-content;
 				height: fit-content;
 				flex-direction: column;
 				margin-left: 50px;
@@ -185,6 +185,19 @@ $preto: #000000;
 		}
 		.navbar-list.expanded {
 			width: 250px;
+
+			.logout-btn {
+				margin-left: 10vw;
+				width: 50%;
+				border: 1px solid $verde;
+				border-radius: 9px;
+				cursor: pointer;
+			}
+			.logout-btn:hover {
+				background-color: $branco;
+				border: 1px solid $verde;
+				color: $verde;
+			}
 		}
 	}
 }

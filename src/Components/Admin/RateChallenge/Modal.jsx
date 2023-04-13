@@ -57,6 +57,14 @@ export default function Modal({
 
 	const handleSubmit = async (event) => {
 		event.preventDefault()
+
+		if (
+			parseInt(points.points) > challenge.challengePoints ||
+			parseInt(points.points) < 0
+		) {
+			alert('Digite uma pontuacao valida para o desafio em questao')
+			return
+		}
 		const patchUser = {
 			userId: userId,
 			patchColumn: 'userRankPoints',

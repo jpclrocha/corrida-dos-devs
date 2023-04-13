@@ -12,7 +12,6 @@ const defaultMaterial = {
 	materialIdealFor: '',
 	materialDetailedInformation: '',
 	materialShortInformation: '',
-	materialContentList: [],
 }
 
 export default function RegisterMaterialAdmin() {
@@ -37,13 +36,16 @@ export default function RegisterMaterialAdmin() {
 
 	const handleSubmit = async (event) => {
 		event.preventDefault()
-		const response = await api.post('/material')
+
+		const response = await api.post('/material', postar)
+
+		console.log(response)
 		if (response.status !== 200) {
 			alert('Campos invalidos')
 			return
 		}
 
-		const lista = listaChave.listaChave.split('; ')
+		const lista = listaChave.listaChave.split(';')
 		lista.map(async (item) => {
 			await api.post('/materialcontent', {
 				materialId: response.data[0].id,
@@ -80,7 +82,7 @@ export default function RegisterMaterialAdmin() {
 							placeholder='Escreva o conteúdo que complementa o vídeo'
 							required
 							color='verde'
-							name={'materialDetailedInformation'}
+							name='materialDetailedInformation'
 							value={postar.materialDetailedInformation}
 							onChange={handleChange}
 						/>
@@ -93,7 +95,7 @@ export default function RegisterMaterialAdmin() {
 							placeholder='Descreva para quem o material é adequado'
 							required
 							color='verde'
-							name={'materialIdealFor'}
+							name='materialIdealFor'
 							value={postar.materialIdealFor}
 							onChange={handleChange}
 						/>
@@ -106,7 +108,7 @@ export default function RegisterMaterialAdmin() {
 							placeholder='Escreva palavras-chave sobre o conteúdo'
 							required
 							color='verde'
-							name={'listaChave'}
+							name='listaChave'
 							value={listaChave.listaChave}
 							onChange={listaChange}
 						/>
@@ -124,7 +126,7 @@ export default function RegisterMaterialAdmin() {
 							placeholder='Link para o vídeo'
 							required
 							color='verde'
-							name={'materialVideoUrl'}
+							name='materialVideoUrl'
 							value={postar.materialVideoUrl}
 							onChange={handleChange}
 						/>
