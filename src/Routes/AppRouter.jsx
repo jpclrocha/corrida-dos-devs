@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter, createHashRouter } from 'react-router-dom'
 import Navbar from '../Components/Utils/Navbar/Navbar.jsx'
 import Admin from '../Pages/Admin.jsx'
 import Challenge from '../Pages/Challenge.jsx'
@@ -13,7 +13,7 @@ import StudyMaterial from '../Pages/StudyMaterial.jsx'
 import StudyMaterialPlaylist from '../Pages/StudyMaterialPlaylist.jsx'
 import UserAccount from '../Pages/UserAccount.jsx'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
 	{
 		path: '/',
 		element: <Navbar />,
