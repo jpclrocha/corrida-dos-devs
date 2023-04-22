@@ -1,6 +1,6 @@
 # Corrida dos DEVs
 
-Corrida dos Devs is a programming website that has studying material for users that want to learn more about programming. We also have weekly challenges for users to respond and get points to get higher in the rank
+Corrida dos Devs is a programming website that has studying material for people that want to learn the basics about programming. We also have weekly challenges for users to respond and get points to get higher in the rank
 
 # What i learned so far
 
