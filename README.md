@@ -1,32 +1,12 @@
-# Links:
+# Corrida dos DEVs
 
--   Link do Figma: https://www.figma.com/file/EwfnR1OXrkPGNwpZIIrZqc/Ranking-dos-Devs?node-id=0%3A1
+Corrida dos Devs is a programming website that has studying material for users that want to learn more about programming. We also have weekly challenges for users to respond and get points to get higher in the rank
 
--   Link da Documentação: https://drive.google.com/file/d/1phk_Zy26ui8iOh-eTdTYE4FqpbJjHfNk/view?usp=drive_web&authuser=0
+# What i learned so far
 
-# Color Palette:
-
--   $verde: #1c7a1f;
--   $branco: #ffffff;
--   $preto: #000000;
--   $cinza: #606D75;
--   $rodape: rgba(0,0,0,0.5);
--   $vermelho: #FF1A1A;
--   $verdeDesbotado: #507061;
--   $cinzaLg: #94A2AB;
--   $cinzaAdm: rgba(255;255;255;0.23);
-
-# Breakpoints:
-
-| Dispositivos          | Valores         |
-| --------------------- | --------------- |
-| Smartphones           | 320px — 480px   |
-| iPads, tablets        | 481px — 768px   |
-| Laptops               | 769px — 1024px  |
-| Desktops              | 1025px — 1200px |
-| Desktops grandes, TVs | 1201px e acima  |
-
---tw-shadow: 0 25px 50px -12px rgba(0 0 0 / 0.25);
---tw-shadow-colored: 0 25px 50px -12px rgba(0 0 0 / 0.25) var(--tw-shadow-color);
-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+-   React basics: components, props, state, hooks, etc
+-   React Context: manage user auth
+-   React Router DOM
+-   Sass basics
+-   Axios: backend API integration with GET, POST, PUT, PATCH and DELETE methods
+-   React Modal
