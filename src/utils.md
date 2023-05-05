@@ -26,7 +26,8 @@
 | Desktops              | 1025px — 1200px |
 | Desktops grandes, TVs | 1201px e acima  |
 
---tw-shadow: 0 25px 50px -12px rgba(0 0 0 / 0.25);
---tw-shadow-colored: 0 25px 50px -12px rgba(0 0 0 / 0.25) var(--tw-shadow-color);
+Sombra 1: --tw-shadow: 0 25px 50px -12px rgba(0 0 0 / 0.25);
+
+Sombra 2: --tw-shadow-colored: 0 25px 50px -12px rgba(0 0 0 / 0.25) var(--tw-shadow-color);
 box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
 var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
