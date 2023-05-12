@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import StudyMaterialModal from './StudyMaterialModal'
 
 import { api } from '../../../services/api.js'

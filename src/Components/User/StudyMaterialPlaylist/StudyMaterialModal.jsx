@@ -1,5 +1,6 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
-import image from '../../../assets/playBtn.svg'
+//import image from '../../../assets/playBtn.svg'
 import Button from '../../Utils/Button/Button'
 import './StudyMaterialModal.scss'
 
@@ -23,7 +24,11 @@ export default function StudyMaterialModal({
 	return (
 		<div className='material-modal-container'>
 			<div className='img-container'>
-				<img src={image} alt='Play Button' className='img' />
+				<img
+					src={'assets/playBtn.svg'}
+					alt='Play Button'
+					className='img'
+				/>
 			</div>
 
 			<div className='info-container'>
@@ -36,9 +41,9 @@ export default function StudyMaterialModal({
 			<div className='list-container'>
 				<h1 className='list-title'>{materialIdealFor}</h1>
 				<ul className='list-items-container'>{generateList}</ul>
-				<Link to={`/materials/${id}`}>
+				{/* <Link to={`/materials/${id}`}>
 					<Button buttonType={'verde'}>Iniciar jornada</Button>
-				</Link>
+				</Link> */}
 			</div>
 		</div>
 	)
