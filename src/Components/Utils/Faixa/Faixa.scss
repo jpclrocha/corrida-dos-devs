@@ -1,6 +1,3 @@
-$verdeDesbotado: #507061;
-$branco: #ffffff;
-$cinzaAdm: rgba(255, 255, 255, 0.23);
 .faixa-container {
 	display: flex;
 	width: 100%;
@@ -16,18 +13,18 @@ $cinzaAdm: rgba(255, 255, 255, 0.23);
 		font-size: 2.25rem;
 		line-height: 2.5rem;
 		font-weight: 800;
-		color: $branco;
+		color: var(--white-color);
 		margin-left: 8rem;
 		height: fit-content;
 	}
 }
 
 .faixa-verde {
-	background-color: $verdeDesbotado;
+	background-color: var(--lg-green-color);
 }
 
 .faixa-cinza {
-	background-color: $cinzaAdm;
+	background-color: var(--admin-background);
 }
 
 @media screen and (max-width: 768px) {
