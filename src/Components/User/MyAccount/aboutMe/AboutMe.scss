@@ -1,11 +1,10 @@
-$branco: #ffffff;
 .aboutme-container {
 	width: 60vw;
 	height: fit-content;
 	border-radius: 0.75rem;
 	padding: 1.25rem 2.5rem 1.25rem 2.5rem;
 	margin: 1.25rem 0rem 1.25rem 0rem;
-	background-color: $branco;
+	background-color: var(--component-color);
 
 	.modal-teste {
 		display: inline-flex;

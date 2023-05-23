@@ -1,14 +1,10 @@
-$verde: #1c7a1f;
-$branco: #ffffff;
-$preto: #000000;
-
 .myaccount-container {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
 	height: 9rem;
 	justify-content: space-evenly;
-	background-color: $verde;
+	background-color: var(--green-color);
 	--tw-shadow: 0 25px 50px -12px rgba(0 0 0 / 0.25);
 	--tw-shadow-colored: 0 25px 50px -12px rgba(0 0 0 / 0.25) var(--tw-shadow-color);
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
