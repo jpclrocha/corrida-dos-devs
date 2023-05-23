@@ -1,6 +1,3 @@
-$branco: #ffffff;
-$verde: #1c7a1f;
-
 .register-container {
 	display: flex;
 
@@ -15,7 +12,7 @@ $verde: #1c7a1f;
 			margin-bottom: 2.5rem;
 			padding: 1.25rem;
 			border-radius: 1rem;
-			background-color: $branco;
+			background-color: var(--component-color);
 		}
 	}
 
@@ -26,7 +23,7 @@ $verde: #1c7a1f;
 			margin-bottom: 1.25rem;
 			padding: 1.25rem;
 			border-radius: 1rem;
-			background-color: $branco;
+			background-color: var(--component-color);
 
 			.upload-image {
 				display: flex;
@@ -36,7 +33,7 @@ $verde: #1c7a1f;
 				align-items: center;
 				margin-bottom: 1.25rem;
 				border-radius: 0.75rem;
-				background-color: $verde;
+				background-color: var(--green-color);
 			}
 		}
 	}

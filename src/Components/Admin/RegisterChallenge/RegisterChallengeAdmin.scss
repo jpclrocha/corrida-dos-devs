@@ -1,8 +1,6 @@
-$branco: #ffffff;
-
 .register-material-input {
 	margin-bottom: 2.5rem;
 	padding: 1.25rem;
 	border-radius: 1rem;
-	background-color: $branco;
+	background-color: var(--component-color);
 }

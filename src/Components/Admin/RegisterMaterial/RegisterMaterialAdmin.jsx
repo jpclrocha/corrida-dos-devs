@@ -118,7 +118,7 @@ export default function RegisterMaterialAdmin() {
 					<div className='upload-input-container'>
 						<div className='upload-image'>
 							<img
-								src={'nuvem-download.svg'}
+								src={'assets/nuvem-download.svg'}
 								alt='material-upload'
 							/>
 						</div>
