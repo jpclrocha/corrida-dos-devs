@@ -1,14 +1,10 @@
-$cinzaLg: #94a2ab;
-$verde: #1c7a1f;
-$branco: #ffffff;
-
 .sign-up-container {
 	display: flex;
 	width: 100vw;
 	height: 90vh;
 	justify-content: center;
 	align-items: center;
-	background-color: $cinzaLg;
+	background-color: var(--auth-background);
 
 	.signup-logo {
 		width: 50vw;
@@ -18,7 +14,7 @@ $branco: #ffffff;
 		.signup-link {
 			display: inline-flex;
 			height: fit-content;
-			color: $branco;
+			color: var(--white-color);
 			font-size: 2.25rem;
 			line-height: 2.5rem;
 			font-weight: 700;
@@ -34,7 +30,7 @@ $branco: #ffffff;
 			font-size: 3rem;
 			line-height: 1;
 			font-weight: 600;
-			color: $branco;
+			color: var(--white-color);
 		}
 
 		.signup-text {
@@ -61,7 +57,7 @@ $branco: #ffffff;
 				font-size: 1.75rem;
 				line-height: 1;
 				font-weight: 600;
-				color: $branco;
+				color: var(--white-color);
 			}
 
 			.signup-text {
@@ -87,7 +83,7 @@ $branco: #ffffff;
 				font-size: 1.5rem;
 				line-height: 1;
 				font-weight: 600;
-				color: $branco;
+				color: var(--white-color);
 			}
 		}
 	}

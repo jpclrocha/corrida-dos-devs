@@ -87,7 +87,7 @@ export default function Modal({
 			<div className='rate-userinfo-container'>
 				<div className='rate-img-container'>
 					<img
-						src={'ft-perfil.svg'}
+						src={'assets/ft-perfil.svg'}
 						alt='Foto de perfil'
 						className='rate-img'
 					/>

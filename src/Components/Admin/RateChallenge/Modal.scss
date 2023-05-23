@@ -1,6 +1,3 @@
-$branco: #ffffff;
-$verde: #1c7a1f;
-
 .rate-modal-container {
 	display: inline-flex;
 	width: 70vw;
@@ -8,7 +5,8 @@ $verde: #1c7a1f;
 	justify-content: space-between;
 	border-radius: 60px;
 	margin-bottom: 1.5rem;
-	background-color: $branco;
+	background-color: var(--component-color);
+
 	--tw-shadow: 0 25px 50px -12px rgba(0 0 0 / 0.25);
 	--tw-shadow-colored: 0 25px 50px -12px rgba(0 0 0 / 0.25) var(--tw-shadow-color);
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
@@ -21,7 +19,7 @@ $verde: #1c7a1f;
 			width: 10rem;
 			height: 10rem;
 			border-radius: 60px;
-			background-color: $verde;
+			background-color: var(--green-color);
 
 			.rate-img {
 				width: 6rem;
@@ -37,7 +35,7 @@ $verde: #1c7a1f;
 				font-size: 1.5rem;
 				line-height: 2rem;
 				font-weight: 800;
-				color: $verde;
+				color: var(--green-color);
 			}
 
 			.rate-challenge-link {
@@ -45,7 +43,7 @@ $verde: #1c7a1f;
 				line-height: 1.75rem;
 				font-weight: 800;
 				text-decoration: none;
-				color: $verde;
+				color: var(--green-color);
 			}
 		}
 	}
@@ -56,14 +54,14 @@ $verde: #1c7a1f;
 		width: 15rem;
 		height: 10rem;
 		border-radius: 60px;
-		background-color: $verde;
+		background-color: var(--green-color);
 		justify-content: center;
 		align-items: center;
 		.btn-rate {
 			width: 75%;
 		}
 		.btn-rate:hover {
-			border: 1px solid black;
+			border: 1px solid var(--black-color);
 		}
 	}
 }
