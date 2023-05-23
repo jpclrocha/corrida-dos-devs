@@ -1,23 +1,18 @@
-$verde: #1c7a1f;
-$branco: #ffffff;
-$preto: #000000;
-$vermelho: #ff1a1a;
-
 .ranking-modal {
-	background-color: $branco;
+	background-color: var(--component-color);
 	display: inline-flex;
 	width: 80vw;
 	height: fit-content;
 	border-radius: 9999px;
 	margin-bottom: 1.5rem;
 	justify-content: space-between;
-	box-shadow: 1px 1px 10px $preto;
+	box-shadow: 1px 1px 10px var(--black-color);
 
 	.student-ranking {
 		display: inline-flex;
 
 		.ranking-modal-image-container {
-			background-color: $vermelho;
+			background-color: var(--red-color);
 			width: 8rem;
 			height: 8rem;
 			border-radius: 50%;
@@ -39,14 +34,14 @@ $vermelho: #ff1a1a;
 			justify-content: space-evenly;
 
 			h1 {
-				color: $verde;
+				color: var(--green-color);
 				font-weight: 900;
 				font-size: 2rem;
 				line-height: 2.5rem;
 			}
 
 			h2 {
-				color: $verde;
+				color: var(--green-color);
 				font-size: 1.75rem;
 				line-height: 1.25rem;
 			}
@@ -61,13 +56,13 @@ $vermelho: #ff1a1a;
 		font-weight: 900;
 
 		h1 {
-			color: $verde;
+			color: var(--green-color);
 			font-size: 3rem;
 			font-weight: 900;
 		}
 
 		h2 {
-			color: $verde;
+			color: var(--green-color);
 			font-size: 2rem;
 			font-weight: 900;
 		}
