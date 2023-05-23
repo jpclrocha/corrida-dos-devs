@@ -1,6 +1,3 @@
-import certo from '../../../assets/certo.svg'
-import livro from '../../../assets/livro.svg'
-import raio from '../../../assets/raio.svg'
 import './AdminMenu.scss'
 import CardAdmin from './CardAdmin'
 
@@ -18,7 +15,7 @@ export default function AdminMenu() {
 
 			<CardAdmin
 				title='Adicionar material'
-				image={livro}
+				image={'assets/livro.svg'}
 				textBtn='Adicionar!'
 				route='/registerMaterial'
 			/>
@@ -32,14 +29,14 @@ export default function AdminMenu() {
 
 			<CardAdmin
 				title='Adicionar desafios'
-				image={raio}
+				image={'assets/raio.svg'}
 				textBtn='Adicionar!'
 				route='/registerChallenge'
 			/>
 
 			<CardAdmin
 				title='Corrigir desafios'
-				image={certo}
+				image={'assets/certo.svg'}
 				textBtn='Corrigir!'
 				route='/rateChallenge'
 			/>

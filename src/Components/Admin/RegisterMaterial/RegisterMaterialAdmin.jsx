@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import image from '../../../assets/nuvem-download.svg'
 import { api } from '../../../services/api'
 import Button from '../../Utils/Button/Button'
 import Faixa from '../../Utils/Faixa/Faixa'
@@ -118,7 +117,10 @@ export default function RegisterMaterialAdmin() {
 				<div className='upload-container'>
 					<div className='upload-input-container'>
 						<div className='upload-image'>
-							<img src={image} alt='material-upload' />
+							<img
+								src={'nuvem-download.svg'}
+								alt='material-upload'
+							/>
 						</div>
 						<Input
 							label='Adicione link do vídeo:  (Obrigatório)'

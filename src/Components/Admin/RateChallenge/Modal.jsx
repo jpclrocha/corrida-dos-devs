@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import image from '../../../assets/ft-perfil.svg'
 import { api } from '../../../services/api'
 import Button from '../../Utils/Button/Button'
 import Input from '../../Utils/Input/Input'
@@ -88,7 +87,7 @@ export default function Modal({
 			<div className='rate-userinfo-container'>
 				<div className='rate-img-container'>
 					<img
-						src={image}
+						src={'ft-perfil.svg'}
 						alt='Foto de perfil'
 						className='rate-img'
 					/>

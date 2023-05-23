@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import image from '../../../assets/calc.svg'
 import { api } from '../../../services/api'
 import './ChallengeComponent.scss'
 import ChallengeModal from './ChallengeModal'

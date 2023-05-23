@@ -1,7 +1,6 @@
 import { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../../Contexts/AuthContext'
-import image from '../../../assets/calc.svg'
 import { api } from '../../../services/api'
 import Button from '../../Utils/Button/Button'
 import Input from '../../Utils/Input/Input'
@@ -63,7 +62,7 @@ export default function ChallengeModal({
 			<div className='img-and-info'>
 				<div className='imagem-container'>
 					<img
-						src={image}
+						src={'assets/calc.svg'}
 						alt='desafio-imagem'
 						className='desafio-imagem'
 					/>

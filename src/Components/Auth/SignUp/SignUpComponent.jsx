@@ -1,7 +1,6 @@
 import { useContext, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../../Contexts/AuthContext'
-import image from '../../../assets/logoBranca.svg'
 import Rodape from '../Rodape/Rodape'
 import './SignUpComponent.scss'
 import SignUpForm from './SignUpForm'
@@ -23,7 +22,7 @@ export default function SignUpComponent() {
 					<Link to='/' className='signup-link'>
 						Corrida dos DEVs
 						<img
-							src={image}
+							src={'assets/logoBranca.svg'}
 							alt='Corrida-dos-devs-logo'
 							className='signup-img'
 						/>

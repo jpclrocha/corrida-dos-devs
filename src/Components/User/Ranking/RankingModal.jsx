@@ -1,5 +1,4 @@
 import React from 'react'
-import image from '../../../assets/ft-perfil.svg'
 import './RankingModal.scss'
 
 export default function RankingModal({ id, userName, userRankPoints, turma }) {
@@ -10,7 +9,7 @@ export default function RankingModal({ id, userName, userRankPoints, turma }) {
 			<div className='student-ranking'>
 				<div className='ranking-modal-image-container'>
 					<img
-						src={image}
+						src={'assets/ft-perfil.svg'}
 						alt='Foto de perfil'
 						className='ranking-modal-image'
 					/>
