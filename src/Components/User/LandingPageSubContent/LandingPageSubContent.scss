@@ -1,12 +1,8 @@
-$verde: #1c7a1f;
-$branco: #ffffff;
-$preto: #000000;
-
 .landing-page-sub-content-container {
 	display: inline-flex;
 	justify-content: space-evenly;
 	align-items: center;
-	background-color: $branco;
+	background-color: var(--component-color);
 	width: 100%;
 	height: 10rem;
 	margin-bottom: 10vh;
@@ -21,7 +17,7 @@ $preto: #000000;
 			font-weight: 700;
 			margin-bottom: 1rem;
 			.text-verde {
-				color: $verde;
+				color: var(--green-color);
 			}
 		}
 
@@ -65,7 +61,7 @@ $preto: #000000;
 				margin-bottom: 1rem;
 
 				.text-verde {
-					color: $verde;
+					color: var(--green-color);
 				}
 			}
 

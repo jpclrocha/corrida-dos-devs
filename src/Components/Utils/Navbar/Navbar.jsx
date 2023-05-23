@@ -5,6 +5,7 @@ import Button from '../Button/Button'
 import './Navbar.scss'
 
 import image from '../../../assets/logo.svg'
+import DarkMode from '../DarkMode/DarkMode'
 
 export default function Navbar() {
 	const [isNavExpanded, setIsNavExpanded] = useState(false)
@@ -27,7 +28,7 @@ export default function Navbar() {
 							className='navbar-logo'
 						/>
 					</Link>
-
+					<DarkMode />
 					<Button className='hamburger' onClick={toggleNav}>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'

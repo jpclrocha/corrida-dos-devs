@@ -6,7 +6,8 @@
 
 * {
 	box-sizing: border-box;
-	color: black;
+	color: var(--text-color);
+	transition: all 0.3s ease-in-out;
 }
 
 html,
@@ -115,7 +116,7 @@ body {
 	line-height: 1;
 	width: 100%;
 	height: 100%;
-	background-color: #606d75;
+	background-color: var(--body_background);
 	font-family: 'Inter', sans-serif;
 }
 ol,
@@ -136,4 +137,25 @@ q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+:root {
+	--body_background: #606d75;
+	--auth-background: #94a2ab;
+	--admin-background: rgba(255, 255, 255, 0.23);
+	--component-color: #ffffff;
+	--footer-color: rgba(0, 0, 0, 0.5);
+	--text-color: #000000;
+	--green-color: #1c7a1f;
+	--lg-green-color: #507061;
+	--white-color: #ffffff;
+	--black-color: #000000;
+	--red-color: #ff1a1a;
+}
+
+[data-theme='dark'] {
+	--body_background: #1c1c1c;
+	--component-color: #121212;
+	--text-color: rgba(255, 255, 255, 0.87);
+	--footer-color: rgba(255, 255, 255, 0.8);
 }

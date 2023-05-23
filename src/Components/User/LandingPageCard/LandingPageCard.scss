@@ -1,12 +1,8 @@
-$verde: #1c7a1f;
-$branco: #ffffff;
-$preto: #000000;
-
 .main-content-card-container {
 	height: fit-content;
 	width: 30vw;
 	padding: 30px;
-	background-color: $branco;
+	background-color: var(--component-color);
 	border-radius: 0.75rem;
 	margin-bottom: 5vh;
 
@@ -16,6 +12,7 @@ $preto: #000000;
 		line-height: 1.75rem;
 		font-weight: 700;
 		margin-bottom: 1vw;
+		color: var(--text-color);
 	}
 
 	.landing-page-text {
@@ -23,10 +20,11 @@ $preto: #000000;
 		font-size: 0.875rem;
 		line-height: 1.25rem;
 		margin-bottom: 1vw;
+		color: var(--text-color);
 	}
 
 	.card-text-verde {
-		color: $verde;
+		color: var(--green-color);
 	}
 }
 
