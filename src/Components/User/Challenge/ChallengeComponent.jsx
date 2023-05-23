@@ -19,17 +19,11 @@ export default function ChallengeComponent() {
 	}, [])
 	if (!desafio.length) return <h3>Loading...</h3>
 
-	const dataHoje = `${new Date().getDate()}-${
-		new Date().getMonth() + 1
-	}-${new Date().getFullYear()}`
-
 	return (
 		<div className='desafio-component-container'>
 			<div className='titulo'>Desafios da semana:</div>
 			{desafio.map((item) => {
-				if (item.challengeDeadline >= dataHoje) {
-					return <ChallengeModal {...item} key={item.id} />
-				}
+				return <ChallengeModal {...item} key={item.id} />
 			})}
 		</div>
 	)

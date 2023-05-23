@@ -1,12 +1,8 @@
-$verde: #1c7a1f;
-$branco: #ffffff;
-$preto: #000000;
-
 .desafio-container {
 	flex-wrap: wrap;
 	padding: 2.5rem;
 	border-radius: 75px;
-	background-color: $branco;
+	background-color: var(--component-color);
 	margin-bottom: 5vh;
 	width: 65vw;
 
@@ -20,7 +16,7 @@ $preto: #000000;
 			width: 250px;
 			height: 250px;
 			border-radius: 50%;
-			background-color: $verde;
+			background-color: var(--green-color);
 
 			.desafio-imagem {
 				margin: 0 auto;
@@ -45,13 +41,13 @@ $preto: #000000;
 					line-height: 2.5rem;
 					font-weight: 800;
 					margin-bottom: 0.5rem;
-					color: $verde;
+					color: var(--green-color);
 				}
 
 				p {
 					font-size: 1.25rem;
 					line-height: 1.75rem;
-					color: $verde;
+					color: var(--green-color);
 				}
 			}
 
@@ -61,15 +57,15 @@ $preto: #000000;
 				padding: 2.5rem;
 
 				h1 {
-					color: $branco;
+					color: var(--white-color);
 				}
 
 				.requisitos {
 					font-size: 1.25rem;
 					line-height: 1.75rem;
 					font-weight: 600;
-					color: $branco;
-					background-color: $verde;
+					color: var(--white-color);
+					background-color: var(--green-color);
 					padding: 1rem;
 					border-radius: 24px;
 					margin-bottom: 1vh;
@@ -82,20 +78,20 @@ $preto: #000000;
 					justify-content: center;
 					align-items: center;
 					border-radius: 0.75rem;
-					background-color: $preto;
+					background-color: var(--black-color);
 					border: 0px;
 					cursor: pointer;
 
 					a {
 						text-decoration: none;
-						color: $branco;
+						color: var(--white-color);
 					}
 				}
 
 				.requisitos-btn:hover {
-					background-color: $branco;
-					color: $preto;
-					border: 1px solid $preto;
+					background-color: var(--white-color);
+					color: var(--black-color);
+					border: 1px solid var(--black-color);
 				}
 			}
 		}
@@ -114,16 +110,16 @@ $preto: #000000;
 				font-size: 1.25rem;
 				line-height: 1.75rem;
 				font-weight: 800;
-				color: $verde;
+				color: var(--green-color);
 			}
 
 			.input-response {
 				width: 70%;
 				height: 60px;
 
-				border: 1px solid black;
+				border: 1px solid var(--black-color);
 				border-radius: 1rem;
-				color: $verde;
+				color: var(--green-color);
 				padding: 1.25rem;
 				margin-right: 0.5vw;
 			}
@@ -141,7 +137,7 @@ $preto: #000000;
 			margin: 0 auto;
 
 			h1 {
-				color: $verde;
+				color: var(--green-color);
 				font-weight: 800;
 				font-size: 1.5rem;
 				line-height: 2rem;
