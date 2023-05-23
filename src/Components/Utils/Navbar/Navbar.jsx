@@ -1,11 +1,9 @@
-import { useContext, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import { AuthContext } from '../../../Contexts/AuthContext'
 import Button from '../Button/Button'
-import './Navbar.scss'
-
-import image from '../../../assets/logo.svg'
 import DarkMode from '../DarkMode/DarkMode'
+import './Navbar.scss'
 
 export default function Navbar() {
 	const [isNavExpanded, setIsNavExpanded] = useState(false)
@@ -23,7 +21,7 @@ export default function Navbar() {
 					<Link to={'/'} className='navbar-logo-link'>
 						Corrida dos DEVs
 						<img
-							src={image}
+							src='assets/logo.svg'
 							alt='Corrida-dos-devs-logo'
 							className='navbar-logo'
 						/>

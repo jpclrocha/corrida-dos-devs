@@ -1,3 +1,4 @@
+import React from 'react'
 import LandingPageCard from '../LandingPageCard/LandingPageCard'
 import './LandingPageMainContent.scss'
 export default function LandingPageMainContent() {

@@ -1,3 +1,4 @@
+import React from 'react'
 import image from '../../../assets/ft-perfil.svg'
 import './RankingModal.scss'
 
